@@ -348,8 +348,8 @@ namespace ATM_DataBase
         {
             if (ID != -1)
             {
-                EditATMEquip edit = new EditATMEquip(ID);
-                if (edit.ShowDialog() == DialogResult.OK)
+                Storage storage = new Storage(ID);
+                if (storage.ShowDialog() == DialogResult.OK)
                 {
                     RefreshEquipmetTable();
                     RefreshEquipmentFields();
@@ -388,7 +388,7 @@ namespace ATM_DataBase
                 }
 
                 DialogResult result = MessageBox.Show(
-                    "Вы действительно хотите \nудалить выбранную запись?",
+                    "Вы действительно хотите \nвернуть оборудование на склад?",
                     "Удалить?",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question);
@@ -397,7 +397,7 @@ namespace ATM_DataBase
 
                 int id = (int)dgv_atm_equip.SelectedRows[0].Cells[0].Value;
 
-                string querystring = $"delete from ATM_Eq where id = {id}";
+                string querystring = $"update ATM_Eq set atm_id = NULL where id = {id}";
 
                 DBwork.ExeCommand(querystring, dataBase);
 
@@ -410,6 +410,11 @@ namespace ATM_DataBase
         {
             Storage storage = new Storage();
             storage.ShowDialog();
+        }
+
+        private void buttonAddToStorage_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

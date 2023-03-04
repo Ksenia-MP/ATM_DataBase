@@ -16,6 +16,7 @@ namespace ATM_DataBase
         BindingSource bindingSource = new BindingSource();  //связка sql запроса с таблицей
 
         public static int ID;   //ID выбранной записи в таблице 
+        public static int ATM_ID;   //ID банкомата при выборе оборудования со склада
 
         public Storage()
         {
@@ -33,6 +34,7 @@ namespace ATM_DataBase
             buttonAddEq.Visible = false;
             buttonEditEq.Visible = false;
             buttonDeleteEq.Visible = false;
+            ATM_ID = atm_id;
 
             InitEqTable();
         }
@@ -42,16 +44,16 @@ namespace ATM_DataBase
         /// </summary>
         private void InitEqTable()
         {
-            string querystring = "select a.id, type 'Тип', name 'Наименование', address 'Адрес', a.sn, a.part_no, bank_no " +
+            string querystring = "select a.id, a.sn 'SN', type 'Тип', name 'Наименование', a.part_no, com, usb " +
                 "from ATM_Eq as a join Equipment as b on equipment_id = b.id " +
-                "left join ATM on atm_id = ATM.id order by type";
+                "where atm_id is NULL order by type";
             DataTable table = DBwork.ExeSelect(querystring, dataBase);
             this.dgvEquipStorage.SelectionChanged -= new System.EventHandler(this.dgvEquipStorage_SelectionChanged);
             bindingSource.DataSource = table;
             dgvEquipStorage.Columns[0].Visible = false;     //скрываем столбец с id
-            dgvEquipStorage.Columns[4].Visible = false;     //скрываем столбец серийного номера (sn)
-            dgvEquipStorage.Columns[5].Visible = false;     //скрываем столбец номера партии (part_no)
-            dgvEquipStorage.Columns[6].Visible = false;     //скрываем столбец номера ATM (bank_no)
+            dgvEquipStorage.Columns[4].Visible = false;     //скрываем столбец номера партии (part_no)
+            dgvEquipStorage.Columns[5].Visible = false;     //скрываем столбец com подключения (com)
+            dgvEquipStorage.Columns[6].Visible = false;     //скрываем столбец usb подключения (usb)
             this.dgvEquipStorage.SelectionChanged += new System.EventHandler(this.dgvEquipStorage_SelectionChanged);
         }
 
@@ -88,7 +90,8 @@ namespace ATM_DataBase
             {
                 lb_eq_sn.Text = dgvEquipStorage.Rows[index].Cells[4].Value.ToString();
                 lb_eq_part_no.Text = dgvEquipStorage.Rows[index].Cells[5].Value.ToString();
-                lb_atm_bank_no.Text = dgvEquipStorage.Rows[index].Cells[6].Value.ToString();
+                checkBoxCom.Checked = dgvEquipStorage.Rows[index].Cells[5].Value.ToString().Equals("True");
+                checkBoxUsb.Checked = dgvEquipStorage.Rows[index].Cells[6].Value.ToString().Equals("True");
             }
             else
             {
@@ -145,7 +148,7 @@ namespace ATM_DataBase
                 return;
             }
             ID = (int)dgvEquipStorage.SelectedRows[0].Cells[0].Value;
-            EditATMEquip edit = new EditATMEquip(ID);
+            EditATMEquip edit = new EditATMEquip(-1, ID);
             if (edit.ShowDialog() == DialogResult.OK)
             {
                 ID = edit.Ret_ID;   //получаем ID созданной записи
@@ -153,5 +156,26 @@ namespace ATM_DataBase
                 SetCurrentRow(dgvEquipStorage); //фокусируемся на новой записи
             }
         }
+
+        private void buttonConfirm_Click(object sender, EventArgs e)
+        {
+            if (dgvEquipStorage.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Не выбрана строка для добавления", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            ID = (int)dgvEquipStorage.SelectedRows[0].Cells[0].Value;
+            string querystring = $"update ATM_Eq set atm_id = {ATM_ID} where id = {ID}"; 
+            DBwork.ExeCommand(querystring, dataBase);
+
+            DialogResult = DialogResult.OK;
+            InitEqTable();
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
     }
 }

@@ -106,6 +106,7 @@ namespace ATM_DataBase
             this.buttonAddEquip = new System.Windows.Forms.Button();
             this.dgv_atm_equip = new System.Windows.Forms.DataGridView();
             this.buttonEditEquip = new System.Windows.Forms.Button();
+            this.buttonAddToStorage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvATM)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -824,6 +825,7 @@ namespace ATM_DataBase
             // 
             // tabEquipment
             // 
+            this.tabEquipment.Controls.Add(this.buttonAddToStorage);
             this.tabEquipment.Controls.Add(this.lb_eq_part_no);
             this.tabEquipment.Controls.Add(this.lb_eq_sn);
             this.tabEquipment.Controls.Add(this.label31);
@@ -883,10 +885,10 @@ namespace ATM_DataBase
             // buttonDelEquip
             // 
             this.buttonDelEquip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDelEquip.Location = new System.Drawing.Point(437, 546);
+            this.buttonDelEquip.Location = new System.Drawing.Point(420, 535);
             this.buttonDelEquip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDelEquip.Name = "buttonDelEquip";
-            this.buttonDelEquip.Size = new System.Drawing.Size(89, 30);
+            this.buttonDelEquip.Size = new System.Drawing.Size(109, 44);
             this.buttonDelEquip.TabIndex = 20;
             this.buttonDelEquip.Text = "Удалить";
             this.buttonDelEquip.UseVisualStyleBackColor = true;
@@ -895,12 +897,12 @@ namespace ATM_DataBase
             // buttonAddEquip
             // 
             this.buttonAddEquip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAddEquip.Location = new System.Drawing.Point(248, 546);
+            this.buttonAddEquip.Location = new System.Drawing.Point(75, 535);
             this.buttonAddEquip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAddEquip.Name = "buttonAddEquip";
-            this.buttonAddEquip.Size = new System.Drawing.Size(89, 30);
+            this.buttonAddEquip.Size = new System.Drawing.Size(109, 44);
             this.buttonAddEquip.TabIndex = 19;
-            this.buttonAddEquip.Text = "Добавить";
+            this.buttonAddEquip.Text = "Добавить со склада";
             this.buttonAddEquip.UseVisualStyleBackColor = true;
             this.buttonAddEquip.Click += new System.EventHandler(this.buttonAddEquip_Click);
             // 
@@ -929,14 +931,26 @@ namespace ATM_DataBase
             // buttonEditEquip
             // 
             this.buttonEditEquip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEditEquip.Location = new System.Drawing.Point(343, 546);
+            this.buttonEditEquip.Location = new System.Drawing.Point(305, 535);
             this.buttonEditEquip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEditEquip.Name = "buttonEditEquip";
-            this.buttonEditEquip.Size = new System.Drawing.Size(89, 30);
+            this.buttonEditEquip.Size = new System.Drawing.Size(109, 44);
             this.buttonEditEquip.TabIndex = 17;
             this.buttonEditEquip.Text = "Изменить";
             this.buttonEditEquip.UseVisualStyleBackColor = true;
             this.buttonEditEquip.Click += new System.EventHandler(this.buttonEditEquip_Click);
+            // 
+            // buttonAddToStorage
+            // 
+            this.buttonAddToStorage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAddToStorage.Location = new System.Drawing.Point(190, 535);
+            this.buttonAddToStorage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonAddToStorage.Name = "buttonAddToStorage";
+            this.buttonAddToStorage.Size = new System.Drawing.Size(109, 44);
+            this.buttonAddToStorage.TabIndex = 60;
+            this.buttonAddToStorage.Text = "Добавить";
+            this.buttonAddToStorage.UseVisualStyleBackColor = true;
+            this.buttonAddToStorage.Click += new System.EventHandler(this.buttonAddToStorage_Click);
             // 
             // MainForm
             // 
@@ -1050,6 +1064,7 @@ namespace ATM_DataBase
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.ToolStripMenuItem storageToolStripMenuItem;
+        private System.Windows.Forms.Button buttonAddToStorage;
     }
 }
 

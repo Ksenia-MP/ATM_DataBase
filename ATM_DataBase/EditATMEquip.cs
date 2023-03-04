@@ -13,7 +13,7 @@ namespace ATM_DataBase
     public partial class EditATMEquip : Form
     {
         DataBase dataBase = new DataBase();     //база данных
-        //int ID;     //ID текущей записи 
+        int ID;     //ID текущего банкомата
         int ATMeq_ID; //ID выбранного оборудования
         public int Ret_ID; //ID добавленной записи в ATM_Eq
         object[,] id_and_name;  //ID и наименование для comboBox
@@ -23,9 +23,9 @@ namespace ATM_DataBase
         /// </summary>
         /// <param name="atm_id">Идентификатор записи ATM</param>
         /// <param name="eq_id">Идентификатор оборудования, при добавлении пустрое</param>
-        public EditATMEquip(/*int atm_id = -1, */int atm_eq_id = -1)
+        public EditATMEquip(int atm_id = -1, int atm_eq_id = -1)
         {
-            //ID = atm_id;
+            ID = atm_id;
             ATMeq_ID = atm_eq_id;
 
             InitializeComponent();
@@ -160,12 +160,17 @@ namespace ATM_DataBase
                     eq_id = (int)id_and_name[i, 0];
             }
 
-            string s_eq_id = eq_id == 0 ? "NULL" : eq_id.ToString();
-            //string s_atm_id = ID == -1 ? "NULL" : ID.ToString();
+            if (eq_id == 0)
+            {
+                MessageBox.Show("Не выбрано оборудование", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string s_eq_id = eq_id.ToString();
+            string s_atm_id = ID == -1 ? "NULL" : ID.ToString();
 
             string querystring = $"insert into ATM_Eq (atm_id, sn, part_no, equipment_id) " +
-                $"values (NULL, '{tb_sn.Text}', '{tb_part_no.Text}', {s_eq_id})";
-                //$"values ({s_atm_id}, '{tb_sn.Text}', '{tb_part_no.Text}', {s_eq_id})";
+                $"values ({s_atm_id}, '{tb_sn.Text}', '{tb_part_no.Text}', {s_eq_id})";
             this.DialogResult = DialogResult.OK;
             Ret_ID = DBwork.ExeScalar(querystring, dataBase);
 
