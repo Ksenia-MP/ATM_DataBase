@@ -144,7 +144,9 @@ namespace ATM_DataBase
             string querystring = $"update ATM_Eq set sn = '{tb_sn.Text}', " +
                 $"part_no = '{tb_part_no.Text}', equipment_id = '{s_eq_id}' " +
                 $"where id = {ATMeq_ID}"; //and atm_id = {ID}";
+            
             DBwork.ExeCommand(querystring, dataBase);
+            Ret_ID = ATMeq_ID;
 
             DialogResult = DialogResult.OK;
             Close();

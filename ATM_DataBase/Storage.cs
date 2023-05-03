@@ -64,6 +64,7 @@ namespace ATM_DataBase
                 ID = (int)dgvEquipStorage.SelectedRows[0].Cells[0].Value;
             }
             else ID = -1;
+
             RefreshEquipmentFields();
         }
 
@@ -81,6 +82,8 @@ namespace ATM_DataBase
                 if (dgv.Rows.Count != 0)
                     dgv.Rows[0].Selected = true;
             }
+
+            RefreshEquipmentFields();
         }
 
         private void RefreshEquipmentFields()
@@ -88,16 +91,15 @@ namespace ATM_DataBase
             int index = dgvEquipStorage.SelectedRows.Count != 0? dgvEquipStorage.SelectedRows[0].Index: -1;
             if (index != -1)
             {
-                lb_eq_sn.Text = dgvEquipStorage.Rows[index].Cells[4].Value.ToString();
-                lb_eq_part_no.Text = dgvEquipStorage.Rows[index].Cells[5].Value.ToString();
+                lb_eq_part_no.Text = dgvEquipStorage.Rows[index].Cells[4].Value.ToString();
                 checkBoxCom.Checked = dgvEquipStorage.Rows[index].Cells[5].Value.ToString().Equals("True");
                 checkBoxUsb.Checked = dgvEquipStorage.Rows[index].Cells[6].Value.ToString().Equals("True");
             }
             else
             {
-                lb_eq_sn.Text = "";
                 lb_eq_part_no.Text = "";
-                lb_atm_bank_no.Text = "";
+                checkBoxCom.Checked = false;
+                checkBoxUsb.Checked = false;
             }
             
         }

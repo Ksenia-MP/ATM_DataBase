@@ -31,10 +31,10 @@ namespace ATM_DataBase
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.EquipPage = new System.Windows.Forms.TabPage();
+            this.checkBoxUsb = new System.Windows.Forms.CheckBox();
+            this.checkBoxCom = new System.Windows.Forms.CheckBox();
             this.buttonAddEq = new System.Windows.Forms.Button();
-            this.lb_atm_bank_no = new System.Windows.Forms.Label();
             this.lb_eq_part_no = new System.Windows.Forms.Label();
-            this.lb_eq_sn = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,8 +44,6 @@ namespace ATM_DataBase
             this.buttonDeleteEq = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.AlarmPage = new System.Windows.Forms.TabPage();
-            this.checkBoxCom = new System.Windows.Forms.CheckBox();
-            this.checkBoxUsb = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.EquipPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquipStorage)).BeginInit();
@@ -70,9 +68,7 @@ namespace ATM_DataBase
             this.EquipPage.Controls.Add(this.checkBoxUsb);
             this.EquipPage.Controls.Add(this.checkBoxCom);
             this.EquipPage.Controls.Add(this.buttonAddEq);
-            this.EquipPage.Controls.Add(this.lb_atm_bank_no);
             this.EquipPage.Controls.Add(this.lb_eq_part_no);
-            this.EquipPage.Controls.Add(this.lb_eq_sn);
             this.EquipPage.Controls.Add(this.label3);
             this.EquipPage.Controls.Add(this.label2);
             this.EquipPage.Controls.Add(this.label1);
@@ -90,6 +86,28 @@ namespace ATM_DataBase
             this.EquipPage.Text = "Оборудование";
             this.EquipPage.UseVisualStyleBackColor = true;
             // 
+            // checkBoxUsb
+            // 
+            this.checkBoxUsb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxUsb.AutoCheck = false;
+            this.checkBoxUsb.AutoSize = true;
+            this.checkBoxUsb.Location = new System.Drawing.Point(709, 111);
+            this.checkBoxUsb.Name = "checkBoxUsb";
+            this.checkBoxUsb.Size = new System.Drawing.Size(18, 17);
+            this.checkBoxUsb.TabIndex = 69;
+            this.checkBoxUsb.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxCom
+            // 
+            this.checkBoxCom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxCom.AutoCheck = false;
+            this.checkBoxCom.AutoSize = true;
+            this.checkBoxCom.Location = new System.Drawing.Point(709, 82);
+            this.checkBoxCom.Name = "checkBoxCom";
+            this.checkBoxCom.Size = new System.Drawing.Size(18, 17);
+            this.checkBoxCom.TabIndex = 68;
+            this.checkBoxCom.UseVisualStyleBackColor = true;
+            // 
             // buttonAddEq
             // 
             this.buttonAddEq.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -102,35 +120,15 @@ namespace ATM_DataBase
             this.buttonAddEq.UseVisualStyleBackColor = true;
             this.buttonAddEq.Click += new System.EventHandler(this.buttonAddEq_Click);
             // 
-            // lb_atm_bank_no
-            // 
-            this.lb_atm_bank_no.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_atm_bank_no.AutoSize = true;
-            this.lb_atm_bank_no.Location = new System.Drawing.Point(733, 110);
-            this.lb_atm_bank_no.Name = "lb_atm_bank_no";
-            this.lb_atm_bank_no.Size = new System.Drawing.Size(128, 17);
-            this.lb_atm_bank_no.TabIndex = 62;
-            this.lb_atm_bank_no.Text = "_______________";
-            // 
             // lb_eq_part_no
             // 
             this.lb_eq_part_no.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_eq_part_no.AutoSize = true;
-            this.lb_eq_part_no.Location = new System.Drawing.Point(733, 81);
+            this.lb_eq_part_no.Location = new System.Drawing.Point(706, 52);
             this.lb_eq_part_no.Name = "lb_eq_part_no";
             this.lb_eq_part_no.Size = new System.Drawing.Size(128, 17);
             this.lb_eq_part_no.TabIndex = 61;
             this.lb_eq_part_no.Text = "_______________";
-            // 
-            // lb_eq_sn
-            // 
-            this.lb_eq_sn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_eq_sn.AutoSize = true;
-            this.lb_eq_sn.Location = new System.Drawing.Point(733, 52);
-            this.lb_eq_sn.Name = "lb_eq_sn";
-            this.lb_eq_sn.Size = new System.Drawing.Size(128, 17);
-            this.lb_eq_sn.TabIndex = 60;
-            this.lb_eq_sn.Text = "_______________";
             // 
             // label3
             // 
@@ -242,26 +240,6 @@ namespace ATM_DataBase
             this.AlarmPage.Text = "Сигнализация";
             this.AlarmPage.UseVisualStyleBackColor = true;
             // 
-            // checkBoxCom
-            // 
-            this.checkBoxCom.AutoCheck = false;
-            this.checkBoxCom.AutoSize = true;
-            this.checkBoxCom.Location = new System.Drawing.Point(709, 82);
-            this.checkBoxCom.Name = "checkBoxCom";
-            this.checkBoxCom.Size = new System.Drawing.Size(18, 17);
-            this.checkBoxCom.TabIndex = 68;
-            this.checkBoxCom.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxUsb
-            // 
-            this.checkBoxUsb.AutoCheck = false;
-            this.checkBoxUsb.AutoSize = true;
-            this.checkBoxUsb.Location = new System.Drawing.Point(709, 111);
-            this.checkBoxUsb.Name = "checkBoxUsb";
-            this.checkBoxUsb.Size = new System.Drawing.Size(18, 17);
-            this.checkBoxUsb.TabIndex = 69;
-            this.checkBoxUsb.UseVisualStyleBackColor = true;
-            // 
             // Storage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -291,8 +269,6 @@ namespace ATM_DataBase
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lb_eq_part_no;
-        private System.Windows.Forms.Label lb_eq_sn;
-        private System.Windows.Forms.Label lb_atm_bank_no;
         private System.Windows.Forms.Button buttonAddEq;
         private System.Windows.Forms.Button buttonEditEq;
         private System.Windows.Forms.Button buttonDeleteEq;
