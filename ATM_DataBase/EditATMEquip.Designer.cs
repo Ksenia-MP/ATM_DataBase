@@ -31,9 +31,7 @@ namespace ATM_DataBase
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.tb_part_no = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.tb_sn = new System.Windows.Forms.TextBox();
             this.buttonClear = new System.Windows.Forms.Button();
             this.buttonAddEq = new System.Windows.Forms.Button();
             this.cb_name = new System.Windows.Forms.ComboBox();
@@ -45,6 +43,8 @@ namespace ATM_DataBase
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
+            this.tb_sn = new System.Windows.Forms.MaskedTextBox();
+            this.tb_part_no = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,10 +52,10 @@ namespace ATM_DataBase
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.tb_part_no);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.tb_sn);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.buttonClear);
             this.groupBox1.Controls.Add(this.buttonAddEq);
             this.groupBox1.Controls.Add(this.cb_name);
@@ -84,16 +84,6 @@ namespace ATM_DataBase
             this.label4.TabIndex = 25;
             this.label4.Text = "№ партии";
             // 
-            // tb_part_no
-            // 
-            this.tb_part_no.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_part_no.Location = new System.Drawing.Point(5, 84);
-            this.tb_part_no.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tb_part_no.Name = "tb_part_no";
-            this.tb_part_no.Size = new System.Drawing.Size(332, 22);
-            this.tb_part_no.TabIndex = 24;
-            // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -104,17 +94,6 @@ namespace ATM_DataBase
             this.label3.Size = new System.Drawing.Size(31, 17);
             this.label3.TabIndex = 23;
             this.label3.Text = "S/N";
-            // 
-            // tb_sn
-            // 
-            this.tb_sn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_sn.Location = new System.Drawing.Point(5, 38);
-            this.tb_sn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tb_sn.MaxLength = 10;
-            this.tb_sn.Name = "tb_sn";
-            this.tb_sn.Size = new System.Drawing.Size(332, 22);
-            this.tb_sn.TabIndex = 22;
             // 
             // buttonClear
             // 
@@ -253,6 +232,24 @@ namespace ATM_DataBase
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
+            // tb_sn
+            // 
+            this.tb_sn.Location = new System.Drawing.Point(5, 38);
+            this.tb_sn.Mask = "0000000000";
+            this.tb_sn.Name = "tb_sn";
+            this.tb_sn.Size = new System.Drawing.Size(332, 22);
+            this.tb_sn.TabIndex = 26;
+            this.tb_sn.ValidatingType = typeof(int);
+            // 
+            // tb_part_no
+            // 
+            this.tb_part_no.Location = new System.Drawing.Point(5, 84);
+            this.tb_part_no.Mask = "00000";
+            this.tb_part_no.Name = "tb_part_no";
+            this.tb_part_no.Size = new System.Drawing.Size(332, 22);
+            this.tb_part_no.TabIndex = 27;
+            this.tb_part_no.ValidatingType = typeof(int);
+            // 
             // EditATMEquip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -284,10 +281,10 @@ namespace ATM_DataBase
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Button buttonAddEq;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tb_part_no;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tb_sn;
         public System.Windows.Forms.Button buttonEdit;
         public System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.MaskedTextBox tb_sn;
+        private System.Windows.Forms.MaskedTextBox tb_part_no;
     }
 }

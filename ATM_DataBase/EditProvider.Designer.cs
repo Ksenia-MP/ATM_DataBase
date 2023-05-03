@@ -34,10 +34,10 @@ namespace ATM_DataBase
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.tb_dns1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.tb_dns2 = new System.Windows.Forms.TextBox();
             this.buttonAdd = new System.Windows.Forms.Button();
+            this.tb_dns1 = new System.Windows.Forms.MaskedTextBox();
+            this.tb_dns2 = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // tb_name
@@ -94,16 +94,6 @@ namespace ATM_DataBase
             this.label2.TabIndex = 5;
             this.label2.Text = "DNS1";
             // 
-            // tb_dns1
-            // 
-            this.tb_dns1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_dns1.Location = new System.Drawing.Point(15, 83);
-            this.tb_dns1.MaxLength = 15;
-            this.tb_dns1.Name = "tb_dns1";
-            this.tb_dns1.Size = new System.Drawing.Size(320, 22);
-            this.tb_dns1.TabIndex = 1;
-            // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -114,16 +104,6 @@ namespace ATM_DataBase
             this.label3.Size = new System.Drawing.Size(45, 17);
             this.label3.TabIndex = 7;
             this.label3.Text = "DNS2";
-            // 
-            // tb_dns2
-            // 
-            this.tb_dns2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_dns2.Location = new System.Drawing.Point(15, 139);
-            this.tb_dns2.MaxLength = 15;
-            this.tb_dns2.Name = "tb_dns2";
-            this.tb_dns2.Size = new System.Drawing.Size(320, 22);
-            this.tb_dns2.TabIndex = 2;
             // 
             // buttonAdd
             // 
@@ -136,6 +116,22 @@ namespace ATM_DataBase
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
+            // tb_dns1
+            // 
+            this.tb_dns1.Location = new System.Drawing.Point(15, 83);
+            this.tb_dns1.Mask = "000.000.000.000";
+            this.tb_dns1.Name = "tb_dns1";
+            this.tb_dns1.Size = new System.Drawing.Size(320, 22);
+            this.tb_dns1.TabIndex = 9;
+            // 
+            // tb_dns2
+            // 
+            this.tb_dns2.Location = new System.Drawing.Point(15, 139);
+            this.tb_dns2.Mask = "000.000.000.000";
+            this.tb_dns2.Name = "tb_dns2";
+            this.tb_dns2.Size = new System.Drawing.Size(320, 22);
+            this.tb_dns2.TabIndex = 10;
+            // 
             // EditProvider
             // 
             this.AcceptButton = this.buttonEdit;
@@ -143,11 +139,11 @@ namespace ATM_DataBase
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(347, 232);
+            this.Controls.Add(this.tb_dns2);
+            this.Controls.Add(this.tb_dns1);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.tb_dns2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tb_dns1);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.label1);
@@ -168,9 +164,9 @@ namespace ATM_DataBase
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tb_dns1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tb_dns2;
         private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.MaskedTextBox tb_dns1;
+        private System.Windows.Forms.MaskedTextBox tb_dns2;
     }
 }

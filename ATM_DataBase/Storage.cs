@@ -178,6 +178,5 @@ namespace ATM_DataBase
         {
             Close();
         }
-
     }
 }

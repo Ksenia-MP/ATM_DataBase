@@ -32,19 +32,19 @@ namespace ATM_DataBase
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ch_adsl = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.tb_ext_gw = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.tb_ext_mask = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.tb_ext_ip = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.tb_bank_gw = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.tb_bank_mask = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.tb_bank_ip = new System.Windows.Forms.TextBox();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonOK = new System.Windows.Forms.Button();
+            this.tb_bank_ip = new System.Windows.Forms.MaskedTextBox();
+            this.tb_bank_mask = new System.Windows.Forms.MaskedTextBox();
+            this.tb_bank_gw = new System.Windows.Forms.MaskedTextBox();
+            this.tb_ext_ip = new System.Windows.Forms.MaskedTextBox();
+            this.tb_ext_mask = new System.Windows.Forms.MaskedTextBox();
+            this.tb_ext_gw = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,19 +52,19 @@ namespace ATM_DataBase
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.tb_ext_gw);
+            this.groupBox2.Controls.Add(this.tb_ext_mask);
+            this.groupBox2.Controls.Add(this.tb_ext_ip);
+            this.groupBox2.Controls.Add(this.tb_bank_gw);
+            this.groupBox2.Controls.Add(this.tb_bank_mask);
+            this.groupBox2.Controls.Add(this.tb_bank_ip);
             this.groupBox2.Controls.Add(this.ch_adsl);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.tb_ext_gw);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.tb_ext_mask);
             this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.tb_ext_ip);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.tb_bank_gw);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.tb_bank_mask);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.tb_bank_ip);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(296, 358);
@@ -91,16 +91,6 @@ namespace ATM_DataBase
             this.label10.TabIndex = 15;
             this.label10.Text = "GateWay(внеш.)";
             // 
-            // tb_ext_gw
-            // 
-            this.tb_ext_gw.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_ext_gw.Location = new System.Drawing.Point(6, 285);
-            this.tb_ext_gw.MaxLength = 15;
-            this.tb_ext_gw.Name = "tb_ext_gw";
-            this.tb_ext_gw.Size = new System.Drawing.Size(284, 22);
-            this.tb_ext_gw.TabIndex = 14;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -109,16 +99,6 @@ namespace ATM_DataBase
             this.label11.Size = new System.Drawing.Size(89, 17);
             this.label11.TabIndex = 13;
             this.label11.Text = "Mask(внеш.)";
-            // 
-            // tb_ext_mask
-            // 
-            this.tb_ext_mask.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_ext_mask.Location = new System.Drawing.Point(6, 240);
-            this.tb_ext_mask.MaxLength = 15;
-            this.tb_ext_mask.Name = "tb_ext_mask";
-            this.tb_ext_mask.Size = new System.Drawing.Size(284, 22);
-            this.tb_ext_mask.TabIndex = 12;
             // 
             // label12
             // 
@@ -129,16 +109,6 @@ namespace ATM_DataBase
             this.label12.TabIndex = 11;
             this.label12.Text = "IP(внеш.)";
             // 
-            // tb_ext_ip
-            // 
-            this.tb_ext_ip.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_ext_ip.Location = new System.Drawing.Point(6, 195);
-            this.tb_ext_ip.MaxLength = 15;
-            this.tb_ext_ip.Name = "tb_ext_ip";
-            this.tb_ext_ip.Size = new System.Drawing.Size(284, 22);
-            this.tb_ext_ip.TabIndex = 10;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -147,16 +117,6 @@ namespace ATM_DataBase
             this.label9.Size = new System.Drawing.Size(118, 17);
             this.label9.TabIndex = 9;
             this.label9.Text = "GateWay(внутр.)";
-            // 
-            // tb_bank_gw
-            // 
-            this.tb_bank_gw.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_bank_gw.Location = new System.Drawing.Point(6, 128);
-            this.tb_bank_gw.MaxLength = 15;
-            this.tb_bank_gw.Name = "tb_bank_gw";
-            this.tb_bank_gw.Size = new System.Drawing.Size(284, 22);
-            this.tb_bank_gw.TabIndex = 8;
             // 
             // label8
             // 
@@ -167,16 +127,6 @@ namespace ATM_DataBase
             this.label8.TabIndex = 7;
             this.label8.Text = "Mask(внутр.)";
             // 
-            // tb_bank_mask
-            // 
-            this.tb_bank_mask.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_bank_mask.Location = new System.Drawing.Point(6, 83);
-            this.tb_bank_mask.MaxLength = 15;
-            this.tb_bank_mask.Name = "tb_bank_mask";
-            this.tb_bank_mask.Size = new System.Drawing.Size(284, 22);
-            this.tb_bank_mask.TabIndex = 6;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -185,16 +135,6 @@ namespace ATM_DataBase
             this.label7.Size = new System.Drawing.Size(71, 17);
             this.label7.TabIndex = 5;
             this.label7.Text = "IP(внутр.)";
-            // 
-            // tb_bank_ip
-            // 
-            this.tb_bank_ip.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_bank_ip.Location = new System.Drawing.Point(6, 38);
-            this.tb_bank_ip.MaxLength = 15;
-            this.tb_bank_ip.Name = "tb_bank_ip";
-            this.tb_bank_ip.Size = new System.Drawing.Size(284, 22);
-            this.tb_bank_ip.TabIndex = 4;
             // 
             // buttonCancel
             // 
@@ -219,6 +159,56 @@ namespace ATM_DataBase
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
+            // tb_bank_ip
+            // 
+            this.tb_bank_ip.Location = new System.Drawing.Point(6, 38);
+            this.tb_bank_ip.Mask = "000.000.000.000";
+            this.tb_bank_ip.Name = "tb_bank_ip";
+            this.tb_bank_ip.Size = new System.Drawing.Size(284, 22);
+            this.tb_bank_ip.TabIndex = 17;
+            // 
+            // tb_bank_mask
+            // 
+            this.tb_bank_mask.Location = new System.Drawing.Point(6, 83);
+            this.tb_bank_mask.Mask = "000.000.000.000";
+            this.tb_bank_mask.Name = "tb_bank_mask";
+            this.tb_bank_mask.Size = new System.Drawing.Size(284, 22);
+            this.tb_bank_mask.TabIndex = 18;
+            this.tb_bank_mask.Text = "2552552550";
+            // 
+            // tb_bank_gw
+            // 
+            this.tb_bank_gw.Location = new System.Drawing.Point(6, 128);
+            this.tb_bank_gw.Mask = "000.000.000.000";
+            this.tb_bank_gw.Name = "tb_bank_gw";
+            this.tb_bank_gw.Size = new System.Drawing.Size(284, 22);
+            this.tb_bank_gw.TabIndex = 19;
+            // 
+            // tb_ext_ip
+            // 
+            this.tb_ext_ip.Location = new System.Drawing.Point(6, 195);
+            this.tb_ext_ip.Mask = "000.000.000.000";
+            this.tb_ext_ip.Name = "tb_ext_ip";
+            this.tb_ext_ip.Size = new System.Drawing.Size(284, 22);
+            this.tb_ext_ip.TabIndex = 20;
+            // 
+            // tb_ext_mask
+            // 
+            this.tb_ext_mask.Location = new System.Drawing.Point(6, 240);
+            this.tb_ext_mask.Mask = "000.000.000.000";
+            this.tb_ext_mask.Name = "tb_ext_mask";
+            this.tb_ext_mask.Size = new System.Drawing.Size(284, 22);
+            this.tb_ext_mask.TabIndex = 21;
+            this.tb_ext_mask.Text = "2552552550";
+            // 
+            // tb_ext_gw
+            // 
+            this.tb_ext_gw.Location = new System.Drawing.Point(6, 285);
+            this.tb_ext_gw.Mask = "000.000.000.000";
+            this.tb_ext_gw.Name = "tb_ext_gw";
+            this.tb_ext_gw.Size = new System.Drawing.Size(284, 22);
+            this.tb_ext_gw.TabIndex = 22;
+            // 
             // EditATMNet
             // 
             this.AcceptButton = this.buttonOK;
@@ -242,18 +232,18 @@ namespace ATM_DataBase
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.CheckBox ch_adsl;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox tb_ext_gw;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox tb_ext_mask;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox tb_ext_ip;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox tb_bank_gw;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox tb_bank_mask;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox tb_bank_ip;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonOK;
+        private System.Windows.Forms.MaskedTextBox tb_bank_gw;
+        private System.Windows.Forms.MaskedTextBox tb_bank_mask;
+        private System.Windows.Forms.MaskedTextBox tb_bank_ip;
+        private System.Windows.Forms.MaskedTextBox tb_ext_gw;
+        private System.Windows.Forms.MaskedTextBox tb_ext_mask;
+        private System.Windows.Forms.MaskedTextBox tb_ext_ip;
     }
 }

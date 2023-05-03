@@ -29,9 +29,7 @@ namespace ATM_DataBase
         /// </summary>
         private void InitializeComponent()
         {
-            this.tb_bank_no = new System.Windows.Forms.TextBox();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.tb_serial_no = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonCancel = new System.Windows.Forms.Button();
@@ -47,18 +45,10 @@ namespace ATM_DataBase
             this.dtp_setting_date = new System.Windows.Forms.DateTimePicker();
             this.ch_ups = new System.Windows.Forms.CheckBox();
             this.buttonEdit = new System.Windows.Forms.Button();
+            this.tb_bank_no = new System.Windows.Forms.MaskedTextBox();
+            this.tb_serial_no = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tb_bank_no
-            // 
-            this.tb_bank_no.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_bank_no.Location = new System.Drawing.Point(9, 38);
-            this.tb_bank_no.MaxLength = 5;
-            this.tb_bank_no.Name = "tb_bank_no";
-            this.tb_bank_no.Size = new System.Drawing.Size(273, 22);
-            this.tb_bank_no.TabIndex = 0;
             // 
             // buttonAdd
             // 
@@ -70,16 +60,6 @@ namespace ATM_DataBase
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
-            // 
-            // tb_serial_no
-            // 
-            this.tb_serial_no.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_serial_no.Location = new System.Drawing.Point(9, 93);
-            this.tb_serial_no.MaxLength = 10;
-            this.tb_serial_no.Name = "tb_serial_no";
-            this.tb_serial_no.Size = new System.Drawing.Size(273, 22);
-            this.tb_serial_no.TabIndex = 2;
             // 
             // label1
             // 
@@ -176,15 +156,15 @@ namespace ATM_DataBase
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.tb_serial_no);
+            this.groupBox1.Controls.Add(this.tb_bank_no);
             this.groupBox1.Controls.Add(this.tb_setting_date);
             this.groupBox1.Controls.Add(this.dtp_setting_date);
             this.groupBox1.Controls.Add(this.ch_ups);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.tb_bank_no);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.tb_serial_no);
             this.groupBox1.Controls.Add(this.tb_e);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
@@ -236,6 +216,23 @@ namespace ATM_DataBase
             this.buttonEdit.UseVisualStyleBackColor = true;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
+            // tb_bank_no
+            // 
+            this.tb_bank_no.Location = new System.Drawing.Point(9, 38);
+            this.tb_bank_no.Mask = "00000";
+            this.tb_bank_no.Name = "tb_bank_no";
+            this.tb_bank_no.Size = new System.Drawing.Size(273, 22);
+            this.tb_bank_no.TabIndex = 24;
+            this.tb_bank_no.ValidatingType = typeof(int);
+            // 
+            // tb_serial_no
+            // 
+            this.tb_serial_no.Location = new System.Drawing.Point(9, 93);
+            this.tb_serial_no.Mask = "0000000000";
+            this.tb_serial_no.Name = "tb_serial_no";
+            this.tb_serial_no.Size = new System.Drawing.Size(273, 22);
+            this.tb_serial_no.TabIndex = 25;
+            // 
             // EditATM
             // 
             this.AcceptButton = this.buttonAdd;
@@ -260,9 +257,6 @@ namespace ATM_DataBase
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox tb_bank_no;
-        private System.Windows.Forms.TextBox tb_serial_no;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonCancel;
@@ -279,5 +273,7 @@ namespace ATM_DataBase
         public System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.MaskedTextBox tb_setting_date;
         private System.Windows.Forms.DateTimePicker dtp_setting_date;
+        private System.Windows.Forms.MaskedTextBox tb_bank_no;
+        private System.Windows.Forms.MaskedTextBox tb_serial_no;
     }
 }

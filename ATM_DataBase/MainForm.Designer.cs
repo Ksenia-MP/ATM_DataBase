@@ -29,7 +29,7 @@ namespace ATM_DataBase
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvATM = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,9 +39,10 @@ namespace ATM_DataBase
             this.изменитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справочникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.EquipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.провайдерыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ModelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.EquipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.провайдерыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.storageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabGeneral = new System.Windows.Forms.TabPage();
@@ -99,16 +100,17 @@ namespace ATM_DataBase
             this.label29 = new System.Windows.Forms.Label();
             this.buttonEdit_model = new System.Windows.Forms.Button();
             this.tabEquipment = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonDelEquip = new System.Windows.Forms.Button();
+            this.buttonAddEquip = new System.Windows.Forms.Button();
             this.buttonAddToStorage = new System.Windows.Forms.Button();
+            this.buttonEditEquip = new System.Windows.Forms.Button();
             this.lb_eq_part_no = new System.Windows.Forms.Label();
             this.lb_eq_sn = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.buttonDelEquip = new System.Windows.Forms.Button();
-            this.buttonAddEquip = new System.Windows.Forms.Button();
             this.dgv_atm_equip = new System.Windows.Forms.DataGridView();
-            this.buttonEditEquip = new System.Windows.Forms.Button();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.dgvATM)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -117,6 +119,7 @@ namespace ATM_DataBase
             this.tabProvider.SuspendLayout();
             this.tabModel.SuspendLayout();
             this.tabEquipment.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_atm_equip)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,14 +133,14 @@ namespace ATM_DataBase
             this.dgvATM.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvATM.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvATM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvATM.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvATM.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvATM.Location = new System.Drawing.Point(12, 31);
             this.dgvATM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvATM.MultiSelect = false;
@@ -147,7 +150,7 @@ namespace ATM_DataBase
             this.dgvATM.RowHeadersWidth = 51;
             this.dgvATM.RowTemplate.Height = 24;
             this.dgvATM.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvATM.Size = new System.Drawing.Size(536, 503);
+            this.dgvATM.Size = new System.Drawing.Size(544, 557);
             this.dgvATM.TabIndex = 0;
             this.dgvATM.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvATM_RowEnter);
             // 
@@ -162,7 +165,7 @@ namespace ATM_DataBase
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1026, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1034, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -171,7 +174,7 @@ namespace ATM_DataBase
             this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.выходToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(59, 26);
+            this.файлToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
             this.файлToolStripMenuItem.Text = "Файл";
             // 
             // выходToolStripMenuItem
@@ -187,7 +190,7 @@ namespace ATM_DataBase
             this.изменитьToolStripMenuItem,
             this.удалитьToolStripMenuItem});
             this.редактироватьToolStripMenuItem.Name = "редактироватьToolStripMenuItem";
-            this.редактироватьToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
+            this.редактироватьToolStripMenuItem.Size = new System.Drawing.Size(125, 24);
             this.редактироватьToolStripMenuItem.Text = "Редактировать";
             // 
             // добавитьToolStripMenuItem
@@ -222,24 +225,8 @@ namespace ATM_DataBase
             this.toolStripSeparator1,
             this.провайдерыToolStripMenuItem});
             this.справочникиToolStripMenuItem.Name = "справочникиToolStripMenuItem";
-            this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(117, 26);
+            this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(117, 24);
             this.справочникиToolStripMenuItem.Text = "Справочники";
-            // 
-            // EquipToolStripMenuItem
-            // 
-            this.EquipToolStripMenuItem.Name = "EquipToolStripMenuItem";
-            this.EquipToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.E)));
-            this.EquipToolStripMenuItem.Size = new System.Drawing.Size(286, 26);
-            this.EquipToolStripMenuItem.Text = "Оборудование";
-            this.EquipToolStripMenuItem.Click += new System.EventHandler(this.EquipToolStripMenuItem_Click);
-            // 
-            // провайдерыToolStripMenuItem
-            // 
-            this.провайдерыToolStripMenuItem.Name = "провайдерыToolStripMenuItem";
-            this.провайдерыToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.P)));
-            this.провайдерыToolStripMenuItem.Size = new System.Drawing.Size(286, 26);
-            this.провайдерыToolStripMenuItem.Text = "Провайдеры";
-            this.провайдерыToolStripMenuItem.Click += new System.EventHandler(this.ProviderToolStripMenuItem_Click);
             // 
             // ModelToolStripMenuItem
             // 
@@ -249,11 +236,32 @@ namespace ATM_DataBase
             this.ModelToolStripMenuItem.Text = "Модели банкоматов";
             this.ModelToolStripMenuItem.Click += new System.EventHandler(this.ModelToolStripMenuItem_Click);
             // 
+            // EquipToolStripMenuItem
+            // 
+            this.EquipToolStripMenuItem.Name = "EquipToolStripMenuItem";
+            this.EquipToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.E)));
+            this.EquipToolStripMenuItem.Size = new System.Drawing.Size(286, 26);
+            this.EquipToolStripMenuItem.Text = "Оборудование";
+            this.EquipToolStripMenuItem.Click += new System.EventHandler(this.EquipToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(283, 6);
+            // 
+            // провайдерыToolStripMenuItem
+            // 
+            this.провайдерыToolStripMenuItem.Name = "провайдерыToolStripMenuItem";
+            this.провайдерыToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.P)));
+            this.провайдерыToolStripMenuItem.Size = new System.Drawing.Size(286, 26);
+            this.провайдерыToolStripMenuItem.Text = "Провайдеры";
+            this.провайдерыToolStripMenuItem.Click += new System.EventHandler(this.ProviderToolStripMenuItem_Click);
+            // 
             // storageToolStripMenuItem
             // 
             this.storageToolStripMenuItem.Name = "storageToolStripMenuItem";
-            this.storageToolStripMenuItem.Size = new System.Drawing.Size(63, 26);
-            this.storageToolStripMenuItem.Text = "Склад";
+            this.storageToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
+            this.storageToolStripMenuItem.Text = "Склад оборудования";
             this.storageToolStripMenuItem.Click += new System.EventHandler(this.storageToolStripMenuItem_Click);
             // 
             // tabControl1
@@ -265,11 +273,11 @@ namespace ATM_DataBase
             this.tabControl1.Controls.Add(this.tabProvider);
             this.tabControl1.Controls.Add(this.tabModel);
             this.tabControl1.Controls.Add(this.tabEquipment);
-            this.tabControl1.Location = new System.Drawing.Point(553, 31);
+            this.tabControl1.Location = new System.Drawing.Point(561, 31);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(461, 503);
+            this.tabControl1.Size = new System.Drawing.Size(461, 557);
             this.tabControl1.TabIndex = 2;
             // 
             // tabGeneral
@@ -293,7 +301,7 @@ namespace ATM_DataBase
             this.tabGeneral.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabGeneral.Name = "tabGeneral";
             this.tabGeneral.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabGeneral.Size = new System.Drawing.Size(453, 474);
+            this.tabGeneral.Size = new System.Drawing.Size(453, 528);
             this.tabGeneral.TabIndex = 0;
             this.tabGeneral.Text = "Общие";
             this.tabGeneral.UseVisualStyleBackColor = true;
@@ -321,7 +329,7 @@ namespace ATM_DataBase
             // buttonEdit
             // 
             this.buttonEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEdit.Location = new System.Drawing.Point(358, 438);
+            this.buttonEdit.Location = new System.Drawing.Point(358, 494);
             this.buttonEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(89, 30);
@@ -457,7 +465,7 @@ namespace ATM_DataBase
             this.tabNet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabNet.Name = "tabNet";
             this.tabNet.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabNet.Size = new System.Drawing.Size(453, 474);
+            this.tabNet.Size = new System.Drawing.Size(453, 528);
             this.tabNet.TabIndex = 1;
             this.tabNet.Text = "Сетевые ";
             this.tabNet.UseVisualStyleBackColor = true;
@@ -585,7 +593,7 @@ namespace ATM_DataBase
             // buttonEdit_net
             // 
             this.buttonEdit_net.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEdit_net.Location = new System.Drawing.Point(358, 438);
+            this.buttonEdit_net.Location = new System.Drawing.Point(358, 490);
             this.buttonEdit_net.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEdit_net.Name = "buttonEdit_net";
             this.buttonEdit_net.Size = new System.Drawing.Size(89, 30);
@@ -609,7 +617,7 @@ namespace ATM_DataBase
             this.tabProvider.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabProvider.Name = "tabProvider";
             this.tabProvider.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabProvider.Size = new System.Drawing.Size(453, 474);
+            this.tabProvider.Size = new System.Drawing.Size(453, 528);
             this.tabProvider.TabIndex = 3;
             this.tabProvider.Text = "Провайдер";
             this.tabProvider.UseVisualStyleBackColor = true;
@@ -689,7 +697,7 @@ namespace ATM_DataBase
             // buttonEdit_provider
             // 
             this.buttonEdit_provider.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEdit_provider.Location = new System.Drawing.Point(358, 438);
+            this.buttonEdit_provider.Location = new System.Drawing.Point(358, 490);
             this.buttonEdit_provider.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEdit_provider.Name = "buttonEdit_provider";
             this.buttonEdit_provider.Size = new System.Drawing.Size(89, 30);
@@ -715,9 +723,9 @@ namespace ATM_DataBase
             this.tabModel.Location = new System.Drawing.Point(4, 25);
             this.tabModel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabModel.Name = "tabModel";
-            this.tabModel.Size = new System.Drawing.Size(453, 474);
+            this.tabModel.Size = new System.Drawing.Size(453, 528);
             this.tabModel.TabIndex = 4;
-            this.tabModel.Text = "О модели";
+            this.tabModel.Text = "О Модели";
             this.tabModel.UseVisualStyleBackColor = true;
             // 
             // lb_weight
@@ -825,7 +833,7 @@ namespace ATM_DataBase
             // buttonEdit_model
             // 
             this.buttonEdit_model.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEdit_model.Location = new System.Drawing.Point(358, 439);
+            this.buttonEdit_model.Location = new System.Drawing.Point(358, 491);
             this.buttonEdit_model.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEdit_model.Name = "buttonEdit_model";
             this.buttonEdit_model.Size = new System.Drawing.Size(89, 30);
@@ -836,40 +844,97 @@ namespace ATM_DataBase
             // 
             // tabEquipment
             // 
+            this.tabEquipment.Controls.Add(this.button1);
+            this.tabEquipment.Controls.Add(this.groupBox1);
             this.tabEquipment.Controls.Add(this.buttonAddToStorage);
+            this.tabEquipment.Controls.Add(this.buttonEditEquip);
             this.tabEquipment.Controls.Add(this.lb_eq_part_no);
             this.tabEquipment.Controls.Add(this.lb_eq_sn);
             this.tabEquipment.Controls.Add(this.label31);
             this.tabEquipment.Controls.Add(this.label32);
-            this.tabEquipment.Controls.Add(this.buttonDelEquip);
-            this.tabEquipment.Controls.Add(this.buttonAddEquip);
             this.tabEquipment.Controls.Add(this.dgv_atm_equip);
-            this.tabEquipment.Controls.Add(this.buttonEditEquip);
             this.tabEquipment.Location = new System.Drawing.Point(4, 25);
-            this.tabEquipment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabEquipment.Margin = new System.Windows.Forms.Padding(4);
             this.tabEquipment.Name = "tabEquipment";
-            this.tabEquipment.Size = new System.Drawing.Size(453, 474);
+            this.tabEquipment.Size = new System.Drawing.Size(453, 528);
             this.tabEquipment.TabIndex = 5;
             this.tabEquipment.Text = "Оборудование";
             this.tabEquipment.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(334, 391);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(109, 39);
+            this.button1.TabIndex = 62;
+            this.button1.Text = "Удалить";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.buttonDelEquip);
+            this.groupBox1.Controls.Add(this.buttonAddEquip);
+            this.groupBox1.Location = new System.Drawing.Point(104, 451);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(344, 66);
+            this.groupBox1.TabIndex = 61;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Операции со складом";
+            // 
+            // buttonDelEquip
+            // 
+            this.buttonDelEquip.Location = new System.Drawing.Point(182, 20);
+            this.buttonDelEquip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonDelEquip.Name = "buttonDelEquip";
+            this.buttonDelEquip.Size = new System.Drawing.Size(156, 39);
+            this.buttonDelEquip.TabIndex = 20;
+            this.buttonDelEquip.Text = "Вернуть на склад";
+            this.buttonDelEquip.UseVisualStyleBackColor = true;
+            this.buttonDelEquip.Click += new System.EventHandler(this.buttonDelEquip_Click);
+            // 
+            // buttonAddEquip
+            // 
+            this.buttonAddEquip.Location = new System.Drawing.Point(6, 20);
+            this.buttonAddEquip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonAddEquip.Name = "buttonAddEquip";
+            this.buttonAddEquip.Size = new System.Drawing.Size(170, 39);
+            this.buttonAddEquip.TabIndex = 19;
+            this.buttonAddEquip.Text = "Добавить со склада";
+            this.buttonAddEquip.UseVisualStyleBackColor = true;
+            this.buttonAddEquip.Click += new System.EventHandler(this.buttonAddEquip_Click);
+            // 
             // buttonAddToStorage
             // 
             this.buttonAddToStorage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAddToStorage.Location = new System.Drawing.Point(111, 428);
+            this.buttonAddToStorage.Location = new System.Drawing.Point(104, 391);
             this.buttonAddToStorage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAddToStorage.Name = "buttonAddToStorage";
-            this.buttonAddToStorage.Size = new System.Drawing.Size(109, 44);
+            this.buttonAddToStorage.Size = new System.Drawing.Size(109, 39);
             this.buttonAddToStorage.TabIndex = 60;
             this.buttonAddToStorage.Text = "Добавить";
             this.buttonAddToStorage.UseVisualStyleBackColor = true;
             this.buttonAddToStorage.Click += new System.EventHandler(this.buttonAddToStorage_Click);
             // 
+            // buttonEditEquip
+            // 
+            this.buttonEditEquip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonEditEquip.Location = new System.Drawing.Point(219, 391);
+            this.buttonEditEquip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonEditEquip.Name = "buttonEditEquip";
+            this.buttonEditEquip.Size = new System.Drawing.Size(109, 39);
+            this.buttonEditEquip.TabIndex = 17;
+            this.buttonEditEquip.Text = "Изменить";
+            this.buttonEditEquip.UseVisualStyleBackColor = true;
+            this.buttonEditEquip.Click += new System.EventHandler(this.buttonEditEquip_Click);
+            // 
             // lb_eq_part_no
             // 
             this.lb_eq_part_no.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lb_eq_part_no.AutoSize = true;
-            this.lb_eq_part_no.Location = new System.Drawing.Point(143, 385);
+            this.lb_eq_part_no.Location = new System.Drawing.Point(303, 358);
             this.lb_eq_part_no.Name = "lb_eq_part_no";
             this.lb_eq_part_no.Size = new System.Drawing.Size(128, 17);
             this.lb_eq_part_no.TabIndex = 59;
@@ -879,7 +944,7 @@ namespace ATM_DataBase
             // 
             this.lb_eq_sn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lb_eq_sn.AutoSize = true;
-            this.lb_eq_sn.Location = new System.Drawing.Point(143, 356);
+            this.lb_eq_sn.Location = new System.Drawing.Point(40, 358);
             this.lb_eq_sn.Name = "lb_eq_sn";
             this.lb_eq_sn.Size = new System.Drawing.Size(128, 17);
             this.lb_eq_sn.TabIndex = 55;
@@ -889,7 +954,7 @@ namespace ATM_DataBase
             // 
             this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(3, 385);
+            this.label31.Location = new System.Drawing.Point(199, 358);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(106, 17);
             this.label31.TabIndex = 50;
@@ -899,35 +964,11 @@ namespace ATM_DataBase
             // 
             this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(3, 356);
+            this.label32.Location = new System.Drawing.Point(3, 358);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(124, 17);
+            this.label32.Size = new System.Drawing.Size(31, 17);
             this.label32.TabIndex = 49;
-            this.label32.Text = "Серийный номер:";
-            // 
-            // buttonDelEquip
-            // 
-            this.buttonDelEquip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDelEquip.Location = new System.Drawing.Point(341, 428);
-            this.buttonDelEquip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonDelEquip.Name = "buttonDelEquip";
-            this.buttonDelEquip.Size = new System.Drawing.Size(109, 44);
-            this.buttonDelEquip.TabIndex = 20;
-            this.buttonDelEquip.Text = "Удалить";
-            this.buttonDelEquip.UseVisualStyleBackColor = true;
-            this.buttonDelEquip.Click += new System.EventHandler(this.buttonDelEquip_Click);
-            // 
-            // buttonAddEquip
-            // 
-            this.buttonAddEquip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAddEquip.Location = new System.Drawing.Point(-4, 428);
-            this.buttonAddEquip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonAddEquip.Name = "buttonAddEquip";
-            this.buttonAddEquip.Size = new System.Drawing.Size(109, 44);
-            this.buttonAddEquip.TabIndex = 19;
-            this.buttonAddEquip.Text = "Добавить со склада";
-            this.buttonAddEquip.UseVisualStyleBackColor = true;
-            this.buttonAddEquip.Click += new System.EventHandler(this.buttonAddEquip_Click);
+            this.label32.Text = "s/n:";
             // 
             // dgv_atm_equip
             // 
@@ -947,32 +988,15 @@ namespace ATM_DataBase
             this.dgv_atm_equip.RowHeadersWidth = 51;
             this.dgv_atm_equip.RowTemplate.Height = 24;
             this.dgv_atm_equip.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_atm_equip.Size = new System.Drawing.Size(445, 321);
+            this.dgv_atm_equip.Size = new System.Drawing.Size(445, 344);
             this.dgv_atm_equip.TabIndex = 18;
             this.dgv_atm_equip.SelectionChanged += new System.EventHandler(this.dgv_atm_equip_SelectionChanged);
-            // 
-            // buttonEditEquip
-            // 
-            this.buttonEditEquip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEditEquip.Location = new System.Drawing.Point(226, 428);
-            this.buttonEditEquip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonEditEquip.Name = "buttonEditEquip";
-            this.buttonEditEquip.Size = new System.Drawing.Size(109, 44);
-            this.buttonEditEquip.TabIndex = 17;
-            this.buttonEditEquip.Text = "Изменить";
-            this.buttonEditEquip.UseVisualStyleBackColor = true;
-            this.buttonEditEquip.Click += new System.EventHandler(this.buttonEditEquip_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(283, 6);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1026, 545);
+            this.ClientSize = new System.Drawing.Size(1034, 599);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.dgvATM);
             this.Controls.Add(this.menuStrip1);
@@ -995,6 +1019,7 @@ namespace ATM_DataBase
             this.tabModel.PerformLayout();
             this.tabEquipment.ResumeLayout(false);
             this.tabEquipment.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_atm_equip)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1082,6 +1107,8 @@ namespace ATM_DataBase
         private System.Windows.Forms.ToolStripMenuItem storageToolStripMenuItem;
         private System.Windows.Forms.Button buttonAddToStorage;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
