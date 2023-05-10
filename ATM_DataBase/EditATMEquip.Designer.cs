@@ -30,6 +30,8 @@ namespace ATM_DataBase
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tb_part_no = new System.Windows.Forms.MaskedTextBox();
+            this.tb_sn = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonClear = new System.Windows.Forms.Button();
@@ -43,8 +45,6 @@ namespace ATM_DataBase
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.tb_sn = new System.Windows.Forms.MaskedTextBox();
-            this.tb_part_no = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +72,24 @@ namespace ATM_DataBase
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Оборудование";
+            // 
+            // tb_part_no
+            // 
+            this.tb_part_no.Location = new System.Drawing.Point(5, 84);
+            this.tb_part_no.Mask = "00000";
+            this.tb_part_no.Name = "tb_part_no";
+            this.tb_part_no.Size = new System.Drawing.Size(332, 22);
+            this.tb_part_no.TabIndex = 27;
+            this.tb_part_no.ValidatingType = typeof(int);
+            // 
+            // tb_sn
+            // 
+            this.tb_sn.Location = new System.Drawing.Point(5, 38);
+            this.tb_sn.Mask = "0000000000";
+            this.tb_sn.Name = "tb_sn";
+            this.tb_sn.Size = new System.Drawing.Size(332, 22);
+            this.tb_sn.TabIndex = 26;
+            this.tb_sn.ValidatingType = typeof(int);
             // 
             // label4
             // 
@@ -231,24 +249,6 @@ namespace ATM_DataBase
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
-            // 
-            // tb_sn
-            // 
-            this.tb_sn.Location = new System.Drawing.Point(5, 38);
-            this.tb_sn.Mask = "0000000000";
-            this.tb_sn.Name = "tb_sn";
-            this.tb_sn.Size = new System.Drawing.Size(332, 22);
-            this.tb_sn.TabIndex = 26;
-            this.tb_sn.ValidatingType = typeof(int);
-            // 
-            // tb_part_no
-            // 
-            this.tb_part_no.Location = new System.Drawing.Point(5, 84);
-            this.tb_part_no.Mask = "00000";
-            this.tb_part_no.Name = "tb_part_no";
-            this.tb_part_no.Size = new System.Drawing.Size(332, 22);
-            this.tb_part_no.TabIndex = 27;
-            this.tb_part_no.ValidatingType = typeof(int);
             // 
             // EditATMEquip
             // 

@@ -29,6 +29,7 @@ namespace ATM_DataBase
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvATM = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -111,6 +112,12 @@ namespace ATM_DataBase
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.dgv_atm_equip = new System.Windows.Forms.DataGridView();
+            this.tabJournal = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.dgv_journal = new System.Windows.Forms.DataGridView();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvATM)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -121,6 +128,8 @@ namespace ATM_DataBase
             this.tabEquipment.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_atm_equip)).BeginInit();
+            this.tabJournal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_journal)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvATM
@@ -273,6 +282,7 @@ namespace ATM_DataBase
             this.tabControl1.Controls.Add(this.tabProvider);
             this.tabControl1.Controls.Add(this.tabModel);
             this.tabControl1.Controls.Add(this.tabEquipment);
+            this.tabControl1.Controls.Add(this.tabJournal);
             this.tabControl1.Location = new System.Drawing.Point(561, 31);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
@@ -992,6 +1002,82 @@ namespace ATM_DataBase
             this.dgv_atm_equip.TabIndex = 18;
             this.dgv_atm_equip.SelectionChanged += new System.EventHandler(this.dgv_atm_equip_SelectionChanged);
             // 
+            // tabJournal
+            // 
+            this.tabJournal.Controls.Add(this.button2);
+            this.tabJournal.Controls.Add(this.button3);
+            this.tabJournal.Controls.Add(this.button4);
+            this.tabJournal.Controls.Add(this.dgv_journal);
+            this.tabJournal.Location = new System.Drawing.Point(4, 25);
+            this.tabJournal.Name = "tabJournal";
+            this.tabJournal.Size = new System.Drawing.Size(453, 528);
+            this.tabJournal.TabIndex = 6;
+            this.tabJournal.Text = "Журнал";
+            this.tabJournal.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(341, 487);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(109, 39);
+            this.button2.TabIndex = 65;
+            this.button2.Text = "Удалить";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Location = new System.Drawing.Point(111, 487);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(109, 39);
+            this.button3.TabIndex = 64;
+            this.button3.Text = "Добавить";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Location = new System.Drawing.Point(226, 487);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(109, 39);
+            this.button4.TabIndex = 63;
+            this.button4.Text = "Изменить";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // dgv_journal
+            // 
+            this.dgv_journal.AllowUserToAddRows = false;
+            this.dgv_journal.AllowUserToDeleteRows = false;
+            this.dgv_journal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_journal.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_journal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_journal.Location = new System.Drawing.Point(3, 2);
+            this.dgv_journal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv_journal.MultiSelect = false;
+            this.dgv_journal.Name = "dgv_journal";
+            this.dgv_journal.ReadOnly = true;
+            this.dgv_journal.RowHeadersVisible = false;
+            this.dgv_journal.RowHeadersWidth = 51;
+            this.dgv_journal.RowTemplate.Height = 24;
+            this.dgv_journal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_journal.Size = new System.Drawing.Size(447, 446);
+            this.dgv_journal.TabIndex = 19;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1021,6 +1107,8 @@ namespace ATM_DataBase
             this.tabEquipment.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_atm_equip)).EndInit();
+            this.tabJournal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_journal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1109,6 +1197,12 @@ namespace ATM_DataBase
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TabPage tabJournal;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridView dgv_journal;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

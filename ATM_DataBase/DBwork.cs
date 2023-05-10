@@ -21,7 +21,7 @@ namespace ATM_DataBase
         {
             for (int i = 0; i < dgv.Rows.Count; i++)
             {
-                if ((int)dgv.Rows[i].Cells[0].Value == id)
+                if ((int)dgv.Rows[i].Cells["id"].Value == id)
                     return i;
             }
             return -1;

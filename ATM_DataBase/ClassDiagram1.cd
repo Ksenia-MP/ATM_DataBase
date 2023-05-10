@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ATM_DataBase.DataBase">
+    <Position X="7.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABABAAAQAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>DataBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ATM_DataBase.DBwork" Collapsed="true">
+    <Position X="9" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAEAAAQAAAAAAAAAAAAAAgAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>DBwork.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ATM_DataBase.EditATM" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <AssociationLine Name="dataBase" Type="ATM_DataBase.DataBase" FixedFromPoint="true">
+      <Path>
+        <Point X="12.25" Y="2.812" />
+        <Point X="9.25" Y="2.812" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AACAAAQAAyBEghAAEAiABgACMAAAAAAAACpAAACAAAA=</HashCode>
+      <FileName>EditATM.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dataBase" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ATM_DataBase.EditATMEquip">
+    <Position X="12.25" Y="4.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="dataBase" Type="ATM_DataBase.DataBase" FixedFromPoint="true">
+      <Path>
+        <Point X="12.25" Y="5.427" />
+        <Point X="8.969" Y="5.427" />
+        <Point X="8.969" Y="4.641" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEgiBEgjIAEAyABgASOAAAAIABAiAAAAAEAAA=</HashCode>
+      <FileName>EditATMEquip.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dataBase" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ATM_DataBase.EditATMModel">
+    <Position X="14.5" Y="3" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="dataBase" Type="ATM_DataBase.DataBase" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.5" Y="4.544" />
+        <Point X="14" Y="4.544" />
+        <Point X="14" Y="4.25" />
+        <Point X="9.5" Y="4.25" />
+        <Point X="9.5" Y="4.891" />
+        <Point X="9.063" Y="4.891" />
+        <Point X="9.063" Y="4.641" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>RQAJAAAAACDEgDAAQAiABgASGAAAAAEIAiAAAAEESBA=</HashCode>
+      <FileName>EditATMModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dataBase" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ATM_DataBase.EditATMNet">
+    <Position X="13.75" Y="7.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>cAAAAAAAACGEgBAAAAiABCgSIAAAAAAIACAAAAEAAAA=</HashCode>
+      <FileName>EditATMNet.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dataBase" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ATM_DataBase.EditATMProvider" Collapsed="true">
+    <Position X="12.25" Y="3.25" Width="1.5" />
+    <AssociationLine Name="dataBase" Type="ATM_DataBase.DataBase" FixedFromPoint="true">
+      <Path>
+        <Point X="12.25" Y="3.5" />
+        <Point X="9.25" Y="3.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>DEAAAAAAASAEgGAAQAiIBgACRCAAAAAIACAEAAEEABA=</HashCode>
+      <FileName>EditATMProvider.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dataBase" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ATM_DataBase.EditEquip" Collapsed="true">
+    <Position X="3.75" Y="5.5" Width="1.5" />
+    <AssociationLine Name="dataBase" Type="ATM_DataBase.DataBase" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="5.846" />
+        <Point X="8.25" Y="5.846" />
+        <Point X="8.25" Y="4.641" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAgCAEgBIAAACABAACMCAAAAAIACEAAAEAAAA=</HashCode>
+      <FileName>EditEquip.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dataBase" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ATM_DataBase.EditModel" Collapsed="true">
+    <Position X="3.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RQAJAAAAACBEgBAAAACABAACICAAAAEIACEAAAEACBA=</HashCode>
+      <FileName>EditModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dataBase" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ATM_DataBase.EditProvider" Collapsed="true">
+    <Position X="3.75" Y="6.25" Width="1.5" />
+    <AssociationLine Name="dataBase" Type="ATM_DataBase.DataBase" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="6.344" />
+        <Point X="8.625" Y="6.344" />
+        <Point X="8.625" Y="4.641" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACBEghAAAAiABgACIAAAkAAAAAEAAAAAAAA=</HashCode>
+      <FileName>EditProvider.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dataBase" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ATM_DataBase.Equipment" Collapsed="true">
+    <Position X="3.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAACBEAgAAIAiAAgACABAAAAAAAAAABIAAACA=</HashCode>
+      <FileName>Equipment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dataBase" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ATM_DataBase.MainForm" Collapsed="true">
+    <Position X="10" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/4ygIwUNQfFOh1AEkEaWgFg6EIEMppAAADKQCIghJDA=</HashCode>
+      <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dataBase" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ATM_DataBase.Model" Collapsed="true">
+    <Position X="3.5" Y="2" Width="1.5" />
+    <AssociationLine Name="dataBase" Type="ATM_DataBase.DataBase" FixedFromPoint="true">
+      <Path>
+        <Point X="5" Y="2.438" />
+        <Point X="7.75" Y="2.438" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAACBEAgAAIAiAAgBCAAAAAAAAAAAAAIAAACA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dataBase" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ATM_DataBase.Provider" Collapsed="true">
+    <Position X="3.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAACBEAgAAIAiAAoACAAAAAAAAAAAAAIAAACA=</HashCode>
+      <FileName>Provider.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dataBase" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ATM_DataBase.SetConnection" Collapsed="true">
+    <Position X="10.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAACABAACEAAAAAAIAAAAAAEAgAA=</HashCode>
+      <FileName>SetConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ATM_DataBase.Storage" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAgAQAEACAEgBYAAACCBACCEAhAAAABEAAEAIABBAA=</HashCode>
+      <FileName>Storage.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dataBase" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

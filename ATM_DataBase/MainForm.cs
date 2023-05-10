@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Threading;
+using System.Net.NetworkInformation;
 
 namespace ATM_DataBase
 {
@@ -20,12 +21,20 @@ namespace ATM_DataBase
         public static int ID;   //ID выбранной записи в таблице 
         private bool f_modify_mode; //контроль выбранной записи в таблице
 
+        Image img_on = new Bitmap(Environment.CurrentDirectory + "\\on.png");
+        Image img_off = new Bitmap(Environment.CurrentDirectory + "\\off.png");
+
+
+
         public MainForm()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
 
             dgvATM.DataSource = bindingSource;
+
+            DataGridViewImageColumn imgColumn = new DataGridViewImageColumn(); 
+            dgvATM.Columns.Add(imgColumn);
 
             InitGrid(); //инициализация таблицы ATM
             SetCurrentRow();    //установить текущий ряд
@@ -44,7 +53,16 @@ namespace ATM_DataBase
 
             dgvATM.RowEnter -= new DataGridViewCellEventHandler(this.dgvATM_RowEnter);
             bindingSource.DataSource = table;
-            dgvATM.Columns[0].Visible = false;  //скрываем столбец с таблицами
+            dgvATM.Columns["id"].Visible = false;  //скрываем столбец с таблицами
+            dgvATM.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dgvATM.Columns[0].Width = 34;
+            dgvATM.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dgvATM.Columns[1].Width = 70;
+            dgvATM.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dgvATM.Columns[2].Width = 100;
+
+            
+
             dgvATM.RowEnter += new DataGridViewCellEventHandler(this.dgvATM_RowEnter);
             f_modify_mode = false;
         }
@@ -61,7 +79,7 @@ namespace ATM_DataBase
                 dgvATM.Rows[row].Selected = true;   //фокусинуемся на индексе row
             }
             else if (dgvATM.Rows.Count > 0)     //если записи с указанным ID нет
-                ID = (int)dgvATM.Rows[0].Cells[0].Value;    //ID присваивается значение ID первой записи
+                ID = (int)dgvATM.Rows[0].Cells["id"].Value;    //ID присваивается значение ID первой записи
         }
 
 
@@ -227,6 +245,7 @@ namespace ATM_DataBase
 
             RefreshEquipmetTable();
             RefreshEquipmentFields();
+            RefreshJournalTable();
         }
 
         private void RefreshEquipmetTable()
@@ -237,6 +256,20 @@ namespace ATM_DataBase
 
             dgv_atm_equip.DataSource = equip_table;
             dgv_atm_equip.Columns[0].Visible = false;
+        }
+
+        private void RefreshJournalTable()
+        {
+            string querystring = $"select id, date 'Дата', comments 'Комментарии' from History where atm_id = {ID} order by date DESC, id DESC";
+
+            DataTable journal_table = DBwork.ExeSelect(querystring, dataBase);
+
+            dgv_journal.DataSource = journal_table;
+            dgv_journal.Columns[0].Visible = false; //убираем ID
+
+            dgv_journal.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dgv_journal.Columns[1].Width = 80;
+
         }
 
         private void RefreshEquipmentFields()
@@ -261,7 +294,7 @@ namespace ATM_DataBase
         private void dgvATM_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             if (!f_modify_mode)
-                ID = (int)dgvATM.Rows[e.RowIndex].Cells[0].Value;
+                //ID = (int)dgvATM.Rows[e.RowIndex].Cells[0].Value;
             RefreshTab();
         }
 
@@ -415,6 +448,104 @@ namespace ATM_DataBase
         private void buttonAddToStorage_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (ID != -1)
+            {
+                Journal journal = new Journal(ID);
+                if (journal.ShowDialog() == DialogResult.OK)
+                {
+                    RefreshJournalTable();
+                }
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if(dgv_journal.SelectedRows.Count == 0) return;
+            if (ID == -1) return;
+
+            int j_id = (int)dgv_journal.SelectedRows[0].Cells[0].Value;
+            Journal journal = new Journal(ID, j_id);
+            if (journal.ShowDialog() == DialogResult.OK)
+            {
+                RefreshJournalTable();
+            }
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (dgv_journal.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Не выбрана строка для удаления", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            DialogResult result = MessageBox.Show(
+                "Вы действительно хотите \nудалить выбранную запись?",
+                "Удалить?",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (result == DialogResult.No) return;  //если нажата отмена, не удаляем
+
+            int j_id = (int)dgv_journal.SelectedRows[0].Cells[0].Value;    //Получаем ID выбранной записи
+
+            string querystring = $"delete from History where id = {j_id}";    //строка запроса удаления записи
+
+            DBwork.ExeCommand(querystring, dataBase);   //выполнение запроса
+
+            RefreshJournalTable();
+        }
+
+        private string GetIP(int id)
+        {
+            string querystring = $"select bank_ip from ATM where id = {id}";
+            DataTable table = DBwork.ExeSelect(querystring, dataBase);
+            return table.Rows[0][0].ToString();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Color color;
+            for (int i = 0; i < dgvATM.RowCount; i++)
+            {
+                string ATM_IP = GetIP((int)dgvATM.Rows[i].Cells["id"].Value);
+                ATM_IP = ATM_IP.Replace(" ", "");
+                if (PingHost(ATM_IP)) { dgvATM.Rows[i].Cells[0].Value = img_on; }
+                else { dgvATM.Rows[i].Cells[0].Value = img_off; }
+
+            }
+            
+        }
+
+        public static bool PingHost(string nameOrAddress)
+        {
+            bool pingable = false;
+            Ping pinger = null;
+
+            try
+            {
+                pinger = new Ping();
+                PingReply reply = pinger.Send(nameOrAddress);
+                pingable = reply.Status == IPStatus.Success;
+            }
+            catch (PingException)
+            {
+                // Discard PingExceptions and return false;
+            }
+            finally
+            {
+                if (pinger != null)
+                {
+                    pinger.Dispose();
+                }
+            }
+
+            return pingable;
         }
     }
 }
