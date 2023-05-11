@@ -25,7 +25,8 @@ namespace ATM_DataBase
 
             GetProviders();
 
-            string querystring = $"select ATM.id, provider_id, pr_line_no, pr_contract_no, pr_contract_date, Provider.id, name " +
+            string querystring = $"select ATM.id, provider_id, pr_line_no, pr_contract_no, pr_contract_date, " +
+                $"renter_company, renter_name, renter_phone, Provider.id, name " +
                 $"from ATM left join Provider " +
                 $"on provider_id = Provider.id where ATM.id = {id}";
             DataTable table = DBwork.ExeSelect(querystring,dataBase);
@@ -41,7 +42,9 @@ namespace ATM_DataBase
             tb_pr_line_no.Text = DBwork.FieldByName(table, "pr_line_no").ToString();
             tb_contract_no.Text = DBwork.FieldByName(table, "pr_contract_no").ToString();
             tb_date.Text = DateTime.TryParse(DBwork.FieldByName(table, "pr_contract_date").ToString(), out DateTime dt) ? dt.ToShortDateString() : "";
-            //заполнение полей сделай!!!(>-<)!!!
+            tb_company.Text = DBwork.FieldByName(table, "renter_company").ToString();
+            tb_renter_name.Text = DBwork.FieldByName(table, "renter_name").ToString();
+            tb_phone.Text = DBwork.FieldByName(table, "renter_phone").ToString();
         }
 
         private void GetProviders()
