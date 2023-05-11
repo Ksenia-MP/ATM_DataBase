@@ -41,12 +41,12 @@ namespace ATM_DataBase
             this.tb_e = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tb_serial_no = new System.Windows.Forms.MaskedTextBox();
+            this.tb_bank_no = new System.Windows.Forms.MaskedTextBox();
             this.tb_setting_date = new System.Windows.Forms.MaskedTextBox();
             this.dtp_setting_date = new System.Windows.Forms.DateTimePicker();
             this.ch_ups = new System.Windows.Forms.CheckBox();
             this.buttonEdit = new System.Windows.Forms.Button();
-            this.tb_bank_no = new System.Windows.Forms.MaskedTextBox();
-            this.tb_serial_no = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,7 +86,7 @@ namespace ATM_DataBase
             this.buttonCancel.Location = new System.Drawing.Point(208, 400);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(92, 28);
-            this.buttonCancel.TabIndex = 5;
+            this.buttonCancel.TabIndex = 10;
             this.buttonCancel.Text = "Отмена";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
@@ -109,7 +109,7 @@ namespace ATM_DataBase
             this.tb_address.Multiline = true;
             this.tb_address.Name = "tb_address";
             this.tb_address.Size = new System.Drawing.Size(273, 67);
-            this.tb_address.TabIndex = 6;
+            this.tb_address.TabIndex = 3;
             // 
             // label4
             // 
@@ -125,7 +125,7 @@ namespace ATM_DataBase
             this.tb_n.Location = new System.Drawing.Point(9, 249);
             this.tb_n.Name = "tb_n";
             this.tb_n.Size = new System.Drawing.Size(101, 22);
-            this.tb_n.TabIndex = 8;
+            this.tb_n.TabIndex = 4;
             // 
             // label5
             // 
@@ -141,7 +141,7 @@ namespace ATM_DataBase
             this.tb_e.Location = new System.Drawing.Point(126, 249);
             this.tb_e.Name = "tb_e";
             this.tb_e.Size = new System.Drawing.Size(101, 22);
-            this.tb_e.TabIndex = 10;
+            this.tb_e.TabIndex = 5;
             // 
             // label6
             // 
@@ -177,13 +177,30 @@ namespace ATM_DataBase
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Основные параметры";
             // 
+            // tb_serial_no
+            // 
+            this.tb_serial_no.Location = new System.Drawing.Point(9, 93);
+            this.tb_serial_no.Mask = "0000000000";
+            this.tb_serial_no.Name = "tb_serial_no";
+            this.tb_serial_no.Size = new System.Drawing.Size(273, 22);
+            this.tb_serial_no.TabIndex = 2;
+            // 
+            // tb_bank_no
+            // 
+            this.tb_bank_no.Location = new System.Drawing.Point(9, 38);
+            this.tb_bank_no.Mask = "00000";
+            this.tb_bank_no.Name = "tb_bank_no";
+            this.tb_bank_no.Size = new System.Drawing.Size(273, 22);
+            this.tb_bank_no.TabIndex = 1;
+            this.tb_bank_no.ValidatingType = typeof(int);
+            // 
             // tb_setting_date
             // 
             this.tb_setting_date.Location = new System.Drawing.Point(9, 305);
             this.tb_setting_date.Mask = "00/00/0000";
             this.tb_setting_date.Name = "tb_setting_date";
             this.tb_setting_date.Size = new System.Drawing.Size(135, 22);
-            this.tb_setting_date.TabIndex = 23;
+            this.tb_setting_date.TabIndex = 6;
             this.tb_setting_date.ValidatingType = typeof(System.DateTime);
             // 
             // dtp_setting_date
@@ -192,7 +209,7 @@ namespace ATM_DataBase
             this.dtp_setting_date.Location = new System.Drawing.Point(147, 305);
             this.dtp_setting_date.Name = "dtp_setting_date";
             this.dtp_setting_date.Size = new System.Drawing.Size(18, 22);
-            this.dtp_setting_date.TabIndex = 22;
+            this.dtp_setting_date.TabIndex = 7;
             this.dtp_setting_date.ValueChanged += new System.EventHandler(this.dtp_setting_date_ValueChanged);
             // 
             // ch_ups
@@ -201,7 +218,7 @@ namespace ATM_DataBase
             this.ch_ups.Location = new System.Drawing.Point(9, 343);
             this.ch_ups.Name = "ch_ups";
             this.ch_ups.Size = new System.Drawing.Size(58, 21);
-            this.ch_ups.TabIndex = 15;
+            this.ch_ups.TabIndex = 8;
             this.ch_ups.Text = "UPS";
             this.ch_ups.UseVisualStyleBackColor = true;
             // 
@@ -211,27 +228,10 @@ namespace ATM_DataBase
             this.buttonEdit.Location = new System.Drawing.Point(106, 400);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(92, 28);
-            this.buttonEdit.TabIndex = 18;
+            this.buttonEdit.TabIndex = 9;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = true;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
-            // 
-            // tb_bank_no
-            // 
-            this.tb_bank_no.Location = new System.Drawing.Point(9, 38);
-            this.tb_bank_no.Mask = "00000";
-            this.tb_bank_no.Name = "tb_bank_no";
-            this.tb_bank_no.Size = new System.Drawing.Size(273, 22);
-            this.tb_bank_no.TabIndex = 24;
-            this.tb_bank_no.ValidatingType = typeof(int);
-            // 
-            // tb_serial_no
-            // 
-            this.tb_serial_no.Location = new System.Drawing.Point(9, 93);
-            this.tb_serial_no.Mask = "0000000000";
-            this.tb_serial_no.Name = "tb_serial_no";
-            this.tb_serial_no.Size = new System.Drawing.Size(273, 22);
-            this.tb_serial_no.TabIndex = 25;
             // 
             // EditATM
             // 

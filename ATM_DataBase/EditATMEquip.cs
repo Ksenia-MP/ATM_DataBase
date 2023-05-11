@@ -139,9 +139,16 @@ namespace ATM_DataBase
                     eq_id = (int)id_and_name[i, 0];
             }
 
-            string s_eq_id = eq_id == 0 ? "NULL" : eq_id.ToString();
+            if (eq_id == 0)
+            {
+                MessageBox.Show("Не выбрано оборудование", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            string querystring = $"update ATM_Eq set sn = '{tb_sn.Text}', " +
+            string s_eq_id = eq_id.ToString();
+            string s_atm_id = ID == -1 ? "NULL" : ID.ToString();
+
+            string querystring = $"update ATM_Eq set atm_id = {s_atm_id}, sn = '{tb_sn.Text}', " +
                 $"part_no = '{tb_part_no.Text}', equipment_id = '{s_eq_id}' " +
                 $"where id = {ATMeq_ID}"; //and atm_id = {ID}";
             

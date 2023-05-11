@@ -30,7 +30,7 @@ namespace ATM_DataBase
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvATM = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,7 +77,7 @@ namespace ATM_DataBase
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.buttonEdit_net = new System.Windows.Forms.Button();
-            this.tabProvider = new System.Windows.Forms.TabPage();
+            this.tabContacts = new System.Windows.Forms.TabPage();
             this.lb_pr_contract_date = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.lb_pr_contract_no = new System.Windows.Forms.Label();
@@ -85,7 +85,6 @@ namespace ATM_DataBase
             this.lb_pr_line_no = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.lb_pr_name = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.buttonEdit_provider = new System.Windows.Forms.Button();
             this.tabModel = new System.Windows.Forms.TabPage();
             this.lb_weight = new System.Windows.Forms.Label();
@@ -101,11 +100,11 @@ namespace ATM_DataBase
             this.label29 = new System.Windows.Forms.Label();
             this.buttonEdit_model = new System.Windows.Forms.Button();
             this.tabEquipment = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDelEquip = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonDelEquip = new System.Windows.Forms.Button();
+            this.buttonRetEquip = new System.Windows.Forms.Button();
             this.buttonAddEquip = new System.Windows.Forms.Button();
-            this.buttonAddToStorage = new System.Windows.Forms.Button();
+            this.buttonCreateEquip = new System.Windows.Forms.Button();
             this.buttonEditEquip = new System.Windows.Forms.Button();
             this.lb_eq_part_no = new System.Windows.Forms.Label();
             this.lb_eq_sn = new System.Windows.Forms.Label();
@@ -113,23 +112,34 @@ namespace ATM_DataBase
             this.label32 = new System.Windows.Forms.Label();
             this.dgv_atm_equip = new System.Windows.Forms.DataGridView();
             this.tabJournal = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnDelJournal = new System.Windows.Forms.Button();
+            this.btnAddJournal = new System.Windows.Forms.Button();
+            this.btnEditJournal = new System.Windows.Forms.Button();
             this.dgv_journal = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lb_renter_company = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lb_renter_phone = new System.Windows.Forms.Label();
+            this.lb_renter_name = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvATM)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabGeneral.SuspendLayout();
             this.tabNet.SuspendLayout();
-            this.tabProvider.SuspendLayout();
+            this.tabContacts.SuspendLayout();
             this.tabModel.SuspendLayout();
             this.tabEquipment.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_atm_equip)).BeginInit();
             this.tabJournal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_journal)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvATM
@@ -142,14 +152,14 @@ namespace ATM_DataBase
             this.dgvATM.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvATM.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvATM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvATM.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvATM.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvATM.Location = new System.Drawing.Point(12, 31);
             this.dgvATM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvATM.MultiSelect = false;
@@ -159,7 +169,7 @@ namespace ATM_DataBase
             this.dgvATM.RowHeadersWidth = 51;
             this.dgvATM.RowTemplate.Height = 24;
             this.dgvATM.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvATM.Size = new System.Drawing.Size(544, 557);
+            this.dgvATM.Size = new System.Drawing.Size(563, 552);
             this.dgvATM.TabIndex = 0;
             this.dgvATM.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvATM_RowEnter);
             // 
@@ -174,7 +184,7 @@ namespace ATM_DataBase
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1034, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1053, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -279,15 +289,15 @@ namespace ATM_DataBase
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabGeneral);
             this.tabControl1.Controls.Add(this.tabNet);
-            this.tabControl1.Controls.Add(this.tabProvider);
+            this.tabControl1.Controls.Add(this.tabContacts);
             this.tabControl1.Controls.Add(this.tabModel);
             this.tabControl1.Controls.Add(this.tabEquipment);
             this.tabControl1.Controls.Add(this.tabJournal);
-            this.tabControl1.Location = new System.Drawing.Point(561, 31);
+            this.tabControl1.Location = new System.Drawing.Point(580, 31);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(461, 557);
+            this.tabControl1.Size = new System.Drawing.Size(461, 552);
             this.tabControl1.TabIndex = 2;
             // 
             // tabGeneral
@@ -612,30 +622,24 @@ namespace ATM_DataBase
             this.buttonEdit_net.UseVisualStyleBackColor = true;
             this.buttonEdit_net.Click += new System.EventHandler(this.buttonEdit_net_Click);
             // 
-            // tabProvider
+            // tabContacts
             // 
-            this.tabProvider.Controls.Add(this.lb_pr_contract_date);
-            this.tabProvider.Controls.Add(this.label27);
-            this.tabProvider.Controls.Add(this.lb_pr_contract_no);
-            this.tabProvider.Controls.Add(this.label25);
-            this.tabProvider.Controls.Add(this.lb_pr_line_no);
-            this.tabProvider.Controls.Add(this.label23);
-            this.tabProvider.Controls.Add(this.lb_pr_name);
-            this.tabProvider.Controls.Add(this.label21);
-            this.tabProvider.Controls.Add(this.buttonEdit_provider);
-            this.tabProvider.Location = new System.Drawing.Point(4, 25);
-            this.tabProvider.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabProvider.Name = "tabProvider";
-            this.tabProvider.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabProvider.Size = new System.Drawing.Size(453, 528);
-            this.tabProvider.TabIndex = 3;
-            this.tabProvider.Text = "Провайдер";
-            this.tabProvider.UseVisualStyleBackColor = true;
+            this.tabContacts.Controls.Add(this.groupBox3);
+            this.tabContacts.Controls.Add(this.groupBox2);
+            this.tabContacts.Controls.Add(this.buttonEdit_provider);
+            this.tabContacts.Location = new System.Drawing.Point(4, 25);
+            this.tabContacts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabContacts.Name = "tabContacts";
+            this.tabContacts.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabContacts.Size = new System.Drawing.Size(453, 523);
+            this.tabContacts.TabIndex = 3;
+            this.tabContacts.Text = "Контакты";
+            this.tabContacts.UseVisualStyleBackColor = true;
             // 
             // lb_pr_contract_date
             // 
             this.lb_pr_contract_date.AutoSize = true;
-            this.lb_pr_contract_date.Location = new System.Drawing.Point(157, 97);
+            this.lb_pr_contract_date.Location = new System.Drawing.Point(144, 110);
             this.lb_pr_contract_date.Name = "lb_pr_contract_date";
             this.lb_pr_contract_date.Size = new System.Drawing.Size(88, 17);
             this.lb_pr_contract_date.TabIndex = 38;
@@ -644,7 +648,7 @@ namespace ATM_DataBase
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(19, 97);
+            this.label27.Location = new System.Drawing.Point(6, 110);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(114, 17);
             this.label27.TabIndex = 37;
@@ -653,7 +657,7 @@ namespace ATM_DataBase
             // lb_pr_contract_no
             // 
             this.lb_pr_contract_no.AutoSize = true;
-            this.lb_pr_contract_no.Location = new System.Drawing.Point(157, 70);
+            this.lb_pr_contract_no.Location = new System.Drawing.Point(144, 83);
             this.lb_pr_contract_no.Name = "lb_pr_contract_no";
             this.lb_pr_contract_no.Size = new System.Drawing.Size(168, 17);
             this.lb_pr_contract_no.TabIndex = 36;
@@ -662,7 +666,7 @@ namespace ATM_DataBase
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(19, 70);
+            this.label25.Location = new System.Drawing.Point(6, 83);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(90, 17);
             this.label25.TabIndex = 35;
@@ -671,7 +675,7 @@ namespace ATM_DataBase
             // lb_pr_line_no
             // 
             this.lb_pr_line_no.AutoSize = true;
-            this.lb_pr_line_no.Location = new System.Drawing.Point(157, 42);
+            this.lb_pr_line_no.Location = new System.Drawing.Point(144, 55);
             this.lb_pr_line_no.Name = "lb_pr_line_no";
             this.lb_pr_line_no.Size = new System.Drawing.Size(168, 17);
             this.lb_pr_line_no.TabIndex = 34;
@@ -680,7 +684,7 @@ namespace ATM_DataBase
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(19, 42);
+            this.label23.Location = new System.Drawing.Point(6, 55);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(70, 17);
             this.label23.TabIndex = 33;
@@ -689,25 +693,16 @@ namespace ATM_DataBase
             // lb_pr_name
             // 
             this.lb_pr_name.AutoSize = true;
-            this.lb_pr_name.Location = new System.Drawing.Point(157, 14);
+            this.lb_pr_name.Location = new System.Drawing.Point(144, 27);
             this.lb_pr_name.Name = "lb_pr_name";
             this.lb_pr_name.Size = new System.Drawing.Size(168, 17);
             this.lb_pr_name.TabIndex = 32;
             this.lb_pr_name.Text = "____________________";
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(19, 14);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(85, 17);
-            this.label21.TabIndex = 31;
-            this.label21.Text = "Провайдер:";
-            // 
             // buttonEdit_provider
             // 
             this.buttonEdit_provider.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEdit_provider.Location = new System.Drawing.Point(358, 490);
+            this.buttonEdit_provider.Location = new System.Drawing.Point(358, 485);
             this.buttonEdit_provider.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEdit_provider.Name = "buttonEdit_provider";
             this.buttonEdit_provider.Size = new System.Drawing.Size(89, 30);
@@ -854,9 +849,9 @@ namespace ATM_DataBase
             // 
             // tabEquipment
             // 
-            this.tabEquipment.Controls.Add(this.button1);
+            this.tabEquipment.Controls.Add(this.btnDelEquip);
             this.tabEquipment.Controls.Add(this.groupBox1);
-            this.tabEquipment.Controls.Add(this.buttonAddToStorage);
+            this.tabEquipment.Controls.Add(this.buttonCreateEquip);
             this.tabEquipment.Controls.Add(this.buttonEditEquip);
             this.tabEquipment.Controls.Add(this.lb_eq_part_no);
             this.tabEquipment.Controls.Add(this.lb_eq_sn);
@@ -871,21 +866,22 @@ namespace ATM_DataBase
             this.tabEquipment.Text = "Оборудование";
             this.tabEquipment.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnDelEquip
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(334, 391);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 39);
-            this.button1.TabIndex = 62;
-            this.button1.Text = "Удалить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDelEquip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelEquip.Location = new System.Drawing.Point(334, 391);
+            this.btnDelEquip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelEquip.Name = "btnDelEquip";
+            this.btnDelEquip.Size = new System.Drawing.Size(109, 39);
+            this.btnDelEquip.TabIndex = 62;
+            this.btnDelEquip.Text = "Удалить";
+            this.btnDelEquip.UseVisualStyleBackColor = true;
+            this.btnDelEquip.Click += new System.EventHandler(this.btnDelEquip_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.buttonDelEquip);
+            this.groupBox1.Controls.Add(this.buttonRetEquip);
             this.groupBox1.Controls.Add(this.buttonAddEquip);
             this.groupBox1.Location = new System.Drawing.Point(104, 451);
             this.groupBox1.Name = "groupBox1";
@@ -894,16 +890,16 @@ namespace ATM_DataBase
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Операции со складом";
             // 
-            // buttonDelEquip
+            // buttonRetEquip
             // 
-            this.buttonDelEquip.Location = new System.Drawing.Point(182, 20);
-            this.buttonDelEquip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonDelEquip.Name = "buttonDelEquip";
-            this.buttonDelEquip.Size = new System.Drawing.Size(156, 39);
-            this.buttonDelEquip.TabIndex = 20;
-            this.buttonDelEquip.Text = "Вернуть на склад";
-            this.buttonDelEquip.UseVisualStyleBackColor = true;
-            this.buttonDelEquip.Click += new System.EventHandler(this.buttonDelEquip_Click);
+            this.buttonRetEquip.Location = new System.Drawing.Point(182, 20);
+            this.buttonRetEquip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonRetEquip.Name = "buttonRetEquip";
+            this.buttonRetEquip.Size = new System.Drawing.Size(156, 39);
+            this.buttonRetEquip.TabIndex = 20;
+            this.buttonRetEquip.Text = "Вернуть на склад";
+            this.buttonRetEquip.UseVisualStyleBackColor = true;
+            this.buttonRetEquip.Click += new System.EventHandler(this.buttonRetEquip_Click);
             // 
             // buttonAddEquip
             // 
@@ -916,17 +912,17 @@ namespace ATM_DataBase
             this.buttonAddEquip.UseVisualStyleBackColor = true;
             this.buttonAddEquip.Click += new System.EventHandler(this.buttonAddEquip_Click);
             // 
-            // buttonAddToStorage
+            // buttonCreateEquip
             // 
-            this.buttonAddToStorage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAddToStorage.Location = new System.Drawing.Point(104, 391);
-            this.buttonAddToStorage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonAddToStorage.Name = "buttonAddToStorage";
-            this.buttonAddToStorage.Size = new System.Drawing.Size(109, 39);
-            this.buttonAddToStorage.TabIndex = 60;
-            this.buttonAddToStorage.Text = "Добавить";
-            this.buttonAddToStorage.UseVisualStyleBackColor = true;
-            this.buttonAddToStorage.Click += new System.EventHandler(this.buttonAddToStorage_Click);
+            this.buttonCreateEquip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCreateEquip.Location = new System.Drawing.Point(104, 391);
+            this.buttonCreateEquip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCreateEquip.Name = "buttonCreateEquip";
+            this.buttonCreateEquip.Size = new System.Drawing.Size(109, 39);
+            this.buttonCreateEquip.TabIndex = 60;
+            this.buttonCreateEquip.Text = "Добавить";
+            this.buttonCreateEquip.UseVisualStyleBackColor = true;
+            this.buttonCreateEquip.Click += new System.EventHandler(this.buttonCreateEquip_Click);
             // 
             // buttonEditEquip
             // 
@@ -1004,9 +1000,9 @@ namespace ATM_DataBase
             // 
             // tabJournal
             // 
-            this.tabJournal.Controls.Add(this.button2);
-            this.tabJournal.Controls.Add(this.button3);
-            this.tabJournal.Controls.Add(this.button4);
+            this.tabJournal.Controls.Add(this.btnDelJournal);
+            this.tabJournal.Controls.Add(this.btnAddJournal);
+            this.tabJournal.Controls.Add(this.btnEditJournal);
             this.tabJournal.Controls.Add(this.dgv_journal);
             this.tabJournal.Location = new System.Drawing.Point(4, 25);
             this.tabJournal.Name = "tabJournal";
@@ -1015,41 +1011,41 @@ namespace ATM_DataBase
             this.tabJournal.Text = "Журнал";
             this.tabJournal.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnDelJournal
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(341, 487);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 39);
-            this.button2.TabIndex = 65;
-            this.button2.Text = "Удалить";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnDelJournal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelJournal.Location = new System.Drawing.Point(341, 487);
+            this.btnDelJournal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelJournal.Name = "btnDelJournal";
+            this.btnDelJournal.Size = new System.Drawing.Size(109, 39);
+            this.btnDelJournal.TabIndex = 65;
+            this.btnDelJournal.Text = "Удалить";
+            this.btnDelJournal.UseVisualStyleBackColor = true;
+            this.btnDelJournal.Click += new System.EventHandler(this.buttonDelJournal_Click);
             // 
-            // button3
+            // btnAddJournal
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(111, 487);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 39);
-            this.button3.TabIndex = 64;
-            this.button3.Text = "Добавить";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnAddJournal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddJournal.Location = new System.Drawing.Point(111, 487);
+            this.btnAddJournal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddJournal.Name = "btnAddJournal";
+            this.btnAddJournal.Size = new System.Drawing.Size(109, 39);
+            this.btnAddJournal.TabIndex = 64;
+            this.btnAddJournal.Text = "Добавить";
+            this.btnAddJournal.UseVisualStyleBackColor = true;
+            this.btnAddJournal.Click += new System.EventHandler(this.buttonAddJournal_Click);
             // 
-            // button4
+            // btnEditJournal
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(226, 487);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(109, 39);
-            this.button4.TabIndex = 63;
-            this.button4.Text = "Изменить";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnEditJournal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditJournal.Location = new System.Drawing.Point(226, 487);
+            this.btnEditJournal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEditJournal.Name = "btnEditJournal";
+            this.btnEditJournal.Size = new System.Drawing.Size(109, 39);
+            this.btnEditJournal.TabIndex = 63;
+            this.btnEditJournal.Text = "Изменить";
+            this.btnEditJournal.UseVisualStyleBackColor = true;
+            this.btnEditJournal.Click += new System.EventHandler(this.buttonEditJournal_Click);
             // 
             // dgv_journal
             // 
@@ -1078,11 +1074,110 @@ namespace ATM_DataBase
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.label21);
+            this.groupBox2.Controls.Add(this.lb_pr_contract_date);
+            this.groupBox2.Controls.Add(this.lb_pr_name);
+            this.groupBox2.Controls.Add(this.label27);
+            this.groupBox2.Controls.Add(this.label23);
+            this.groupBox2.Controls.Add(this.lb_pr_contract_no);
+            this.groupBox2.Controls.Add(this.lb_pr_line_no);
+            this.groupBox2.Controls.Add(this.label25);
+            this.groupBox2.Location = new System.Drawing.Point(6, 5);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(441, 151);
+            this.groupBox2.TabIndex = 39;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Провайдер";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 27);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(110, 17);
+            this.label21.TabIndex = 31;
+            this.label21.Text = "Наименование:";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Controls.Add(this.lb_renter_company);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.lb_renter_phone);
+            this.groupBox3.Controls.Add(this.lb_renter_name);
+            this.groupBox3.Controls.Add(this.label30);
+            this.groupBox3.Location = new System.Drawing.Point(6, 172);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(441, 151);
+            this.groupBox3.TabIndex = 40;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Арендодатель";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 17);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Организация:";
+            // 
+            // lb_renter_company
+            // 
+            this.lb_renter_company.AutoSize = true;
+            this.lb_renter_company.Location = new System.Drawing.Point(144, 27);
+            this.lb_renter_company.Name = "lb_renter_company";
+            this.lb_renter_company.Size = new System.Drawing.Size(208, 17);
+            this.lb_renter_company.TabIndex = 32;
+            this.lb_renter_company.Text = "_________________________";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 55);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(126, 17);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "Контактное лицо:";
+            // 
+            // lb_renter_phone
+            // 
+            this.lb_renter_phone.AutoSize = true;
+            this.lb_renter_phone.Location = new System.Drawing.Point(144, 83);
+            this.lb_renter_phone.Name = "lb_renter_phone";
+            this.lb_renter_phone.Size = new System.Drawing.Size(128, 17);
+            this.lb_renter_phone.TabIndex = 36;
+            this.lb_renter_phone.Text = "_______________";
+            // 
+            // lb_renter_name
+            // 
+            this.lb_renter_name.AutoSize = true;
+            this.lb_renter_name.Location = new System.Drawing.Point(144, 55);
+            this.lb_renter_name.Name = "lb_renter_name";
+            this.lb_renter_name.Size = new System.Drawing.Size(208, 17);
+            this.lb_renter_name.TabIndex = 34;
+            this.lb_renter_name.Text = "_________________________";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(6, 83);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(125, 17);
+            this.label30.TabIndex = 35;
+            this.label30.Text = "Номер телефона:";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 599);
+            this.ClientSize = new System.Drawing.Size(1053, 594);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.dgvATM);
             this.Controls.Add(this.menuStrip1);
@@ -1099,8 +1194,7 @@ namespace ATM_DataBase
             this.tabGeneral.PerformLayout();
             this.tabNet.ResumeLayout(false);
             this.tabNet.PerformLayout();
-            this.tabProvider.ResumeLayout(false);
-            this.tabProvider.PerformLayout();
+            this.tabContacts.ResumeLayout(false);
             this.tabModel.ResumeLayout(false);
             this.tabModel.PerformLayout();
             this.tabEquipment.ResumeLayout(false);
@@ -1109,6 +1203,10 @@ namespace ATM_DataBase
             ((System.ComponentModel.ISupportInitialize)(this.dgv_atm_equip)).EndInit();
             this.tabJournal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_journal)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1158,12 +1256,11 @@ namespace ATM_DataBase
         private System.Windows.Forms.Label lb_bank_ip;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.CheckBox ch_ups;
-        private System.Windows.Forms.TabPage tabProvider;
+        private System.Windows.Forms.TabPage tabContacts;
         private System.Windows.Forms.Button buttonEdit_provider;
         private System.Windows.Forms.Label lb_pr_line_no;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label lb_pr_name;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label lb_pr_contract_date;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label lb_pr_contract_no;
@@ -1184,7 +1281,7 @@ namespace ATM_DataBase
         private System.Windows.Forms.Button buttonEdit_model;
         private System.Windows.Forms.ToolStripMenuItem ModelToolStripMenuItem;
         private System.Windows.Forms.TabPage tabEquipment;
-        private System.Windows.Forms.Button buttonDelEquip;
+        private System.Windows.Forms.Button buttonRetEquip;
         private System.Windows.Forms.Button buttonAddEquip;
         private System.Windows.Forms.DataGridView dgv_atm_equip;
         private System.Windows.Forms.Button buttonEditEquip;
@@ -1193,16 +1290,25 @@ namespace ATM_DataBase
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.ToolStripMenuItem storageToolStripMenuItem;
-        private System.Windows.Forms.Button buttonAddToStorage;
+        private System.Windows.Forms.Button buttonCreateEquip;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDelEquip;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TabPage tabJournal;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnDelJournal;
+        private System.Windows.Forms.Button btnAddJournal;
+        private System.Windows.Forms.Button btnEditJournal;
         private System.Windows.Forms.DataGridView dgv_journal;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lb_renter_company;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lb_renter_phone;
+        private System.Windows.Forms.Label lb_renter_name;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label21;
     }
 }
 

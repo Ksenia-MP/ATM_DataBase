@@ -56,10 +56,10 @@ namespace ATM_DataBase
             dgvATM.Columns["id"].Visible = false;  //скрываем столбец с таблицами
             dgvATM.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             dgvATM.Columns[0].Width = 34;
-            dgvATM.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dgvATM.Columns[1].Width = 70;
-            dgvATM.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dgvATM.Columns[2].Width = 100;
+            dgvATM.Columns["№ ATM"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dgvATM.Columns["№ ATM"].Width = 70;
+            dgvATM.Columns["S/N"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dgvATM.Columns["S/N"].Width = 100;
 
             
 
@@ -116,7 +116,7 @@ namespace ATM_DataBase
                 return;
             }
 
-            ID = (int)dgvATM.SelectedRows[0].Cells[0].Value; //нулевой столбец содержит ID (Visible = false)
+            ID = (int)dgvATM.SelectedRows[0].Cells["id"].Value; //нулевой столбец содержит ID (Visible = false)
             EditATM edit = new EditATM(ID);
             edit.ShowDialog();
             InitGrid();         //обновляем таблицу
@@ -146,7 +146,7 @@ namespace ATM_DataBase
 
             if (result == DialogResult.No) return;  //если нажата отмена, не удаляем
 
-            ID = (int)dgvATM.SelectedRows[0].Cells[0].Value;    //Получаем ID выбранной записи
+            ID = (int)dgvATM.SelectedRows[0].Cells["id"].Value;    //Получаем ID выбранной записи
 
             string querystring = $"delete from ATM where id = {ID}";    //строка запроса удаления записи
 
@@ -184,6 +184,8 @@ namespace ATM_DataBase
             lb_pr_line_no.Text = "____________________";
             lb_pr_contract_no.Text = "____________________";
             lb_pr_contract_date.Text = "__________";
+            lb_renter_company.Text = "_________________________";
+            lb_renter_name.Text = "_________________________";
 
             lb_model_name.Text = "_______________";
             lb_weight.Text = "_______________";
@@ -217,6 +219,9 @@ namespace ATM_DataBase
             lb_pr_line_no.Text = DBwork.FieldByName(table, "pr_line_no").ToString();
             lb_pr_contract_no.Text = DBwork.FieldByName(table, "pr_contract_no").ToString();
             lb_pr_contract_date.Text = DateTime.TryParse(DBwork.FieldByName(table, "pr_contract_date").ToString(), out DateTime dt) ? dt.ToShortDateString() : "";
+            lb_renter_company.Text = DBwork.FieldByName(table, "renter_company").ToString();
+            lb_renter_name.Text = DBwork.FieldByName(table, "renter_name").ToString();
+            lb_renter_phone.Text = DBwork.FieldByName(table, "renter_phone").ToString();
 
             if (int.TryParse(DBwork.FieldByName(table, "provider_id").ToString(), out int pr_id))
             {
@@ -294,7 +299,7 @@ namespace ATM_DataBase
         private void dgvATM_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             if (!f_modify_mode)
-                //ID = (int)dgvATM.Rows[e.RowIndex].Cells[0].Value;
+                ID = (int)dgvATM.Rows[e.RowIndex].Cells["id"].Value;
             RefreshTab();
         }
 
@@ -377,12 +382,13 @@ namespace ATM_DataBase
             RefreshEquipmentFields();
         }
 
-        private void buttonAddEquip_Click(object sender, EventArgs e)
+        //операции с оборудованием 
+        private void buttonCreateEquip_Click(object sender, EventArgs e)
         {
             if (ID != -1)
             {
-                Storage storage = new Storage(ID);
-                if (storage.ShowDialog() == DialogResult.OK)
+                EditATMEquip edit = new EditATMEquip(ID);
+                if (edit.ShowDialog() == DialogResult.OK)
                 {
                     RefreshEquipmetTable();
                     RefreshEquipmentFields();
@@ -396,12 +402,12 @@ namespace ATM_DataBase
             {
                 if (dgv_atm_equip.SelectedRows.Count == 0)
                 {
-                    MessageBox.Show("Не выбрана строка для удаления", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Не выбрана строка для изменения", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
                 int atm_eq_id = (int)dgv_atm_equip.SelectedRows[0].Cells[0].Value;
-                EditATMEquip edit = new EditATMEquip(atm_eq_id);
+                EditATMEquip edit = new EditATMEquip(ID, atm_eq_id);
                 if (edit.ShowDialog() == DialogResult.OK)
                 {
                     RefreshEquipmetTable();
@@ -410,7 +416,51 @@ namespace ATM_DataBase
             }
         }
 
-        private void buttonDelEquip_Click(object sender, EventArgs e)
+        private void btnDelEquip_Click(object sender, EventArgs e)
+        {
+            if (ID != -1)
+            {
+                if (dgv_atm_equip.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Не выбрана строка для удаления", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                DialogResult result = MessageBox.Show(
+                    "Вы действительно хотите \nудалить выбранную запись?",
+                    "Удалить?",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+                if (result == DialogResult.No) return;  //если нажата отмена, не удаляем
+
+                int atm_eq_id = (int)dgv_atm_equip.SelectedRows[0].Cells[0].Value;
+
+                string querystring = $"delete from ATM_Eq where id = {atm_eq_id}";
+                DBwork.ExeCommand(querystring, dataBase);   //выполнение запроса
+
+                RefreshEquipmetTable();
+                RefreshEquipmentFields();
+                
+            }
+        }
+
+
+        //операции со складом
+        private void buttonAddEquip_Click(object sender, EventArgs e)
+        {
+            if (ID != -1)
+            {
+                Storage storage = new Storage(ID);
+                if (storage.ShowDialog() == DialogResult.OK)
+                {
+                    RefreshEquipmetTable();
+                    RefreshEquipmentFields();
+                }
+            }
+        }
+
+        private void buttonRetEquip_Click(object sender, EventArgs e)
         {
             if (ID != -1)
             {
@@ -445,12 +495,9 @@ namespace ATM_DataBase
             storage.ShowDialog();
         }
 
-        private void buttonAddToStorage_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        
+        //операции с журналом
+        private void buttonAddJournal_Click(object sender, EventArgs e)
         {
             if (ID != -1)
             {
@@ -462,7 +509,7 @@ namespace ATM_DataBase
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void buttonEditJournal_Click(object sender, EventArgs e)
         {
             if(dgv_journal.SelectedRows.Count == 0) return;
             if (ID == -1) return;
@@ -476,7 +523,7 @@ namespace ATM_DataBase
             
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonDelJournal_Click(object sender, EventArgs e)
         {
             if (dgv_journal.SelectedRows.Count == 0)
             {
@@ -501,6 +548,8 @@ namespace ATM_DataBase
             RefreshJournalTable();
         }
 
+
+        //мониторинг
         private string GetIP(int id)
         {
             string querystring = $"select bank_ip from ATM where id = {id}";
@@ -510,16 +559,14 @@ namespace ATM_DataBase
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Color color;
             for (int i = 0; i < dgvATM.RowCount; i++)
             {
                 string ATM_IP = GetIP((int)dgvATM.Rows[i].Cells["id"].Value);
                 ATM_IP = ATM_IP.Replace(" ", "");
+                if (ATM_IP == "") { ATM_IP = "...."; }
                 if (PingHost(ATM_IP)) { dgvATM.Rows[i].Cells[0].Value = img_on; }
                 else { dgvATM.Rows[i].Cells[0].Value = img_off; }
-
             }
-            
         }
 
         public static bool PingHost(string nameOrAddress)
@@ -547,5 +594,6 @@ namespace ATM_DataBase
 
             return pingable;
         }
+
     }
 }

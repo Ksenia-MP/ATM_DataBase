@@ -38,6 +38,7 @@ namespace ATM_DataBase
             this.label2 = new System.Windows.Forms.Label();
             this.cb_type = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +49,7 @@ namespace ATM_DataBase
             this.buttonOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(81, 26);
-            this.buttonOK.TabIndex = 0;
+            this.buttonOK.TabIndex = 4;
             this.buttonOK.Text = "OK";
             this.buttonOK.UseVisualStyleBackColor = true;
             this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
@@ -61,7 +62,7 @@ namespace ATM_DataBase
             this.buttonCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(81, 26);
-            this.buttonCancel.TabIndex = 1;
+            this.buttonCancel.TabIndex = 5;
             this.buttonCancel.Text = "Отмена";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
@@ -73,7 +74,7 @@ namespace ATM_DataBase
             this.ch_usb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ch_usb.Name = "ch_usb";
             this.ch_usb.Size = new System.Drawing.Size(58, 21);
-            this.ch_usb.TabIndex = 2;
+            this.ch_usb.TabIndex = 3;
             this.ch_usb.Text = "USB";
             this.ch_usb.UseVisualStyleBackColor = true;
             // 
@@ -84,7 +85,7 @@ namespace ATM_DataBase
             this.ch_com.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ch_com.Name = "ch_com";
             this.ch_com.Size = new System.Drawing.Size(61, 21);
-            this.ch_com.TabIndex = 3;
+            this.ch_com.TabIndex = 4;
             this.ch_com.Text = "COM";
             this.ch_com.UseVisualStyleBackColor = true;
             // 
@@ -96,7 +97,7 @@ namespace ATM_DataBase
             this.tb_name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_name.Name = "tb_name";
             this.tb_name.Size = new System.Drawing.Size(313, 22);
-            this.tb_name.TabIndex = 5;
+            this.tb_name.TabIndex = 2;
             // 
             // label1
             // 
@@ -124,17 +125,20 @@ namespace ATM_DataBase
             // 
             this.cb_type.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cb_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_type.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_type.FormattingEnabled = true;
             this.cb_type.Items.AddRange(new object[] {
             "Чековый принтер",
             "Журнальный принтер",
             "Картридер",
-            "Клавиатура"});
+            "Клавиатура",
+            "Другое"});
             this.cb_type.Location = new System.Drawing.Point(5, 44);
             this.cb_type.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cb_type.Name = "cb_type";
             this.cb_type.Size = new System.Drawing.Size(312, 24);
-            this.cb_type.TabIndex = 8;
+            this.cb_type.TabIndex = 1;
             // 
             // groupBox1
             // 
@@ -146,6 +150,7 @@ namespace ATM_DataBase
             this.groupBox1.Controls.Add(this.tb_name);
             this.groupBox1.Controls.Add(this.ch_com);
             this.groupBox1.Controls.Add(this.ch_usb);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Location = new System.Drawing.Point(12, 16);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
@@ -154,6 +159,18 @@ namespace ATM_DataBase
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Оборудование";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(4, 43);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(315, 26);
+            this.textBox1.TabIndex = 9;
             // 
             // EditEquip
             // 
@@ -188,5 +205,6 @@ namespace ATM_DataBase
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cb_type;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -41,6 +41,7 @@ namespace ATM_DataBase
             tb_pr_line_no.Text = DBwork.FieldByName(table, "pr_line_no").ToString();
             tb_contract_no.Text = DBwork.FieldByName(table, "pr_contract_no").ToString();
             tb_date.Text = DateTime.TryParse(DBwork.FieldByName(table, "pr_contract_date").ToString(), out DateTime dt) ? dt.ToShortDateString() : "";
+            //заполнение полей сделай!!!(>-<)!!!
         }
 
         private void GetProviders()
@@ -75,7 +76,8 @@ namespace ATM_DataBase
             string s_id = pr_id == 0 ? "NULL" : pr_id.ToString();
             string s_date = tb_date.Text == "  .  ." ? "NULL" : $"'{tb_date.Text}'";
             string querystring = $"update ATM set provider_id = {s_id}, pr_line_no = '{tb_pr_line_no.Text}', " +
-                $"pr_contract_no = '{tb_contract_no.Text}', pr_contract_date = {s_date} " +
+                $"pr_contract_no = '{tb_contract_no.Text}', pr_contract_date = {s_date}, " +
+                $"renter_company = '{tb_company.Text}', renter_name = '{tb_renter_name.Text}', renter_phone = '{tb_phone.Text}' " +
                 $"where id = {ID}";
 
             DBwork.ExeCommand(querystring, dataBase);
