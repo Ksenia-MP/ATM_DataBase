@@ -14,6 +14,7 @@ namespace ATM_DataBase
     public partial class Equipment : Form
     {
         DataBase dataBase = new DataBase();
+        EditEquip edit;
 
         public Equipment()
         {
@@ -32,7 +33,7 @@ namespace ATM_DataBase
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            EditEquip edit = new EditEquip();
+            edit = new EditEquip();
             edit.ShowDialog();
             InitGrid();
         }
@@ -46,7 +47,7 @@ namespace ATM_DataBase
             }
 
             int ID = (int)dgvEquip.SelectedRows[0].Cells[0].Value;
-            EditEquip edit = new EditEquip(ID);
+            edit = new EditEquip(ID);
             edit.ShowDialog();
             InitGrid();
         }

@@ -14,6 +14,7 @@ namespace ATM_DataBase
     public partial class Model : Form
     {
         DataBase dataBase = new DataBase();
+        EditModel edit;
 
         public Model()
         {
@@ -32,7 +33,7 @@ namespace ATM_DataBase
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            EditModel edit = new EditModel();
+            edit = new EditModel();
             if (edit.ShowDialog() == DialogResult.OK)
                 InitGrid();
         }
@@ -46,7 +47,7 @@ namespace ATM_DataBase
             }
 
             int ID = (int)dgvModel.SelectedRows[0].Cells[0].Value;
-            EditModel edit = new EditModel(ID);
+            edit = new EditModel(ID);
             if (edit.ShowDialog() == DialogResult.OK)
                 InitGrid();
         }

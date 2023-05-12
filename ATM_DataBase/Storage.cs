@@ -18,6 +18,8 @@ namespace ATM_DataBase
         public static int ID;   //ID выбранной записи в таблице 
         public static int ATM_ID;   //ID банкомата при выборе оборудования со склада
 
+        EditATMEquip edit;
+
         public Storage()
         {
             InitializeComponent();
@@ -106,7 +108,7 @@ namespace ATM_DataBase
 
         private void buttonAddEq_Click(object sender, EventArgs e)
         {
-            EditATMEquip edit = new EditATMEquip();
+            edit = new EditATMEquip();
             if (edit.ShowDialog() == DialogResult.OK)
             {
                 ID = edit.Ret_ID;   //получаем ID созданной записи
@@ -150,7 +152,7 @@ namespace ATM_DataBase
                 return;
             }
             ID = (int)dgvEquipStorage.SelectedRows[0].Cells[0].Value;
-            EditATMEquip edit = new EditATMEquip(-1, ID);
+            edit = new EditATMEquip(-1, ID);
             if (edit.ShowDialog() == DialogResult.OK)
             {
                 ID = edit.Ret_ID;   //получаем ID созданной записи

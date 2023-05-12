@@ -14,6 +14,7 @@ namespace ATM_DataBase
     public partial class Provider : Form
     {
         DataBase dataBase = new DataBase();
+        EditProvider edit;
 
         public Provider()
         {
@@ -32,7 +33,7 @@ namespace ATM_DataBase
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            EditProvider edit = new EditProvider();
+            edit = new EditProvider();
             if (edit.ShowDialog() == DialogResult.OK)
                 InitGrid();
         }
@@ -47,7 +48,7 @@ namespace ATM_DataBase
 
             int ID = (int)dgvProvider.SelectedRows[0].Cells[0].Value;
 
-            EditProvider edit = new EditProvider(ID);
+            edit = new EditProvider(ID);
             if (edit.ShowDialog() == DialogResult.OK)
                 InitGrid();
         }

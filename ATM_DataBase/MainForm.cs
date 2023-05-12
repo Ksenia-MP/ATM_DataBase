@@ -24,7 +24,12 @@ namespace ATM_DataBase
         Image img_on = new Bitmap(Environment.CurrentDirectory + "\\on.png");
         Image img_off = new Bitmap(Environment.CurrentDirectory + "\\off.png");
 
-
+        EditATM editATM;
+        EditATMProvider editProvider;
+        EditATMNet editNet;
+        EditATMModel editModel;
+        EditATMEquip editEqiup;
+        Journal journal;
 
         public MainForm()
         {
@@ -91,10 +96,10 @@ namespace ATM_DataBase
         private void AddToolStripMenuItem_Click(object sender, EventArgs e)
         {
             f_modify_mode = true;
-            EditATM edit = new EditATM();
-            if (edit.ShowDialog() == DialogResult.OK)
+            editATM = new EditATM();
+            if (editATM.ShowDialog() == DialogResult.OK)
             {
-                ID = edit.Ret_ID;   //получаем ID созданной записи
+                ID = editATM.Ret_ID;   //получаем ID созданной записи
                 InitGrid();         //обновляем таблицу
                 SetCurrentRow();    //фокусируемся на созданной записи
                 RefreshTab();   //обновление полей
@@ -117,8 +122,8 @@ namespace ATM_DataBase
             }
 
             ID = (int)dgvATM.SelectedRows[0].Cells["id"].Value; //нулевой столбец содержит ID (Visible = false)
-            EditATM edit = new EditATM(ID);
-            edit.ShowDialog();
+            editATM = new EditATM(ID);
+            editATM.ShowDialog();
             InitGrid();         //обновляем таблицу
             SetCurrentRow();    //фокусируемся на созданной записи
             RefreshTab();   //обновление полей
@@ -340,8 +345,8 @@ namespace ATM_DataBase
                 return;
             }
 
-            EditATMProvider edit = new EditATMProvider(ID);
-            edit.ShowDialog();
+            editProvider= new EditATMProvider(ID);
+            editProvider.ShowDialog();
             RefreshTab();
             f_modify_mode = false;
         }
@@ -356,8 +361,8 @@ namespace ATM_DataBase
                 return;
             }
 
-            EditATMNet edit = new EditATMNet(ID);
-            edit.ShowDialog();
+            editNet = new EditATMNet(ID);
+            editNet.ShowDialog();
             RefreshTab();
             f_modify_mode = false;
         }
@@ -371,8 +376,8 @@ namespace ATM_DataBase
                 return;
             }
 
-            EditATMModel edit = new EditATMModel(ID);
-            edit.ShowDialog();
+            editModel = new EditATMModel(ID);
+            editModel.ShowDialog();
             RefreshTab();
             f_modify_mode = false;
         }
@@ -387,8 +392,8 @@ namespace ATM_DataBase
         {
             if (ID != -1)
             {
-                EditATMEquip edit = new EditATMEquip(ID);
-                if (edit.ShowDialog() == DialogResult.OK)
+                editEqiup = new EditATMEquip(ID);
+                if (editEqiup.ShowDialog() == DialogResult.OK)
                 {
                     RefreshEquipmetTable();
                     RefreshEquipmentFields();
@@ -407,8 +412,8 @@ namespace ATM_DataBase
                 }
 
                 int atm_eq_id = (int)dgv_atm_equip.SelectedRows[0].Cells[0].Value;
-                EditATMEquip edit = new EditATMEquip(ID, atm_eq_id);
-                if (edit.ShowDialog() == DialogResult.OK)
+                editEqiup = new EditATMEquip(ID, atm_eq_id);
+                if (editEqiup.ShowDialog() == DialogResult.OK)
                 {
                     RefreshEquipmetTable();
                     RefreshEquipmentFields();
@@ -501,7 +506,7 @@ namespace ATM_DataBase
         {
             if (ID != -1)
             {
-                Journal journal = new Journal(ID);
+                journal = new Journal(ID);
                 if (journal.ShowDialog() == DialogResult.OK)
                 {
                     RefreshJournalTable();
@@ -515,7 +520,7 @@ namespace ATM_DataBase
             if (ID == -1) return;
 
             int j_id = (int)dgv_journal.SelectedRows[0].Cells[0].Value;
-            Journal journal = new Journal(ID, j_id);
+            journal = new Journal(ID, j_id);
             if (journal.ShowDialog() == DialogResult.OK)
             {
                 RefreshJournalTable();
