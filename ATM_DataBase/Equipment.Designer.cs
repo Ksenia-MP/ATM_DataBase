@@ -41,9 +41,10 @@ namespace ATM_DataBase
             // 
             this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonExit.Location = new System.Drawing.Point(727, 366);
+            this.buttonExit.Location = new System.Drawing.Point(636, 388);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(102, 33);
+            this.buttonExit.Size = new System.Drawing.Size(89, 35);
             this.buttonExit.TabIndex = 14;
             this.buttonExit.Text = "Выход";
             this.buttonExit.UseVisualStyleBackColor = true;
@@ -52,9 +53,10 @@ namespace ATM_DataBase
             // buttonDel
             // 
             this.buttonDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDel.Location = new System.Drawing.Point(727, 90);
+            this.buttonDel.Location = new System.Drawing.Point(636, 95);
+            this.buttonDel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonDel.Name = "buttonDel";
-            this.buttonDel.Size = new System.Drawing.Size(102, 33);
+            this.buttonDel.Size = new System.Drawing.Size(89, 35);
             this.buttonDel.TabIndex = 13;
             this.buttonDel.Text = "Удалить";
             this.buttonDel.UseVisualStyleBackColor = true;
@@ -63,9 +65,10 @@ namespace ATM_DataBase
             // buttonEdit
             // 
             this.buttonEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEdit.Location = new System.Drawing.Point(727, 51);
+            this.buttonEdit.Location = new System.Drawing.Point(636, 54);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(102, 33);
+            this.buttonEdit.Size = new System.Drawing.Size(89, 35);
             this.buttonEdit.TabIndex = 12;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = true;
@@ -74,9 +77,10 @@ namespace ATM_DataBase
             // buttonAdd
             // 
             this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAdd.Location = new System.Drawing.Point(727, 12);
+            this.buttonAdd.Location = new System.Drawing.Point(636, 13);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(102, 33);
+            this.buttonAdd.Size = new System.Drawing.Size(89, 35);
             this.buttonAdd.TabIndex = 11;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -91,7 +95,8 @@ namespace ATM_DataBase
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEquip.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEquip.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEquip.Location = new System.Drawing.Point(12, 12);
+            this.dgvEquip.Location = new System.Drawing.Point(10, 13);
+            this.dgvEquip.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgvEquip.MultiSelect = false;
             this.dgvEquip.Name = "dgvEquip";
             this.dgvEquip.ReadOnly = true;
@@ -99,22 +104,25 @@ namespace ATM_DataBase
             this.dgvEquip.RowHeadersWidth = 51;
             this.dgvEquip.RowTemplate.Height = 24;
             this.dgvEquip.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEquip.Size = new System.Drawing.Size(704, 387);
+            this.dgvEquip.Size = new System.Drawing.Size(616, 411);
             this.dgvEquip.TabIndex = 10;
             // 
             // Equipment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonExit;
-            this.ClientSize = new System.Drawing.Size(841, 411);
+            this.ClientSize = new System.Drawing.Size(736, 437);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.dgvEquip);
-            this.MinimumSize = new System.Drawing.Size(525, 267);
+            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.MaximumSize = new System.Drawing.Size(752, 476);
             this.Name = "Equipment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Справочник оборудования";
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquip)).EndInit();
             this.ResumeLayout(false);
