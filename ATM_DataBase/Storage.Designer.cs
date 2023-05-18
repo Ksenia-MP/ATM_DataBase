@@ -49,9 +49,10 @@ namespace ATM_DataBase
             this.checkBoxUsb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxUsb.AutoCheck = false;
             this.checkBoxUsb.AutoSize = true;
-            this.checkBoxUsb.Location = new System.Drawing.Point(727, 86);
+            this.checkBoxUsb.Location = new System.Drawing.Point(694, 75);
+            this.checkBoxUsb.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.checkBoxUsb.Name = "checkBoxUsb";
-            this.checkBoxUsb.Size = new System.Drawing.Size(18, 17);
+            this.checkBoxUsb.Size = new System.Drawing.Size(15, 14);
             this.checkBoxUsb.TabIndex = 81;
             this.checkBoxUsb.UseVisualStyleBackColor = true;
             // 
@@ -60,19 +61,20 @@ namespace ATM_DataBase
             this.checkBoxCom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxCom.AutoCheck = false;
             this.checkBoxCom.AutoSize = true;
-            this.checkBoxCom.Location = new System.Drawing.Point(727, 57);
+            this.checkBoxCom.Location = new System.Drawing.Point(694, 43);
+            this.checkBoxCom.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.checkBoxCom.Name = "checkBoxCom";
-            this.checkBoxCom.Size = new System.Drawing.Size(18, 17);
+            this.checkBoxCom.Size = new System.Drawing.Size(15, 14);
             this.checkBoxCom.TabIndex = 80;
             this.checkBoxCom.UseVisualStyleBackColor = true;
             // 
             // buttonAddEq
             // 
             this.buttonAddEq.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAddEq.Location = new System.Drawing.Point(666, 136);
-            this.buttonAddEq.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonAddEq.Location = new System.Drawing.Point(624, 107);
+            this.buttonAddEq.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonAddEq.Name = "buttonAddEq";
-            this.buttonAddEq.Size = new System.Drawing.Size(132, 39);
+            this.buttonAddEq.Size = new System.Drawing.Size(115, 42);
             this.buttonAddEq.TabIndex = 77;
             this.buttonAddEq.Text = "Добавить";
             this.buttonAddEq.UseVisualStyleBackColor = true;
@@ -82,9 +84,10 @@ namespace ATM_DataBase
             // 
             this.lb_eq_part_no.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_eq_part_no.AutoSize = true;
-            this.lb_eq_part_no.Location = new System.Drawing.Point(724, 27);
+            this.lb_eq_part_no.Location = new System.Drawing.Point(690, 12);
+            this.lb_eq_part_no.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_eq_part_no.Name = "lb_eq_part_no";
-            this.lb_eq_part_no.Size = new System.Drawing.Size(128, 17);
+            this.lb_eq_part_no.Size = new System.Drawing.Size(83, 17);
             this.lb_eq_part_no.TabIndex = 74;
             this.lb_eq_part_no.Text = "_______________";
             // 
@@ -92,9 +95,10 @@ namespace ATM_DataBase
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(605, 85);
+            this.label3.Location = new System.Drawing.Point(587, 73);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 17);
+            this.label3.Size = new System.Drawing.Size(34, 17);
             this.label3.TabIndex = 73;
             this.label3.Text = "USB:";
             // 
@@ -102,9 +106,10 @@ namespace ATM_DataBase
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(605, 27);
+            this.label2.Location = new System.Drawing.Point(587, 12);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 17);
+            this.label2.Size = new System.Drawing.Size(97, 17);
             this.label2.TabIndex = 72;
             this.label2.Text = "Номер партии:";
             // 
@@ -112,9 +117,10 @@ namespace ATM_DataBase
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(605, 56);
+            this.label1.Location = new System.Drawing.Point(587, 43);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 17);
+            this.label1.Size = new System.Drawing.Size(45, 17);
             this.label1.TabIndex = 71;
             this.label1.Text = "COM: ";
             // 
@@ -127,8 +133,8 @@ namespace ATM_DataBase
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEquipStorage.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEquipStorage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEquipStorage.Location = new System.Drawing.Point(12, 11);
-            this.dgvEquipStorage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvEquipStorage.Location = new System.Drawing.Point(10, 12);
+            this.dgvEquipStorage.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgvEquipStorage.MultiSelect = false;
             this.dgvEquipStorage.Name = "dgvEquipStorage";
             this.dgvEquipStorage.ReadOnly = true;
@@ -136,16 +142,16 @@ namespace ATM_DataBase
             this.dgvEquipStorage.RowHeadersWidth = 51;
             this.dgvEquipStorage.RowTemplate.Height = 24;
             this.dgvEquipStorage.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEquipStorage.Size = new System.Drawing.Size(570, 478);
+            this.dgvEquipStorage.Size = new System.Drawing.Size(573, 453);
             this.dgvEquipStorage.TabIndex = 70;
             // 
             // buttonEditEq
             // 
             this.buttonEditEq.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEditEq.Location = new System.Drawing.Point(666, 189);
-            this.buttonEditEq.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonEditEq.Location = new System.Drawing.Point(624, 164);
+            this.buttonEditEq.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonEditEq.Name = "buttonEditEq";
-            this.buttonEditEq.Size = new System.Drawing.Size(132, 39);
+            this.buttonEditEq.Size = new System.Drawing.Size(115, 42);
             this.buttonEditEq.TabIndex = 76;
             this.buttonEditEq.Text = "Изменить";
             this.buttonEditEq.UseVisualStyleBackColor = true;
@@ -154,10 +160,10 @@ namespace ATM_DataBase
             // buttonConfirm
             // 
             this.buttonConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonConfirm.Location = new System.Drawing.Point(666, 189);
-            this.buttonConfirm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonConfirm.Location = new System.Drawing.Point(624, 164);
+            this.buttonConfirm.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonConfirm.Name = "buttonConfirm";
-            this.buttonConfirm.Size = new System.Drawing.Size(132, 39);
+            this.buttonConfirm.Size = new System.Drawing.Size(115, 42);
             this.buttonConfirm.TabIndex = 78;
             this.buttonConfirm.Text = "Выбрать";
             this.buttonConfirm.UseVisualStyleBackColor = true;
@@ -166,10 +172,10 @@ namespace ATM_DataBase
             // buttonDeleteEq
             // 
             this.buttonDeleteEq.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDeleteEq.Location = new System.Drawing.Point(666, 242);
-            this.buttonDeleteEq.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonDeleteEq.Location = new System.Drawing.Point(624, 221);
+            this.buttonDeleteEq.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonDeleteEq.Name = "buttonDeleteEq";
-            this.buttonDeleteEq.Size = new System.Drawing.Size(132, 39);
+            this.buttonDeleteEq.Size = new System.Drawing.Size(115, 42);
             this.buttonDeleteEq.TabIndex = 75;
             this.buttonDeleteEq.Text = "Удалить";
             this.buttonDeleteEq.UseVisualStyleBackColor = true;
@@ -178,10 +184,10 @@ namespace ATM_DataBase
             // buttonCancel
             // 
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCancel.Location = new System.Drawing.Point(666, 242);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCancel.Location = new System.Drawing.Point(624, 221);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(132, 39);
+            this.buttonCancel.Size = new System.Drawing.Size(115, 42);
             this.buttonCancel.TabIndex = 79;
             this.buttonCancel.Text = "Отмена";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -189,9 +195,9 @@ namespace ATM_DataBase
             // 
             // Storage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(875, 500);
+            this.ClientSize = new System.Drawing.Size(784, 477);
             this.Controls.Add(this.checkBoxUsb);
             this.Controls.Add(this.checkBoxCom);
             this.Controls.Add(this.buttonAddEq);
@@ -204,8 +210,8 @@ namespace ATM_DataBase
             this.Controls.Add(this.buttonConfirm);
             this.Controls.Add(this.buttonDeleteEq);
             this.Controls.Add(this.buttonCancel);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(893, 547);
+            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Storage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Склад оборудования";
