@@ -30,7 +30,7 @@ namespace ATM_DataBase
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvATM = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -153,16 +153,15 @@ namespace ATM_DataBase
             this.dgvATM.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvATM.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvATM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvATM.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvATM.Location = new System.Drawing.Point(12, 31);
-            this.dgvATM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvATM.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvATM.Location = new System.Drawing.Point(14, 45);
             this.dgvATM.MultiSelect = false;
             this.dgvATM.Name = "dgvATM";
             this.dgvATM.ReadOnly = true;
@@ -170,12 +169,13 @@ namespace ATM_DataBase
             this.dgvATM.RowHeadersWidth = 51;
             this.dgvATM.RowTemplate.Height = 24;
             this.dgvATM.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvATM.Size = new System.Drawing.Size(563, 552);
+            this.dgvATM.Size = new System.Drawing.Size(633, 571);
             this.dgvATM.TabIndex = 0;
             this.dgvATM.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvATM_RowEnter);
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
@@ -184,8 +184,8 @@ namespace ATM_DataBase
             this.storageToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1053, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(1185, 29);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -194,13 +194,13 @@ namespace ATM_DataBase
             this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.выходToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
+            this.файлToolStripMenuItem.Size = new System.Drawing.Size(53, 23);
             this.файлToolStripMenuItem.Text = "Файл";
             // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(118, 24);
             this.выходToolStripMenuItem.Text = "Выход";
             // 
             // редактироватьToolStripMenuItem
@@ -210,14 +210,14 @@ namespace ATM_DataBase
             this.изменитьToolStripMenuItem,
             this.удалитьToolStripMenuItem});
             this.редактироватьToolStripMenuItem.Name = "редактироватьToolStripMenuItem";
-            this.редактироватьToolStripMenuItem.Size = new System.Drawing.Size(125, 24);
+            this.редактироватьToolStripMenuItem.Size = new System.Drawing.Size(115, 23);
             this.редактироватьToolStripMenuItem.Text = "Редактировать";
             // 
             // добавитьToolStripMenuItem
             // 
             this.добавитьToolStripMenuItem.Name = "добавитьToolStripMenuItem";
             this.добавитьToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.добавитьToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
             this.добавитьToolStripMenuItem.Text = "Добавить";
             this.добавитьToolStripMenuItem.Click += new System.EventHandler(this.AddToolStripMenuItem_Click);
             // 
@@ -225,7 +225,7 @@ namespace ATM_DataBase
             // 
             this.изменитьToolStripMenuItem.Name = "изменитьToolStripMenuItem";
             this.изменитьToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3;
-            this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.изменитьToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
             this.изменитьToolStripMenuItem.Text = "Изменить";
             this.изменитьToolStripMenuItem.Click += new System.EventHandler(this.EditToolStripMenuItem_Click);
             // 
@@ -233,7 +233,7 @@ namespace ATM_DataBase
             // 
             this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
             this.удалитьToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete;
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(164, 24);
             this.удалитьToolStripMenuItem.Text = "Удалить";
             this.удалитьToolStripMenuItem.Click += new System.EventHandler(this.DeleteToolStripMenuItem_Click);
             // 
@@ -245,14 +245,14 @@ namespace ATM_DataBase
             this.toolStripSeparator1,
             this.провайдерыToolStripMenuItem});
             this.справочникиToolStripMenuItem.Name = "справочникиToolStripMenuItem";
-            this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(117, 24);
+            this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(107, 23);
             this.справочникиToolStripMenuItem.Text = "Справочники";
             // 
             // ModelToolStripMenuItem
             // 
             this.ModelToolStripMenuItem.Name = "ModelToolStripMenuItem";
             this.ModelToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.M)));
-            this.ModelToolStripMenuItem.Size = new System.Drawing.Size(286, 26);
+            this.ModelToolStripMenuItem.Size = new System.Drawing.Size(258, 24);
             this.ModelToolStripMenuItem.Text = "Модели банкоматов";
             this.ModelToolStripMenuItem.Click += new System.EventHandler(this.ModelToolStripMenuItem_Click);
             // 
@@ -260,27 +260,27 @@ namespace ATM_DataBase
             // 
             this.EquipToolStripMenuItem.Name = "EquipToolStripMenuItem";
             this.EquipToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.E)));
-            this.EquipToolStripMenuItem.Size = new System.Drawing.Size(286, 26);
+            this.EquipToolStripMenuItem.Size = new System.Drawing.Size(258, 24);
             this.EquipToolStripMenuItem.Text = "Оборудование";
             this.EquipToolStripMenuItem.Click += new System.EventHandler(this.EquipToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(283, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(255, 6);
             // 
             // провайдерыToolStripMenuItem
             // 
             this.провайдерыToolStripMenuItem.Name = "провайдерыToolStripMenuItem";
             this.провайдерыToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.P)));
-            this.провайдерыToolStripMenuItem.Size = new System.Drawing.Size(286, 26);
+            this.провайдерыToolStripMenuItem.Size = new System.Drawing.Size(258, 24);
             this.провайдерыToolStripMenuItem.Text = "Провайдеры";
             this.провайдерыToolStripMenuItem.Click += new System.EventHandler(this.ProviderToolStripMenuItem_Click);
             // 
             // storageToolStripMenuItem
             // 
             this.storageToolStripMenuItem.Name = "storageToolStripMenuItem";
-            this.storageToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
+            this.storageToolStripMenuItem.Size = new System.Drawing.Size(155, 23);
             this.storageToolStripMenuItem.Text = "Склад оборудования";
             this.storageToolStripMenuItem.Click += new System.EventHandler(this.storageToolStripMenuItem_Click);
             // 
@@ -294,11 +294,10 @@ namespace ATM_DataBase
             this.tabControl1.Controls.Add(this.tabModel);
             this.tabControl1.Controls.Add(this.tabEquipment);
             this.tabControl1.Controls.Add(this.tabJournal);
-            this.tabControl1.Location = new System.Drawing.Point(580, 31);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabControl1.Location = new System.Drawing.Point(652, 45);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(461, 552);
+            this.tabControl1.Size = new System.Drawing.Size(519, 571);
             this.tabControl1.TabIndex = 2;
             // 
             // tabGeneral
@@ -318,11 +317,10 @@ namespace ATM_DataBase
             this.tabGeneral.Controls.Add(this.label3);
             this.tabGeneral.Controls.Add(this.lb_bank_no);
             this.tabGeneral.Controls.Add(this.label1);
-            this.tabGeneral.Location = new System.Drawing.Point(4, 25);
-            this.tabGeneral.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabGeneral.Location = new System.Drawing.Point(4, 28);
             this.tabGeneral.Name = "tabGeneral";
-            this.tabGeneral.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabGeneral.Size = new System.Drawing.Size(453, 523);
+            this.tabGeneral.Padding = new System.Windows.Forms.Padding(3);
+            this.tabGeneral.Size = new System.Drawing.Size(511, 539);
             this.tabGeneral.TabIndex = 0;
             this.tabGeneral.Text = "Общие";
             this.tabGeneral.UseVisualStyleBackColor = true;
@@ -331,29 +329,27 @@ namespace ATM_DataBase
             // 
             this.ch_ups.AutoCheck = false;
             this.ch_ups.AutoSize = true;
-            this.ch_ups.Location = new System.Drawing.Point(155, 194);
-            this.ch_ups.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ch_ups.Location = new System.Drawing.Point(174, 278);
             this.ch_ups.Name = "ch_ups";
-            this.ch_ups.Size = new System.Drawing.Size(18, 17);
+            this.ch_ups.Size = new System.Drawing.Size(15, 14);
             this.ch_ups.TabIndex = 15;
             this.ch_ups.UseVisualStyleBackColor = true;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(17, 193);
+            this.label20.Location = new System.Drawing.Point(19, 276);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(44, 17);
+            this.label20.Size = new System.Drawing.Size(41, 19);
             this.label20.TabIndex = 14;
             this.label20.Text = "UPS: ";
             // 
             // buttonEdit
             // 
             this.buttonEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEdit.Location = new System.Drawing.Point(358, 489);
-            this.buttonEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonEdit.Location = new System.Drawing.Point(405, 486);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(89, 30);
+            this.buttonEdit.Size = new System.Drawing.Size(100, 43);
             this.buttonEdit.TabIndex = 13;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = true;
@@ -362,107 +358,107 @@ namespace ATM_DataBase
             // lb_setting_date
             // 
             this.lb_setting_date.AutoSize = true;
-            this.lb_setting_date.Location = new System.Drawing.Point(152, 165);
+            this.lb_setting_date.Location = new System.Drawing.Point(171, 236);
             this.lb_setting_date.Name = "lb_setting_date";
-            this.lb_setting_date.Size = new System.Drawing.Size(88, 17);
+            this.lb_setting_date.Size = new System.Drawing.Size(69, 19);
             this.lb_setting_date.TabIndex = 12;
             this.lb_setting_date.Text = "__________";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(17, 165);
+            this.label11.Location = new System.Drawing.Point(19, 236);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(121, 17);
+            this.label11.Size = new System.Drawing.Size(114, 19);
             this.label11.TabIndex = 11;
             this.label11.Text = "Дата установки: ";
             // 
             // lb_e
             // 
             this.lb_e.AutoSize = true;
-            this.lb_e.Location = new System.Drawing.Point(152, 129);
+            this.lb_e.Location = new System.Drawing.Point(171, 184);
             this.lb_e.Name = "lb_e";
-            this.lb_e.Size = new System.Drawing.Size(56, 17);
+            this.lb_e.Size = new System.Drawing.Size(45, 19);
             this.lb_e.TabIndex = 10;
             this.lb_e.Text = "______";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(17, 129);
+            this.label9.Location = new System.Drawing.Point(19, 184);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(71, 17);
+            this.label9.Size = new System.Drawing.Size(67, 19);
             this.label9.TabIndex = 9;
             this.label9.Text = "Долгота: ";
             // 
             // lb_n
             // 
             this.lb_n.AutoSize = true;
-            this.lb_n.Location = new System.Drawing.Point(152, 112);
+            this.lb_n.Location = new System.Drawing.Point(171, 161);
             this.lb_n.Name = "lb_n";
-            this.lb_n.Size = new System.Drawing.Size(56, 17);
+            this.lb_n.Size = new System.Drawing.Size(45, 19);
             this.lb_n.TabIndex = 8;
             this.lb_n.Text = "______";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(17, 112);
+            this.label7.Location = new System.Drawing.Point(19, 161);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 17);
+            this.label7.Size = new System.Drawing.Size(66, 19);
             this.label7.TabIndex = 7;
             this.label7.Text = "Широта: ";
             // 
             // lb_address
             // 
-            this.lb_address.Location = new System.Drawing.Point(152, 73);
+            this.lb_address.Location = new System.Drawing.Point(171, 105);
             this.lb_address.Name = "lb_address";
-            this.lb_address.Size = new System.Drawing.Size(248, 34);
+            this.lb_address.Size = new System.Drawing.Size(279, 49);
             this.lb_address.TabIndex = 6;
             this.lb_address.Text = "____________________________________________________________";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 73);
+            this.label5.Location = new System.Drawing.Point(19, 105);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 17);
+            this.label5.Size = new System.Drawing.Size(54, 19);
             this.label5.TabIndex = 5;
             this.label5.Text = "Адрес: ";
             // 
             // lb_serial_no
             // 
             this.lb_serial_no.AutoSize = true;
-            this.lb_serial_no.Location = new System.Drawing.Point(152, 42);
+            this.lb_serial_no.Location = new System.Drawing.Point(171, 60);
             this.lb_serial_no.Name = "lb_serial_no";
-            this.lb_serial_no.Size = new System.Drawing.Size(88, 17);
+            this.lb_serial_no.Size = new System.Drawing.Size(69, 19);
             this.lb_serial_no.TabIndex = 4;
             this.lb_serial_no.Text = "__________";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 42);
+            this.label3.Location = new System.Drawing.Point(19, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 17);
+            this.label3.Size = new System.Drawing.Size(38, 19);
             this.label3.TabIndex = 3;
             this.label3.Text = "S/N: ";
             // 
             // lb_bank_no
             // 
             this.lb_bank_no.AutoSize = true;
-            this.lb_bank_no.Location = new System.Drawing.Point(152, 14);
+            this.lb_bank_no.Location = new System.Drawing.Point(171, 20);
             this.lb_bank_no.Name = "lb_bank_no";
-            this.lb_bank_no.Size = new System.Drawing.Size(48, 17);
+            this.lb_bank_no.Size = new System.Drawing.Size(39, 19);
             this.lb_bank_no.TabIndex = 2;
             this.lb_bank_no.Text = "_____";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 14);
+            this.label1.Location = new System.Drawing.Point(19, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 17);
+            this.label1.Size = new System.Drawing.Size(64, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "№ ATM: ";
             // 
@@ -482,11 +478,10 @@ namespace ATM_DataBase
             this.tabNet.Controls.Add(this.label16);
             this.tabNet.Controls.Add(this.label17);
             this.tabNet.Controls.Add(this.buttonEdit_net);
-            this.tabNet.Location = new System.Drawing.Point(4, 25);
-            this.tabNet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabNet.Location = new System.Drawing.Point(4, 28);
             this.tabNet.Name = "tabNet";
-            this.tabNet.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabNet.Size = new System.Drawing.Size(453, 523);
+            this.tabNet.Padding = new System.Windows.Forms.Padding(3);
+            this.tabNet.Size = new System.Drawing.Size(511, 539);
             this.tabNet.TabIndex = 1;
             this.tabNet.Text = "Сетевые ";
             this.tabNet.UseVisualStyleBackColor = true;
@@ -494,54 +489,54 @@ namespace ATM_DataBase
             // lb_bank_mask
             // 
             this.lb_bank_mask.AutoSize = true;
-            this.lb_bank_mask.Location = new System.Drawing.Point(153, 37);
+            this.lb_bank_mask.Location = new System.Drawing.Point(172, 53);
             this.lb_bank_mask.Name = "lb_bank_mask";
-            this.lb_bank_mask.Size = new System.Drawing.Size(128, 17);
+            this.lb_bank_mask.Size = new System.Drawing.Size(99, 19);
             this.lb_bank_mask.TabIndex = 35;
             this.lb_bank_mask.Text = "_______________";
             // 
             // lb_bank_gw
             // 
             this.lb_bank_gw.AutoSize = true;
-            this.lb_bank_gw.Location = new System.Drawing.Point(153, 64);
+            this.lb_bank_gw.Location = new System.Drawing.Point(172, 92);
             this.lb_bank_gw.Name = "lb_bank_gw";
-            this.lb_bank_gw.Size = new System.Drawing.Size(128, 17);
+            this.lb_bank_gw.Size = new System.Drawing.Size(99, 19);
             this.lb_bank_gw.TabIndex = 34;
             this.lb_bank_gw.Text = "_______________";
             // 
             // lb_ext_ip
             // 
             this.lb_ext_ip.AutoSize = true;
-            this.lb_ext_ip.Location = new System.Drawing.Point(153, 112);
+            this.lb_ext_ip.Location = new System.Drawing.Point(172, 161);
             this.lb_ext_ip.Name = "lb_ext_ip";
-            this.lb_ext_ip.Size = new System.Drawing.Size(128, 17);
+            this.lb_ext_ip.Size = new System.Drawing.Size(99, 19);
             this.lb_ext_ip.TabIndex = 33;
             this.lb_ext_ip.Text = "_______________";
             // 
             // lb_ext_mask
             // 
             this.lb_ext_mask.AutoSize = true;
-            this.lb_ext_mask.Location = new System.Drawing.Point(153, 139);
+            this.lb_ext_mask.Location = new System.Drawing.Point(172, 200);
             this.lb_ext_mask.Name = "lb_ext_mask";
-            this.lb_ext_mask.Size = new System.Drawing.Size(128, 17);
+            this.lb_ext_mask.Size = new System.Drawing.Size(99, 19);
             this.lb_ext_mask.TabIndex = 32;
             this.lb_ext_mask.Text = "_______________";
             // 
             // lb_ext_gw
             // 
             this.lb_ext_gw.AutoSize = true;
-            this.lb_ext_gw.Location = new System.Drawing.Point(153, 165);
+            this.lb_ext_gw.Location = new System.Drawing.Point(172, 237);
             this.lb_ext_gw.Name = "lb_ext_gw";
-            this.lb_ext_gw.Size = new System.Drawing.Size(128, 17);
+            this.lb_ext_gw.Size = new System.Drawing.Size(99, 19);
             this.lb_ext_gw.TabIndex = 31;
             this.lb_ext_gw.Text = "_______________";
             // 
             // lb_bank_ip
             // 
             this.lb_bank_ip.AutoSize = true;
-            this.lb_bank_ip.Location = new System.Drawing.Point(153, 10);
+            this.lb_bank_ip.Location = new System.Drawing.Point(172, 14);
             this.lb_bank_ip.Name = "lb_bank_ip";
-            this.lb_bank_ip.Size = new System.Drawing.Size(128, 17);
+            this.lb_bank_ip.Size = new System.Drawing.Size(99, 19);
             this.lb_bank_ip.TabIndex = 30;
             this.lb_bank_ip.Text = "_______________";
             // 
@@ -549,10 +544,9 @@ namespace ATM_DataBase
             // 
             this.ch_adsl.AutoCheck = false;
             this.ch_adsl.AutoSize = true;
-            this.ch_adsl.Location = new System.Drawing.Point(16, 207);
-            this.ch_adsl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ch_adsl.Location = new System.Drawing.Point(18, 298);
             this.ch_adsl.Name = "ch_adsl";
-            this.ch_adsl.Size = new System.Drawing.Size(66, 21);
+            this.ch_adsl.Size = new System.Drawing.Size(61, 23);
             this.ch_adsl.TabIndex = 29;
             this.ch_adsl.Text = "ADSL";
             this.ch_adsl.UseVisualStyleBackColor = true;
@@ -560,64 +554,63 @@ namespace ATM_DataBase
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(13, 165);
+            this.label12.Location = new System.Drawing.Point(15, 237);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(119, 17);
+            this.label12.Size = new System.Drawing.Size(111, 19);
             this.label12.TabIndex = 28;
             this.label12.Text = "GateWay(внеш.):";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(13, 139);
+            this.label13.Location = new System.Drawing.Point(15, 200);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(93, 17);
+            this.label13.Size = new System.Drawing.Size(89, 19);
             this.label13.TabIndex = 26;
             this.label13.Text = "Mask(внеш.):";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(13, 112);
+            this.label14.Location = new System.Drawing.Point(15, 161);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(72, 17);
+            this.label14.Size = new System.Drawing.Size(68, 19);
             this.label14.TabIndex = 24;
             this.label14.Text = "IP(внеш.):";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(13, 64);
+            this.label15.Location = new System.Drawing.Point(15, 92);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(122, 17);
+            this.label15.Size = new System.Drawing.Size(114, 19);
             this.label15.TabIndex = 22;
             this.label15.Text = "GateWay(внутр.):";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(13, 37);
+            this.label16.Location = new System.Drawing.Point(15, 53);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(96, 17);
+            this.label16.Size = new System.Drawing.Size(92, 19);
             this.label16.TabIndex = 20;
             this.label16.Text = "Mask(внутр.):";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(13, 10);
+            this.label17.Location = new System.Drawing.Point(15, 14);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(75, 17);
+            this.label17.Size = new System.Drawing.Size(71, 19);
             this.label17.TabIndex = 18;
             this.label17.Text = "IP(внутр.):";
             // 
             // buttonEdit_net
             // 
             this.buttonEdit_net.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEdit_net.Location = new System.Drawing.Point(358, 490);
-            this.buttonEdit_net.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonEdit_net.Location = new System.Drawing.Point(405, 486);
             this.buttonEdit_net.Name = "buttonEdit_net";
-            this.buttonEdit_net.Size = new System.Drawing.Size(89, 30);
+            this.buttonEdit_net.Size = new System.Drawing.Size(100, 43);
             this.buttonEdit_net.TabIndex = 14;
             this.buttonEdit_net.Text = "Изменить";
             this.buttonEdit_net.UseVisualStyleBackColor = true;
@@ -628,11 +621,10 @@ namespace ATM_DataBase
             this.tabContacts.Controls.Add(this.groupBox3);
             this.tabContacts.Controls.Add(this.groupBox2);
             this.tabContacts.Controls.Add(this.buttonEdit_provider);
-            this.tabContacts.Location = new System.Drawing.Point(4, 25);
-            this.tabContacts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabContacts.Location = new System.Drawing.Point(4, 28);
             this.tabContacts.Name = "tabContacts";
-            this.tabContacts.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabContacts.Size = new System.Drawing.Size(453, 523);
+            this.tabContacts.Padding = new System.Windows.Forms.Padding(3);
+            this.tabContacts.Size = new System.Drawing.Size(511, 539);
             this.tabContacts.TabIndex = 3;
             this.tabContacts.Text = "Контакты";
             this.tabContacts.UseVisualStyleBackColor = true;
@@ -647,9 +639,11 @@ namespace ATM_DataBase
             this.groupBox3.Controls.Add(this.lb_renter_phone);
             this.groupBox3.Controls.Add(this.lb_renter_name);
             this.groupBox3.Controls.Add(this.label30);
-            this.groupBox3.Location = new System.Drawing.Point(6, 172);
+            this.groupBox3.Location = new System.Drawing.Point(7, 247);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(441, 151);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox3.Size = new System.Drawing.Size(496, 217);
             this.groupBox3.TabIndex = 40;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Арендодатель";
@@ -657,54 +651,54 @@ namespace ATM_DataBase
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 27);
+            this.label2.Location = new System.Drawing.Point(7, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 17);
+            this.label2.Size = new System.Drawing.Size(95, 19);
             this.label2.TabIndex = 31;
             this.label2.Text = "Организация:";
             // 
             // lb_renter_company
             // 
             this.lb_renter_company.AutoSize = true;
-            this.lb_renter_company.Location = new System.Drawing.Point(144, 27);
+            this.lb_renter_company.Location = new System.Drawing.Point(162, 39);
             this.lb_renter_company.Name = "lb_renter_company";
-            this.lb_renter_company.Size = new System.Drawing.Size(208, 17);
+            this.lb_renter_company.Size = new System.Drawing.Size(159, 19);
             this.lb_renter_company.TabIndex = 32;
             this.lb_renter_company.Text = "_________________________";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 55);
+            this.label10.Location = new System.Drawing.Point(7, 79);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(126, 17);
+            this.label10.Size = new System.Drawing.Size(120, 19);
             this.label10.TabIndex = 33;
             this.label10.Text = "Контактное лицо:";
             // 
             // lb_renter_phone
             // 
             this.lb_renter_phone.AutoSize = true;
-            this.lb_renter_phone.Location = new System.Drawing.Point(144, 83);
+            this.lb_renter_phone.Location = new System.Drawing.Point(162, 119);
             this.lb_renter_phone.Name = "lb_renter_phone";
-            this.lb_renter_phone.Size = new System.Drawing.Size(128, 17);
+            this.lb_renter_phone.Size = new System.Drawing.Size(99, 19);
             this.lb_renter_phone.TabIndex = 36;
             this.lb_renter_phone.Text = "_______________";
             // 
             // lb_renter_name
             // 
             this.lb_renter_name.AutoSize = true;
-            this.lb_renter_name.Location = new System.Drawing.Point(144, 55);
+            this.lb_renter_name.Location = new System.Drawing.Point(162, 79);
             this.lb_renter_name.Name = "lb_renter_name";
-            this.lb_renter_name.Size = new System.Drawing.Size(208, 17);
+            this.lb_renter_name.Size = new System.Drawing.Size(159, 19);
             this.lb_renter_name.TabIndex = 34;
             this.lb_renter_name.Text = "_________________________";
             // 
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(6, 83);
+            this.label30.Location = new System.Drawing.Point(7, 119);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(125, 17);
+            this.label30.Size = new System.Drawing.Size(119, 19);
             this.label30.TabIndex = 35;
             this.label30.Text = "Номер телефона:";
             // 
@@ -720,9 +714,11 @@ namespace ATM_DataBase
             this.groupBox2.Controls.Add(this.lb_pr_contract_no);
             this.groupBox2.Controls.Add(this.lb_pr_line_no);
             this.groupBox2.Controls.Add(this.label25);
-            this.groupBox2.Location = new System.Drawing.Point(6, 5);
+            this.groupBox2.Location = new System.Drawing.Point(7, 7);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(441, 151);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Size = new System.Drawing.Size(496, 217);
             this.groupBox2.TabIndex = 39;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Провайдер";
@@ -730,82 +726,81 @@ namespace ATM_DataBase
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 27);
+            this.label21.Location = new System.Drawing.Point(7, 39);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(110, 17);
+            this.label21.Size = new System.Drawing.Size(107, 19);
             this.label21.TabIndex = 31;
             this.label21.Text = "Наименование:";
             // 
             // lb_pr_contract_date
             // 
             this.lb_pr_contract_date.AutoSize = true;
-            this.lb_pr_contract_date.Location = new System.Drawing.Point(144, 110);
+            this.lb_pr_contract_date.Location = new System.Drawing.Point(162, 158);
             this.lb_pr_contract_date.Name = "lb_pr_contract_date";
-            this.lb_pr_contract_date.Size = new System.Drawing.Size(88, 17);
+            this.lb_pr_contract_date.Size = new System.Drawing.Size(69, 19);
             this.lb_pr_contract_date.TabIndex = 38;
             this.lb_pr_contract_date.Text = "__________";
             // 
             // lb_pr_name
             // 
             this.lb_pr_name.AutoSize = true;
-            this.lb_pr_name.Location = new System.Drawing.Point(144, 27);
+            this.lb_pr_name.Location = new System.Drawing.Point(162, 39);
             this.lb_pr_name.Name = "lb_pr_name";
-            this.lb_pr_name.Size = new System.Drawing.Size(168, 17);
+            this.lb_pr_name.Size = new System.Drawing.Size(129, 19);
             this.lb_pr_name.TabIndex = 32;
             this.lb_pr_name.Text = "____________________";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(6, 110);
+            this.label27.Location = new System.Drawing.Point(7, 158);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(114, 17);
+            this.label27.Size = new System.Drawing.Size(109, 19);
             this.label27.TabIndex = 37;
             this.label27.Text = "Дата договора: ";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(6, 55);
+            this.label23.Location = new System.Drawing.Point(7, 79);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(70, 17);
+            this.label23.Size = new System.Drawing.Size(71, 19);
             this.label23.TabIndex = 33;
             this.label23.Text = "№ линии:";
             // 
             // lb_pr_contract_no
             // 
             this.lb_pr_contract_no.AutoSize = true;
-            this.lb_pr_contract_no.Location = new System.Drawing.Point(144, 83);
+            this.lb_pr_contract_no.Location = new System.Drawing.Point(162, 119);
             this.lb_pr_contract_no.Name = "lb_pr_contract_no";
-            this.lb_pr_contract_no.Size = new System.Drawing.Size(168, 17);
+            this.lb_pr_contract_no.Size = new System.Drawing.Size(129, 19);
             this.lb_pr_contract_no.TabIndex = 36;
             this.lb_pr_contract_no.Text = "____________________";
             // 
             // lb_pr_line_no
             // 
             this.lb_pr_line_no.AutoSize = true;
-            this.lb_pr_line_no.Location = new System.Drawing.Point(144, 55);
+            this.lb_pr_line_no.Location = new System.Drawing.Point(162, 79);
             this.lb_pr_line_no.Name = "lb_pr_line_no";
-            this.lb_pr_line_no.Size = new System.Drawing.Size(168, 17);
+            this.lb_pr_line_no.Size = new System.Drawing.Size(129, 19);
             this.lb_pr_line_no.TabIndex = 34;
             this.lb_pr_line_no.Text = "____________________";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(6, 83);
+            this.label25.Location = new System.Drawing.Point(7, 119);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(90, 17);
+            this.label25.Size = new System.Drawing.Size(91, 19);
             this.label25.TabIndex = 35;
             this.label25.Text = "№ договора:";
             // 
             // buttonEdit_provider
             // 
             this.buttonEdit_provider.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEdit_provider.Location = new System.Drawing.Point(358, 489);
-            this.buttonEdit_provider.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonEdit_provider.Location = new System.Drawing.Point(405, 486);
             this.buttonEdit_provider.Name = "buttonEdit_provider";
-            this.buttonEdit_provider.Size = new System.Drawing.Size(89, 30);
+            this.buttonEdit_provider.Size = new System.Drawing.Size(100, 43);
             this.buttonEdit_provider.TabIndex = 15;
             this.buttonEdit_provider.Text = "Изменить";
             this.buttonEdit_provider.UseVisualStyleBackColor = true;
@@ -825,10 +820,9 @@ namespace ATM_DataBase
             this.tabModel.Controls.Add(this.label28);
             this.tabModel.Controls.Add(this.label29);
             this.tabModel.Controls.Add(this.buttonEdit_model);
-            this.tabModel.Location = new System.Drawing.Point(4, 25);
-            this.tabModel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabModel.Location = new System.Drawing.Point(4, 28);
             this.tabModel.Name = "tabModel";
-            this.tabModel.Size = new System.Drawing.Size(453, 523);
+            this.tabModel.Size = new System.Drawing.Size(511, 539);
             this.tabModel.TabIndex = 4;
             this.tabModel.Text = "О Модели";
             this.tabModel.UseVisualStyleBackColor = true;
@@ -836,45 +830,45 @@ namespace ATM_DataBase
             // lb_weight
             // 
             this.lb_weight.AutoSize = true;
-            this.lb_weight.Location = new System.Drawing.Point(153, 39);
+            this.lb_weight.Location = new System.Drawing.Point(172, 56);
             this.lb_weight.Name = "lb_weight";
-            this.lb_weight.Size = new System.Drawing.Size(128, 17);
+            this.lb_weight.Size = new System.Drawing.Size(99, 19);
             this.lb_weight.TabIndex = 48;
             this.lb_weight.Text = "_______________";
             // 
             // lb_height
             // 
             this.lb_height.AutoSize = true;
-            this.lb_height.Location = new System.Drawing.Point(153, 70);
+            this.lb_height.Location = new System.Drawing.Point(172, 101);
             this.lb_height.Name = "lb_height";
-            this.lb_height.Size = new System.Drawing.Size(128, 17);
+            this.lb_height.Size = new System.Drawing.Size(99, 19);
             this.lb_height.TabIndex = 47;
             this.lb_height.Text = "_______________";
             // 
             // lb_width
             // 
             this.lb_width.AutoSize = true;
-            this.lb_width.Location = new System.Drawing.Point(153, 100);
+            this.lb_width.Location = new System.Drawing.Point(172, 144);
             this.lb_width.Name = "lb_width";
-            this.lb_width.Size = new System.Drawing.Size(128, 17);
+            this.lb_width.Size = new System.Drawing.Size(99, 19);
             this.lb_width.TabIndex = 46;
             this.lb_width.Text = "_______________";
             // 
             // lb_depth
             // 
             this.lb_depth.AutoSize = true;
-            this.lb_depth.Location = new System.Drawing.Point(153, 130);
+            this.lb_depth.Location = new System.Drawing.Point(172, 187);
             this.lb_depth.Name = "lb_depth";
-            this.lb_depth.Size = new System.Drawing.Size(128, 17);
+            this.lb_depth.Size = new System.Drawing.Size(99, 19);
             this.lb_depth.TabIndex = 45;
             this.lb_depth.Text = "_______________";
             // 
             // lb_model_name
             // 
             this.lb_model_name.AutoSize = true;
-            this.lb_model_name.Location = new System.Drawing.Point(153, 10);
+            this.lb_model_name.Location = new System.Drawing.Point(172, 14);
             this.lb_model_name.Name = "lb_model_name";
-            this.lb_model_name.Size = new System.Drawing.Size(128, 17);
+            this.lb_model_name.Size = new System.Drawing.Size(99, 19);
             this.lb_model_name.TabIndex = 43;
             this.lb_model_name.Text = "_______________";
             // 
@@ -882,10 +876,9 @@ namespace ATM_DataBase
             // 
             this.ch_cashin.AutoCheck = false;
             this.ch_cashin.AutoSize = true;
-            this.ch_cashin.Location = new System.Drawing.Point(16, 170);
-            this.ch_cashin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ch_cashin.Location = new System.Drawing.Point(18, 244);
             this.ch_cashin.Name = "ch_cashin";
-            this.ch_cashin.Size = new System.Drawing.Size(73, 21);
+            this.ch_cashin.Size = new System.Drawing.Size(70, 23);
             this.ch_cashin.TabIndex = 42;
             this.ch_cashin.Text = "CashIn";
             this.ch_cashin.UseVisualStyleBackColor = true;
@@ -893,55 +886,54 @@ namespace ATM_DataBase
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(13, 130);
+            this.label22.Location = new System.Drawing.Point(15, 187);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(91, 17);
+            this.label22.Size = new System.Drawing.Size(87, 19);
             this.label22.TabIndex = 40;
             this.label22.Text = "Глубина, см:";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(13, 100);
+            this.label24.Location = new System.Drawing.Point(15, 144);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(87, 17);
+            this.label24.Size = new System.Drawing.Size(87, 19);
             this.label24.TabIndex = 39;
             this.label24.Text = "Ширина, см:";
             // 
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(13, 70);
+            this.label26.Location = new System.Drawing.Point(15, 101);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(85, 17);
+            this.label26.Size = new System.Drawing.Size(80, 19);
             this.label26.TabIndex = 38;
             this.label26.Text = "Высота, см:";
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(13, 39);
+            this.label28.Location = new System.Drawing.Point(15, 56);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(56, 17);
+            this.label28.Size = new System.Drawing.Size(52, 19);
             this.label28.TabIndex = 37;
             this.label28.Text = "Вес, кг:";
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(13, 10);
+            this.label29.Location = new System.Drawing.Point(15, 14);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(110, 17);
+            this.label29.Size = new System.Drawing.Size(107, 19);
             this.label29.TabIndex = 36;
             this.label29.Text = "Наименование:";
             // 
             // buttonEdit_model
             // 
             this.buttonEdit_model.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEdit_model.Location = new System.Drawing.Point(361, 491);
-            this.buttonEdit_model.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonEdit_model.Location = new System.Drawing.Point(405, 486);
             this.buttonEdit_model.Name = "buttonEdit_model";
-            this.buttonEdit_model.Size = new System.Drawing.Size(89, 30);
+            this.buttonEdit_model.Size = new System.Drawing.Size(100, 43);
             this.buttonEdit_model.TabIndex = 16;
             this.buttonEdit_model.Text = "Изменить";
             this.buttonEdit_model.UseVisualStyleBackColor = true;
@@ -958,10 +950,10 @@ namespace ATM_DataBase
             this.tabEquipment.Controls.Add(this.label31);
             this.tabEquipment.Controls.Add(this.label32);
             this.tabEquipment.Controls.Add(this.dgv_atm_equip);
-            this.tabEquipment.Location = new System.Drawing.Point(4, 25);
-            this.tabEquipment.Margin = new System.Windows.Forms.Padding(4);
+            this.tabEquipment.Location = new System.Drawing.Point(4, 28);
+            this.tabEquipment.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.tabEquipment.Name = "tabEquipment";
-            this.tabEquipment.Size = new System.Drawing.Size(453, 523);
+            this.tabEquipment.Size = new System.Drawing.Size(511, 539);
             this.tabEquipment.TabIndex = 5;
             this.tabEquipment.Text = "Оборудование";
             this.tabEquipment.UseVisualStyleBackColor = true;
@@ -969,10 +961,9 @@ namespace ATM_DataBase
             // btnDelEquip
             // 
             this.btnDelEquip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelEquip.Location = new System.Drawing.Point(334, 391);
-            this.btnDelEquip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelEquip.Location = new System.Drawing.Point(398, 401);
             this.btnDelEquip.Name = "btnDelEquip";
-            this.btnDelEquip.Size = new System.Drawing.Size(109, 39);
+            this.btnDelEquip.Size = new System.Drawing.Size(100, 43);
             this.btnDelEquip.TabIndex = 62;
             this.btnDelEquip.Text = "Удалить";
             this.btnDelEquip.UseVisualStyleBackColor = true;
@@ -983,19 +974,20 @@ namespace ATM_DataBase
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.buttonRetEquip);
             this.groupBox1.Controls.Add(this.buttonAddEquip);
-            this.groupBox1.Location = new System.Drawing.Point(104, 451);
+            this.groupBox1.Location = new System.Drawing.Point(187, 451);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(344, 66);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(317, 84);
             this.groupBox1.TabIndex = 61;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Операции со складом";
             // 
             // buttonRetEquip
             // 
-            this.buttonRetEquip.Location = new System.Drawing.Point(182, 20);
-            this.buttonRetEquip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonRetEquip.Location = new System.Drawing.Point(164, 26);
             this.buttonRetEquip.Name = "buttonRetEquip";
-            this.buttonRetEquip.Size = new System.Drawing.Size(156, 39);
+            this.buttonRetEquip.Size = new System.Drawing.Size(147, 43);
             this.buttonRetEquip.TabIndex = 20;
             this.buttonRetEquip.Text = "Вернуть на склад";
             this.buttonRetEquip.UseVisualStyleBackColor = true;
@@ -1003,10 +995,9 @@ namespace ATM_DataBase
             // 
             // buttonAddEquip
             // 
-            this.buttonAddEquip.Location = new System.Drawing.Point(6, 20);
-            this.buttonAddEquip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonAddEquip.Location = new System.Drawing.Point(6, 26);
             this.buttonAddEquip.Name = "buttonAddEquip";
-            this.buttonAddEquip.Size = new System.Drawing.Size(170, 39);
+            this.buttonAddEquip.Size = new System.Drawing.Size(147, 43);
             this.buttonAddEquip.TabIndex = 19;
             this.buttonAddEquip.Text = "Добавить со склада";
             this.buttonAddEquip.UseVisualStyleBackColor = true;
@@ -1015,10 +1006,9 @@ namespace ATM_DataBase
             // buttonCreateEquip
             // 
             this.buttonCreateEquip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCreateEquip.Location = new System.Drawing.Point(104, 391);
-            this.buttonCreateEquip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCreateEquip.Location = new System.Drawing.Point(186, 401);
             this.buttonCreateEquip.Name = "buttonCreateEquip";
-            this.buttonCreateEquip.Size = new System.Drawing.Size(109, 39);
+            this.buttonCreateEquip.Size = new System.Drawing.Size(100, 43);
             this.buttonCreateEquip.TabIndex = 60;
             this.buttonCreateEquip.Text = "Добавить";
             this.buttonCreateEquip.UseVisualStyleBackColor = true;
@@ -1027,10 +1017,9 @@ namespace ATM_DataBase
             // buttonEditEquip
             // 
             this.buttonEditEquip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEditEquip.Location = new System.Drawing.Point(219, 391);
-            this.buttonEditEquip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonEditEquip.Location = new System.Drawing.Point(292, 401);
             this.buttonEditEquip.Name = "buttonEditEquip";
-            this.buttonEditEquip.Size = new System.Drawing.Size(109, 39);
+            this.buttonEditEquip.Size = new System.Drawing.Size(100, 43);
             this.buttonEditEquip.TabIndex = 17;
             this.buttonEditEquip.Text = "Изменить";
             this.buttonEditEquip.UseVisualStyleBackColor = true;
@@ -1040,9 +1029,9 @@ namespace ATM_DataBase
             // 
             this.lb_eq_part_no.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lb_eq_part_no.AutoSize = true;
-            this.lb_eq_part_no.Location = new System.Drawing.Point(303, 358);
+            this.lb_eq_part_no.Location = new System.Drawing.Point(341, 364);
             this.lb_eq_part_no.Name = "lb_eq_part_no";
-            this.lb_eq_part_no.Size = new System.Drawing.Size(128, 17);
+            this.lb_eq_part_no.Size = new System.Drawing.Size(99, 19);
             this.lb_eq_part_no.TabIndex = 59;
             this.lb_eq_part_no.Text = "_______________";
             // 
@@ -1050,9 +1039,9 @@ namespace ATM_DataBase
             // 
             this.lb_eq_sn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lb_eq_sn.AutoSize = true;
-            this.lb_eq_sn.Location = new System.Drawing.Point(40, 358);
+            this.lb_eq_sn.Location = new System.Drawing.Point(45, 364);
             this.lb_eq_sn.Name = "lb_eq_sn";
-            this.lb_eq_sn.Size = new System.Drawing.Size(128, 17);
+            this.lb_eq_sn.Size = new System.Drawing.Size(99, 19);
             this.lb_eq_sn.TabIndex = 55;
             this.lb_eq_sn.Text = "_______________";
             // 
@@ -1060,9 +1049,9 @@ namespace ATM_DataBase
             // 
             this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(199, 358);
+            this.label31.Location = new System.Drawing.Point(224, 364);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(106, 17);
+            this.label31.Size = new System.Drawing.Size(104, 19);
             this.label31.TabIndex = 50;
             this.label31.Text = "Номер партии:";
             // 
@@ -1070,9 +1059,9 @@ namespace ATM_DataBase
             // 
             this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(3, 358);
+            this.label32.Location = new System.Drawing.Point(3, 364);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(31, 17);
+            this.label32.Size = new System.Drawing.Size(31, 19);
             this.label32.TabIndex = 49;
             this.label32.Text = "s/n:";
             // 
@@ -1085,8 +1074,7 @@ namespace ATM_DataBase
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_atm_equip.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_atm_equip.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_atm_equip.Location = new System.Drawing.Point(3, 2);
-            this.dgv_atm_equip.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv_atm_equip.Location = new System.Drawing.Point(3, 3);
             this.dgv_atm_equip.MultiSelect = false;
             this.dgv_atm_equip.Name = "dgv_atm_equip";
             this.dgv_atm_equip.ReadOnly = true;
@@ -1094,7 +1082,7 @@ namespace ATM_DataBase
             this.dgv_atm_equip.RowHeadersWidth = 51;
             this.dgv_atm_equip.RowTemplate.Height = 24;
             this.dgv_atm_equip.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_atm_equip.Size = new System.Drawing.Size(445, 344);
+            this.dgv_atm_equip.Size = new System.Drawing.Size(501, 358);
             this.dgv_atm_equip.TabIndex = 18;
             this.dgv_atm_equip.SelectionChanged += new System.EventHandler(this.dgv_atm_equip_SelectionChanged);
             // 
@@ -1104,9 +1092,10 @@ namespace ATM_DataBase
             this.tabJournal.Controls.Add(this.btnAddJournal);
             this.tabJournal.Controls.Add(this.btnEditJournal);
             this.tabJournal.Controls.Add(this.dgv_journal);
-            this.tabJournal.Location = new System.Drawing.Point(4, 25);
+            this.tabJournal.Location = new System.Drawing.Point(4, 28);
+            this.tabJournal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabJournal.Name = "tabJournal";
-            this.tabJournal.Size = new System.Drawing.Size(453, 523);
+            this.tabJournal.Size = new System.Drawing.Size(511, 539);
             this.tabJournal.TabIndex = 6;
             this.tabJournal.Text = "Журнал";
             this.tabJournal.UseVisualStyleBackColor = true;
@@ -1114,10 +1103,9 @@ namespace ATM_DataBase
             // btnDelJournal
             // 
             this.btnDelJournal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelJournal.Location = new System.Drawing.Point(331, 473);
-            this.btnDelJournal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelJournal.Location = new System.Drawing.Point(406, 493);
             this.btnDelJournal.Name = "btnDelJournal";
-            this.btnDelJournal.Size = new System.Drawing.Size(109, 39);
+            this.btnDelJournal.Size = new System.Drawing.Size(100, 43);
             this.btnDelJournal.TabIndex = 65;
             this.btnDelJournal.Text = "Удалить";
             this.btnDelJournal.UseVisualStyleBackColor = true;
@@ -1126,10 +1114,9 @@ namespace ATM_DataBase
             // btnAddJournal
             // 
             this.btnAddJournal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddJournal.Location = new System.Drawing.Point(101, 473);
-            this.btnAddJournal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddJournal.Location = new System.Drawing.Point(194, 493);
             this.btnAddJournal.Name = "btnAddJournal";
-            this.btnAddJournal.Size = new System.Drawing.Size(109, 39);
+            this.btnAddJournal.Size = new System.Drawing.Size(100, 43);
             this.btnAddJournal.TabIndex = 64;
             this.btnAddJournal.Text = "Добавить";
             this.btnAddJournal.UseVisualStyleBackColor = true;
@@ -1138,10 +1125,9 @@ namespace ATM_DataBase
             // btnEditJournal
             // 
             this.btnEditJournal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditJournal.Location = new System.Drawing.Point(216, 473);
-            this.btnEditJournal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEditJournal.Location = new System.Drawing.Point(300, 493);
             this.btnEditJournal.Name = "btnEditJournal";
-            this.btnEditJournal.Size = new System.Drawing.Size(109, 39);
+            this.btnEditJournal.Size = new System.Drawing.Size(100, 43);
             this.btnEditJournal.TabIndex = 63;
             this.btnEditJournal.Text = "Изменить";
             this.btnEditJournal.UseVisualStyleBackColor = true;
@@ -1156,8 +1142,7 @@ namespace ATM_DataBase
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_journal.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_journal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_journal.Location = new System.Drawing.Point(3, 2);
-            this.dgv_journal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv_journal.Location = new System.Drawing.Point(3, 3);
             this.dgv_journal.MultiSelect = false;
             this.dgv_journal.Name = "dgv_journal";
             this.dgv_journal.ReadOnly = true;
@@ -1165,7 +1150,7 @@ namespace ATM_DataBase
             this.dgv_journal.RowHeadersWidth = 51;
             this.dgv_journal.RowTemplate.Height = 24;
             this.dgv_journal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_journal.Size = new System.Drawing.Size(447, 446);
+            this.dgv_journal.Size = new System.Drawing.Size(503, 484);
             this.dgv_journal.TabIndex = 19;
             // 
             // timer1
@@ -1176,9 +1161,11 @@ namespace ATM_DataBase
             // 
             // btn_ping
             // 
-            this.btn_ping.Location = new System.Drawing.Point(966, 3);
+            this.btn_ping.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_ping.Location = new System.Drawing.Point(1104, 0);
+            this.btn_ping.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_ping.Name = "btn_ping";
-            this.btn_ping.Size = new System.Drawing.Size(75, 25);
+            this.btn_ping.Size = new System.Drawing.Size(81, 32);
             this.btn_ping.TabIndex = 3;
             this.btn_ping.Text = "off ping";
             this.btn_ping.UseVisualStyleBackColor = true;
@@ -1186,16 +1173,15 @@ namespace ATM_DataBase
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1053, 594);
+            this.ClientSize = new System.Drawing.Size(1185, 632);
             this.Controls.Add(this.btn_ping);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.dgvATM);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(893, 548);
             this.Name = "MainForm";
             this.Text = "ATM: Учет и Сопровождение";
             ((System.ComponentModel.ISupportInitialize)(this.dgvATM)).EndInit();

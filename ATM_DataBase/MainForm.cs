@@ -613,5 +613,6 @@ namespace ATM_DataBase
                 this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             }
         }
+
     }
 }
