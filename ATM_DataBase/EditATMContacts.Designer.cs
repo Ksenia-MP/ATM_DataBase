@@ -1,7 +1,7 @@
 ﻿
 namespace ATM_DataBase
 {
-    partial class EditATMProvider
+    partial class EditATMContacts
     {
         /// <summary>
         /// Required designer variable.

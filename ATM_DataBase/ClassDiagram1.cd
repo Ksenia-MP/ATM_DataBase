@@ -20,22 +20,10 @@
       <Compartment Name="Fields" Collapsed="true" />
       <Compartment Name="Properties" Collapsed="true" />
     </Compartments>
-    <AssociationLine Name="dataBase" Type="ATM_DataBase.DataBase" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="12" Y="3.625" />
-        <Point X="11.545" Y="3.625" />
-        <Point X="11.545" Y="9.786" />
-        <Point X="7.188" Y="9.786" />
-        <Point X="7.188" Y="9.641" />
-      </Path>
-    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AACAAAQAAyBEghAAEAiABgACMAAAAAAAACpAAACAAAA=</HashCode>
       <FileName>EditATM.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="dataBase" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="ATM_DataBase.EditATMEquip">
     <Position X="8" Y="4.75" Width="1.5" />
@@ -100,7 +88,7 @@
       <Field Name="dataBase" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="ATM_DataBase.EditATMProvider">
+  <Class Name="ATM_DataBase.EditATMContacts">
     <Position X="14" Y="4.5" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
@@ -115,7 +103,7 @@
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>DEAAAAAAASAEgHAAQAiIBgICRCACAAAJECAEAAEEABA=</HashCode>
-      <FileName>EditATMProvider.cs</FileName>
+      <FileName>EditATMContacts.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="dataBase" />
@@ -126,19 +114,10 @@
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
-    <AssociationLine Name="dataBase" Type="ATM_DataBase.DataBase" FixedToPoint="true">
-      <Path>
-        <Point X="6.562" Y="6.261" />
-        <Point X="6.562" Y="7.25" />
-      </Path>
-    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAIAAAAgCAEgBIAAACABAACMCAAAAAIECEAAAEAAAA=</HashCode>
       <FileName>EditEquip.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="dataBase" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="ATM_DataBase.EditModel">
     <Position X="2.75" Y="3.75" Width="1.5" />
@@ -214,16 +193,16 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>/4ygMwUNQfFOj1QEkEaWkng6EIEot5ACITKQC4wB5DE=</HashCode>
+      <HashCode>/4ygMwUNQfFOj1QEmEaWkng6EIEot5ACITKQC4wBZDE=</HashCode>
       <FileName>MainForm.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="dataBase" />
       <Field Name="editATM" />
-      <Field Name="editEqiup" />
-      <Field Name="editModel" />
+      <Field Name="editContacts" />
       <Field Name="editNet" />
-      <Field Name="editProvider" />
+      <Field Name="editModel" />
+      <Field Name="editEqiup" />
       <Field Name="journal" />
     </ShowAsAssociation>
   </Class>
@@ -254,18 +233,12 @@
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
-    <AssociationLine Name="dataBase" Type="ATM_DataBase.DataBase" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="dataBase" Type="ATM_DataBase.DataBase" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="4.5" Y="3" />
-        <Point X="4.4" Y="3" />
-        <Point X="4.4" Y="8.812" />
+        <Point X="4.5" Y="3.188" />
+        <Point X="4.377" Y="3.188" />
+        <Point X="4.377" Y="8.812" />
         <Point X="6" Y="8.812" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="edit" Type="ATM_DataBase.EditProvider" ManuallyRouted="true" FixedToPoint="true">
-      <Path>
-        <Point X="5.312" Y="3.396" />
-        <Point X="5.312" Y="3.75" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>

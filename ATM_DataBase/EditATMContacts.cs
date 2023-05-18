@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace ATM_DataBase
 {
-    public partial class EditATMProvider : Form
+    public partial class EditATMContacts : Form
     {
         DataBase dataBase = new DataBase();
         int ID;
         public static int added_provider_id;
         object[,] pr_id_and_name;
 
-        public EditATMProvider(int id)
+        public EditATMContacts(int id)
         {
             ID = id;
             InitializeComponent();

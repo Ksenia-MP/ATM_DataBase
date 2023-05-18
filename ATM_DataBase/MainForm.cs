@@ -25,7 +25,7 @@ namespace ATM_DataBase
         Image img_off = new Bitmap(Environment.CurrentDirectory + "\\off.png");
 
         EditATM editATM;
-        EditATMProvider editProvider;
+        EditATMContacts editContacts;
         EditATMNet editNet;
         EditATMModel editModel;
         EditATMEquip editEqiup;
@@ -260,7 +260,7 @@ namespace ATM_DataBase
 
         private void RefreshEquipmetTable()
         {
-            string querystring = $"select a.id, type, name, usb, com from ATM_Eq as a join Equipment as b on equipment_id = b.id where atm_id = {ID}";
+            string querystring = $"select a.id, type 'Тип', name 'Наименование', usb, com from ATM_Eq as a join Equipment as b on equipment_id = b.id where atm_id = {ID}";
             
             DataTable equip_table = DBwork.ExeSelect(querystring, dataBase);
 
@@ -345,8 +345,8 @@ namespace ATM_DataBase
                 return;
             }
 
-            editProvider= new EditATMProvider(ID);
-            editProvider.ShowDialog();
+            editContacts = new EditATMContacts(ID);
+            editContacts.ShowDialog();
             RefreshTab();
             f_modify_mode = false;
         }
@@ -578,7 +578,7 @@ namespace ATM_DataBase
         {
             bool pingable = false;
             Ping pinger = null;
-
+            
             try
             {
                 pinger = new Ping();
@@ -587,7 +587,7 @@ namespace ATM_DataBase
             }
             catch (PingException)
             {
-                // Discard PingExceptions and return false;
+                //
             }
             finally
             {
@@ -600,5 +600,18 @@ namespace ATM_DataBase
             return pingable;
         }
 
+        private void btn_ping_Click(object sender, EventArgs e)
+        {
+            if (btn_ping.Text.Equals("off ping"))
+            {
+                btn_ping.Text = "on ping";
+                this.timer1.Tick -= new System.EventHandler(this.timer1_Tick);
+            }
+            else
+            {
+                btn_ping.Text = "off ping";
+                this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            }
+        }
     }
 }

@@ -78,13 +78,22 @@ namespace ATM_DataBase
             this.label17 = new System.Windows.Forms.Label();
             this.buttonEdit_net = new System.Windows.Forms.Button();
             this.tabContacts = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lb_renter_company = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lb_renter_phone = new System.Windows.Forms.Label();
+            this.lb_renter_name = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.lb_pr_contract_date = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.lb_pr_contract_no = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.lb_pr_line_no = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.lb_pr_name = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.lb_pr_contract_no = new System.Windows.Forms.Label();
+            this.lb_pr_line_no = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.buttonEdit_provider = new System.Windows.Forms.Button();
             this.tabModel = new System.Windows.Forms.TabPage();
             this.lb_weight = new System.Windows.Forms.Label();
@@ -117,29 +126,21 @@ namespace ATM_DataBase
             this.btnEditJournal = new System.Windows.Forms.Button();
             this.dgv_journal = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lb_renter_company = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lb_renter_phone = new System.Windows.Forms.Label();
-            this.lb_renter_name = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
+            this.btn_ping = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvATM)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabGeneral.SuspendLayout();
             this.tabNet.SuspendLayout();
             this.tabContacts.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.tabModel.SuspendLayout();
             this.tabEquipment.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_atm_equip)).BeginInit();
             this.tabJournal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_journal)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvATM
@@ -321,7 +322,7 @@ namespace ATM_DataBase
             this.tabGeneral.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabGeneral.Name = "tabGeneral";
             this.tabGeneral.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabGeneral.Size = new System.Drawing.Size(453, 528);
+            this.tabGeneral.Size = new System.Drawing.Size(453, 523);
             this.tabGeneral.TabIndex = 0;
             this.tabGeneral.Text = "Общие";
             this.tabGeneral.UseVisualStyleBackColor = true;
@@ -349,7 +350,7 @@ namespace ATM_DataBase
             // buttonEdit
             // 
             this.buttonEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEdit.Location = new System.Drawing.Point(358, 494);
+            this.buttonEdit.Location = new System.Drawing.Point(358, 489);
             this.buttonEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(89, 30);
@@ -485,7 +486,7 @@ namespace ATM_DataBase
             this.tabNet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabNet.Name = "tabNet";
             this.tabNet.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabNet.Size = new System.Drawing.Size(453, 528);
+            this.tabNet.Size = new System.Drawing.Size(453, 523);
             this.tabNet.TabIndex = 1;
             this.tabNet.Text = "Сетевые ";
             this.tabNet.UseVisualStyleBackColor = true;
@@ -636,6 +637,105 @@ namespace ATM_DataBase
             this.tabContacts.Text = "Контакты";
             this.tabContacts.UseVisualStyleBackColor = true;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Controls.Add(this.lb_renter_company);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.lb_renter_phone);
+            this.groupBox3.Controls.Add(this.lb_renter_name);
+            this.groupBox3.Controls.Add(this.label30);
+            this.groupBox3.Location = new System.Drawing.Point(6, 172);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(441, 151);
+            this.groupBox3.TabIndex = 40;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Арендодатель";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 17);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Организация:";
+            // 
+            // lb_renter_company
+            // 
+            this.lb_renter_company.AutoSize = true;
+            this.lb_renter_company.Location = new System.Drawing.Point(144, 27);
+            this.lb_renter_company.Name = "lb_renter_company";
+            this.lb_renter_company.Size = new System.Drawing.Size(208, 17);
+            this.lb_renter_company.TabIndex = 32;
+            this.lb_renter_company.Text = "_________________________";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 55);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(126, 17);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "Контактное лицо:";
+            // 
+            // lb_renter_phone
+            // 
+            this.lb_renter_phone.AutoSize = true;
+            this.lb_renter_phone.Location = new System.Drawing.Point(144, 83);
+            this.lb_renter_phone.Name = "lb_renter_phone";
+            this.lb_renter_phone.Size = new System.Drawing.Size(128, 17);
+            this.lb_renter_phone.TabIndex = 36;
+            this.lb_renter_phone.Text = "_______________";
+            // 
+            // lb_renter_name
+            // 
+            this.lb_renter_name.AutoSize = true;
+            this.lb_renter_name.Location = new System.Drawing.Point(144, 55);
+            this.lb_renter_name.Name = "lb_renter_name";
+            this.lb_renter_name.Size = new System.Drawing.Size(208, 17);
+            this.lb_renter_name.TabIndex = 34;
+            this.lb_renter_name.Text = "_________________________";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(6, 83);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(125, 17);
+            this.label30.TabIndex = 35;
+            this.label30.Text = "Номер телефона:";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.label21);
+            this.groupBox2.Controls.Add(this.lb_pr_contract_date);
+            this.groupBox2.Controls.Add(this.lb_pr_name);
+            this.groupBox2.Controls.Add(this.label27);
+            this.groupBox2.Controls.Add(this.label23);
+            this.groupBox2.Controls.Add(this.lb_pr_contract_no);
+            this.groupBox2.Controls.Add(this.lb_pr_line_no);
+            this.groupBox2.Controls.Add(this.label25);
+            this.groupBox2.Location = new System.Drawing.Point(6, 5);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(441, 151);
+            this.groupBox2.TabIndex = 39;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Провайдер";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 27);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(110, 17);
+            this.label21.TabIndex = 31;
+            this.label21.Text = "Наименование:";
+            // 
             // lb_pr_contract_date
             // 
             this.lb_pr_contract_date.AutoSize = true;
@@ -644,51 +744,6 @@ namespace ATM_DataBase
             this.lb_pr_contract_date.Size = new System.Drawing.Size(88, 17);
             this.lb_pr_contract_date.TabIndex = 38;
             this.lb_pr_contract_date.Text = "__________";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(6, 110);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(114, 17);
-            this.label27.TabIndex = 37;
-            this.label27.Text = "Дата договора: ";
-            // 
-            // lb_pr_contract_no
-            // 
-            this.lb_pr_contract_no.AutoSize = true;
-            this.lb_pr_contract_no.Location = new System.Drawing.Point(144, 83);
-            this.lb_pr_contract_no.Name = "lb_pr_contract_no";
-            this.lb_pr_contract_no.Size = new System.Drawing.Size(168, 17);
-            this.lb_pr_contract_no.TabIndex = 36;
-            this.lb_pr_contract_no.Text = "____________________";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(6, 83);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(90, 17);
-            this.label25.TabIndex = 35;
-            this.label25.Text = "№ договора:";
-            // 
-            // lb_pr_line_no
-            // 
-            this.lb_pr_line_no.AutoSize = true;
-            this.lb_pr_line_no.Location = new System.Drawing.Point(144, 55);
-            this.lb_pr_line_no.Name = "lb_pr_line_no";
-            this.lb_pr_line_no.Size = new System.Drawing.Size(168, 17);
-            this.lb_pr_line_no.TabIndex = 34;
-            this.lb_pr_line_no.Text = "____________________";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(6, 55);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(70, 17);
-            this.label23.TabIndex = 33;
-            this.label23.Text = "№ линии:";
             // 
             // lb_pr_name
             // 
@@ -699,10 +754,55 @@ namespace ATM_DataBase
             this.lb_pr_name.TabIndex = 32;
             this.lb_pr_name.Text = "____________________";
             // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(6, 110);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(114, 17);
+            this.label27.TabIndex = 37;
+            this.label27.Text = "Дата договора: ";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(6, 55);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(70, 17);
+            this.label23.TabIndex = 33;
+            this.label23.Text = "№ линии:";
+            // 
+            // lb_pr_contract_no
+            // 
+            this.lb_pr_contract_no.AutoSize = true;
+            this.lb_pr_contract_no.Location = new System.Drawing.Point(144, 83);
+            this.lb_pr_contract_no.Name = "lb_pr_contract_no";
+            this.lb_pr_contract_no.Size = new System.Drawing.Size(168, 17);
+            this.lb_pr_contract_no.TabIndex = 36;
+            this.lb_pr_contract_no.Text = "____________________";
+            // 
+            // lb_pr_line_no
+            // 
+            this.lb_pr_line_no.AutoSize = true;
+            this.lb_pr_line_no.Location = new System.Drawing.Point(144, 55);
+            this.lb_pr_line_no.Name = "lb_pr_line_no";
+            this.lb_pr_line_no.Size = new System.Drawing.Size(168, 17);
+            this.lb_pr_line_no.TabIndex = 34;
+            this.lb_pr_line_no.Text = "____________________";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(6, 83);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(90, 17);
+            this.label25.TabIndex = 35;
+            this.label25.Text = "№ договора:";
+            // 
             // buttonEdit_provider
             // 
             this.buttonEdit_provider.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEdit_provider.Location = new System.Drawing.Point(358, 485);
+            this.buttonEdit_provider.Location = new System.Drawing.Point(358, 489);
             this.buttonEdit_provider.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEdit_provider.Name = "buttonEdit_provider";
             this.buttonEdit_provider.Size = new System.Drawing.Size(89, 30);
@@ -728,7 +828,7 @@ namespace ATM_DataBase
             this.tabModel.Location = new System.Drawing.Point(4, 25);
             this.tabModel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabModel.Name = "tabModel";
-            this.tabModel.Size = new System.Drawing.Size(453, 528);
+            this.tabModel.Size = new System.Drawing.Size(453, 523);
             this.tabModel.TabIndex = 4;
             this.tabModel.Text = "О Модели";
             this.tabModel.UseVisualStyleBackColor = true;
@@ -838,7 +938,7 @@ namespace ATM_DataBase
             // buttonEdit_model
             // 
             this.buttonEdit_model.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEdit_model.Location = new System.Drawing.Point(358, 491);
+            this.buttonEdit_model.Location = new System.Drawing.Point(361, 491);
             this.buttonEdit_model.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEdit_model.Name = "buttonEdit_model";
             this.buttonEdit_model.Size = new System.Drawing.Size(89, 30);
@@ -861,7 +961,7 @@ namespace ATM_DataBase
             this.tabEquipment.Location = new System.Drawing.Point(4, 25);
             this.tabEquipment.Margin = new System.Windows.Forms.Padding(4);
             this.tabEquipment.Name = "tabEquipment";
-            this.tabEquipment.Size = new System.Drawing.Size(453, 528);
+            this.tabEquipment.Size = new System.Drawing.Size(453, 523);
             this.tabEquipment.TabIndex = 5;
             this.tabEquipment.Text = "Оборудование";
             this.tabEquipment.UseVisualStyleBackColor = true;
@@ -1006,7 +1106,7 @@ namespace ATM_DataBase
             this.tabJournal.Controls.Add(this.dgv_journal);
             this.tabJournal.Location = new System.Drawing.Point(4, 25);
             this.tabJournal.Name = "tabJournal";
-            this.tabJournal.Size = new System.Drawing.Size(453, 528);
+            this.tabJournal.Size = new System.Drawing.Size(453, 523);
             this.tabJournal.TabIndex = 6;
             this.tabJournal.Text = "Журнал";
             this.tabJournal.UseVisualStyleBackColor = true;
@@ -1014,7 +1114,7 @@ namespace ATM_DataBase
             // btnDelJournal
             // 
             this.btnDelJournal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelJournal.Location = new System.Drawing.Point(341, 487);
+            this.btnDelJournal.Location = new System.Drawing.Point(331, 473);
             this.btnDelJournal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelJournal.Name = "btnDelJournal";
             this.btnDelJournal.Size = new System.Drawing.Size(109, 39);
@@ -1026,7 +1126,7 @@ namespace ATM_DataBase
             // btnAddJournal
             // 
             this.btnAddJournal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddJournal.Location = new System.Drawing.Point(111, 487);
+            this.btnAddJournal.Location = new System.Drawing.Point(101, 473);
             this.btnAddJournal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddJournal.Name = "btnAddJournal";
             this.btnAddJournal.Size = new System.Drawing.Size(109, 39);
@@ -1038,7 +1138,7 @@ namespace ATM_DataBase
             // btnEditJournal
             // 
             this.btnEditJournal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditJournal.Location = new System.Drawing.Point(226, 487);
+            this.btnEditJournal.Location = new System.Drawing.Point(216, 473);
             this.btnEditJournal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditJournal.Name = "btnEditJournal";
             this.btnEditJournal.Size = new System.Drawing.Size(109, 39);
@@ -1074,110 +1174,22 @@ namespace ATM_DataBase
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // groupBox2
+            // btn_ping
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.label21);
-            this.groupBox2.Controls.Add(this.lb_pr_contract_date);
-            this.groupBox2.Controls.Add(this.lb_pr_name);
-            this.groupBox2.Controls.Add(this.label27);
-            this.groupBox2.Controls.Add(this.label23);
-            this.groupBox2.Controls.Add(this.lb_pr_contract_no);
-            this.groupBox2.Controls.Add(this.lb_pr_line_no);
-            this.groupBox2.Controls.Add(this.label25);
-            this.groupBox2.Location = new System.Drawing.Point(6, 5);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(441, 151);
-            this.groupBox2.TabIndex = 39;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Провайдер";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 27);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(110, 17);
-            this.label21.TabIndex = 31;
-            this.label21.Text = "Наименование:";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.lb_renter_company);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.lb_renter_phone);
-            this.groupBox3.Controls.Add(this.lb_renter_name);
-            this.groupBox3.Controls.Add(this.label30);
-            this.groupBox3.Location = new System.Drawing.Point(6, 172);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(441, 151);
-            this.groupBox3.TabIndex = 40;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Арендодатель";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 17);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "Организация:";
-            // 
-            // lb_renter_company
-            // 
-            this.lb_renter_company.AutoSize = true;
-            this.lb_renter_company.Location = new System.Drawing.Point(144, 27);
-            this.lb_renter_company.Name = "lb_renter_company";
-            this.lb_renter_company.Size = new System.Drawing.Size(208, 17);
-            this.lb_renter_company.TabIndex = 32;
-            this.lb_renter_company.Text = "_________________________";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 55);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(126, 17);
-            this.label10.TabIndex = 33;
-            this.label10.Text = "Контактное лицо:";
-            // 
-            // lb_renter_phone
-            // 
-            this.lb_renter_phone.AutoSize = true;
-            this.lb_renter_phone.Location = new System.Drawing.Point(144, 83);
-            this.lb_renter_phone.Name = "lb_renter_phone";
-            this.lb_renter_phone.Size = new System.Drawing.Size(128, 17);
-            this.lb_renter_phone.TabIndex = 36;
-            this.lb_renter_phone.Text = "_______________";
-            // 
-            // lb_renter_name
-            // 
-            this.lb_renter_name.AutoSize = true;
-            this.lb_renter_name.Location = new System.Drawing.Point(144, 55);
-            this.lb_renter_name.Name = "lb_renter_name";
-            this.lb_renter_name.Size = new System.Drawing.Size(208, 17);
-            this.lb_renter_name.TabIndex = 34;
-            this.lb_renter_name.Text = "_________________________";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(6, 83);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(125, 17);
-            this.label30.TabIndex = 35;
-            this.label30.Text = "Номер телефона:";
+            this.btn_ping.Location = new System.Drawing.Point(966, 3);
+            this.btn_ping.Name = "btn_ping";
+            this.btn_ping.Size = new System.Drawing.Size(75, 25);
+            this.btn_ping.TabIndex = 3;
+            this.btn_ping.Text = "off ping";
+            this.btn_ping.UseVisualStyleBackColor = true;
+            this.btn_ping.Click += new System.EventHandler(this.btn_ping_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1053, 594);
+            this.Controls.Add(this.btn_ping);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.dgvATM);
             this.Controls.Add(this.menuStrip1);
@@ -1185,7 +1197,7 @@ namespace ATM_DataBase
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(893, 548);
             this.Name = "MainForm";
-            this.Text = "Я люблю свою работу";
+            this.Text = "ATM: Учет и Сопровождение";
             ((System.ComponentModel.ISupportInitialize)(this.dgvATM)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -1195,6 +1207,10 @@ namespace ATM_DataBase
             this.tabNet.ResumeLayout(false);
             this.tabNet.PerformLayout();
             this.tabContacts.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.tabModel.ResumeLayout(false);
             this.tabModel.PerformLayout();
             this.tabEquipment.ResumeLayout(false);
@@ -1203,10 +1219,6 @@ namespace ATM_DataBase
             ((System.ComponentModel.ISupportInitialize)(this.dgv_atm_equip)).EndInit();
             this.tabJournal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_journal)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1309,6 +1321,7 @@ namespace ATM_DataBase
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Button btn_ping;
     }
 }
 
