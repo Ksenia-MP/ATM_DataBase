@@ -21,8 +21,8 @@ namespace ATM_DataBase
         public static int ID;   //ID выбранной записи в таблице 
         private bool f_modify_mode; //контроль выбранной записи в таблице
 
-        Image img_on = new Bitmap(Environment.CurrentDirectory + "\\on.png");
-        Image img_off = new Bitmap(Environment.CurrentDirectory + "\\off.png");
+        static Image img_on = new Bitmap(Environment.CurrentDirectory + "\\on.png");
+        static Image img_off = new Bitmap(Environment.CurrentDirectory + "\\off.png");
 
         EditATM editATM;
         EditATMContacts editContacts;
@@ -562,15 +562,44 @@ namespace ATM_DataBase
             return table.Rows[0][0].ToString();
         }
 
+        public static void ThreadPing(Object obj)
+        {
+            ThreadParams tp = (ThreadParams)obj;
+            string ip = tp.ip;
+            int id = tp.id;
+            DataGridView dgv = tp.dgv;
+
+            bool good_ping = PingHost(ip);
+            int row = DBwork.RowByID(dgv, id);
+            if (row >= 0)
+            {
+                try
+                {
+                    if (good_ping) { dgv.Rows[row].Cells[0].Value = img_on; }
+
+                    else { dgv.Rows[row].Cells[0].Value = img_off; }
+                }
+                catch (InvalidOperationException)
+                {
+                    return;
+                }
+            }
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
+            int id_atm;
             for (int i = 0; i < dgvATM.RowCount; i++)
             {
-                string ATM_IP = GetIP((int)dgvATM.Rows[i].Cells["id"].Value);
+                id_atm = (int)dgvATM.Rows[i].Cells["id"].Value;
+                string ATM_IP = GetIP(id_atm);
                 ATM_IP = ATM_IP.Replace(" ", "");
-                if (ATM_IP == "") { ATM_IP = "...."; }
-                if (PingHost(ATM_IP)) { dgvATM.Rows[i].Cells[0].Value = img_on; }
-                else { dgvATM.Rows[i].Cells[0].Value = img_off; }
+                if (ATM_IP == "") { return; }
+                Thread t = new Thread(ThreadPing);
+                ThreadParams tp = new ThreadParams(ATM_IP, id_atm, dgvATM);
+                t.Start(tp);
+                //if (PingHost(ATM_IP)) { dgvATM.Rows[i].Cells[0].Value = img_on; }
+                //else { dgvATM.Rows[i].Cells[0].Value = img_off; }
             }
         }
 
@@ -614,5 +643,35 @@ namespace ATM_DataBase
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int id_atm;
+            for (int i = 0; i < dgvATM.RowCount; i++)
+            {
+                id_atm = (int)dgvATM.Rows[i].Cells["id"].Value;
+                string ATM_IP = GetIP(id_atm);
+                ATM_IP = ATM_IP.Replace(" ", "");
+                if (ATM_IP == "") { return; }
+                Thread t = new Thread(ThreadPing);
+                ThreadParams tp = new ThreadParams(ATM_IP, id_atm, dgvATM);
+                t.Start(tp);
+                //if (PingHost(ATM_IP)) { dgvATM.Rows[i].Cells[0].Value = img_on; }
+                //else { dgvATM.Rows[i].Cells[0].Value = img_off; }
+            }
+        }
+    }
+
+    class ThreadParams
+    {
+        public string ip;
+        public int id;
+        public DataGridView dgv;
+
+        public ThreadParams(string s, int i, DataGridView d)
+        {
+            ip = s;
+            id = i;
+            dgv = d;
+        }
     }
 }
