@@ -41,6 +41,8 @@ namespace ATM_DataBase
             DataGridViewImageColumn imgColumn = new DataGridViewImageColumn(); 
             dgvATM.Columns.Add(imgColumn);
 
+            OnOffPing(Properties.Settings.Default.ping_on);
+
             InitGrid(); //инициализация таблицы ATM
             SetCurrentRow();    //установить текущий ряд
             RefreshTab();
@@ -53,7 +55,7 @@ namespace ATM_DataBase
         {
             f_modify_mode = true;
 
-            string querystring = "select id, bank_no '№ ATM', serial_no 'S/N', address 'Адрес' from ATM order by bank_no";
+            string querystring = "select id, bank_no '№ATM', serial_no 'SN', address 'Адрес' from ATM order by bank_no";
             DataTable table = DBwork.ExeSelect(querystring, dataBase);
 
             dgvATM.RowEnter -= new DataGridViewCellEventHandler(this.dgvATM_RowEnter);
@@ -61,12 +63,11 @@ namespace ATM_DataBase
             dgvATM.Columns["id"].Visible = false;  //скрываем столбец с таблицами
             dgvATM.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             dgvATM.Columns[0].Width = 34;
-            dgvATM.Columns["№ ATM"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dgvATM.Columns["№ ATM"].Width = 70;
-            dgvATM.Columns["S/N"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            dgvATM.Columns["S/N"].Width = 100;
+            dgvATM.Columns["№ATM"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dgvATM.Columns["№ATM"].Width = 70;
+            dgvATM.Columns["SN"].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            dgvATM.Columns["SN"].Width = 100;
 
-            
 
             dgvATM.RowEnter += new DataGridViewCellEventHandler(this.dgvATM_RowEnter);
             f_modify_mode = false;
@@ -95,6 +96,8 @@ namespace ATM_DataBase
         /// <param name="e"></param>
         private void AddToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //clear_filter_Click(sender, e);
+
             f_modify_mode = true;
             editATM = new EditATM();
             if (editATM.ShowDialog() == DialogResult.OK)
@@ -554,6 +557,23 @@ namespace ATM_DataBase
         }
 
 
+
+        //фильтрация
+        private void tb_filter_TextChanged(object sender, EventArgs e)
+        {
+            bindingSource.Filter = "№ATM LIKE '%" + tb_filter.Text + "%' OR " +
+                "SN LIKE '%" + tb_filter.Text + "%' OR " +
+                "Адрес LIKE '%" + tb_filter.Text + "%'";
+        }
+
+        private void clear_filter_Click(object sender, EventArgs e)
+        {
+            tb_filter.Text = "";
+        }
+
+
+
+
         //мониторинг
         private string GetIP(int id)
         {
@@ -594,12 +614,10 @@ namespace ATM_DataBase
                 id_atm = (int)dgvATM.Rows[i].Cells["id"].Value;
                 string ATM_IP = GetIP(id_atm);
                 ATM_IP = ATM_IP.Replace(" ", "");
-                if (ATM_IP == "") { return; }
+                if (ATM_IP == "") { continue; }
                 Thread t = new Thread(ThreadPing);
                 ThreadParams tp = new ThreadParams(ATM_IP, id_atm, dgvATM);
                 t.Start(tp);
-                //if (PingHost(ATM_IP)) { dgvATM.Rows[i].Cells[0].Value = img_on; }
-                //else { dgvATM.Rows[i].Cells[0].Value = img_off; }
             }
         }
 
@@ -631,33 +649,28 @@ namespace ATM_DataBase
 
         private void btn_ping_Click(object sender, EventArgs e)
         {
-            if (btn_ping.Text.Equals("off ping"))
-            {
-                btn_ping.Text = "on ping";
-                this.timer1.Tick -= new System.EventHandler(this.timer1_Tick);
-            }
-            else
+            Properties.Settings.Default.ping_on = !Properties.Settings.Default.ping_on;
+            Properties.Settings.Default.Save();
+
+            OnOffPing(Properties.Settings.Default.ping_on);
+        }
+
+        private void OnOffPing(bool ping_on)
+        {
+            if (ping_on)
             {
                 btn_ping.Text = "off ping";
                 this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             }
+            else
+            {
+                btn_ping.Text = "on ping";
+                this.timer1.Tick -= new System.EventHandler(this.timer1_Tick);
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void dgvATM_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
-            int id_atm;
-            for (int i = 0; i < dgvATM.RowCount; i++)
-            {
-                id_atm = (int)dgvATM.Rows[i].Cells["id"].Value;
-                string ATM_IP = GetIP(id_atm);
-                ATM_IP = ATM_IP.Replace(" ", "");
-                if (ATM_IP == "") { return; }
-                Thread t = new Thread(ThreadPing);
-                ThreadParams tp = new ThreadParams(ATM_IP, id_atm, dgvATM);
-                t.Start(tp);
-                //if (PingHost(ATM_IP)) { dgvATM.Rows[i].Cells[0].Value = img_on; }
-                //else { dgvATM.Rows[i].Cells[0].Value = img_off; }
-            }
         }
     }
 

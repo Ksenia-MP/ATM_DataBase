@@ -10,5 +10,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=DESKTOP-Q769HJR\SQLEXPRESS;Initial Catalog=ATM;Integrated Security=True</Value>
     </Setting>
+    <Setting Name="ping_on" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

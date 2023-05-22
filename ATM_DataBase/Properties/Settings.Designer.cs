@@ -33,5 +33,17 @@ namespace ATM_DataBase.Properties {
                 return ((string)(this["ATMConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ping_on {
+            get {
+                return ((bool)(this["ping_on"]));
+            }
+            set {
+                this["ping_on"] = value;
+            }
+        }
     }
 }
