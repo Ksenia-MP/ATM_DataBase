@@ -40,20 +40,20 @@ namespace ATM_DataBase
             this.tb_cnn_string.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_cnn_string.Location = new System.Drawing.Point(11, 29);
+            this.tb_cnn_string.Location = new System.Drawing.Point(11, 35);
             this.tb_cnn_string.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tb_cnn_string.Multiline = true;
             this.tb_cnn_string.Name = "tb_cnn_string";
-            this.tb_cnn_string.Size = new System.Drawing.Size(396, 86);
+            this.tb_cnn_string.Size = new System.Drawing.Size(396, 80);
             this.tb_cnn_string.TabIndex = 0;
             // 
             // buttonOK
             // 
             this.buttonOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOK.Location = new System.Drawing.Point(255, 140);
+            this.buttonOK.Location = new System.Drawing.Point(239, 140);
             this.buttonOK.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(74, 32);
+            this.buttonOK.Size = new System.Drawing.Size(82, 32);
             this.buttonOK.TabIndex = 1;
             this.buttonOK.Text = "OK";
             this.buttonOK.UseVisualStyleBackColor = true;
@@ -65,17 +65,17 @@ namespace ATM_DataBase
             this.label1.Location = new System.Drawing.Point(10, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 17);
+            this.label1.Size = new System.Drawing.Size(178, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "Строка подключения";
             // 
             // buttonCancel
             // 
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCancel.Location = new System.Drawing.Point(333, 140);
+            this.buttonCancel.Location = new System.Drawing.Point(325, 140);
             this.buttonCancel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(74, 32);
+            this.buttonCancel.Size = new System.Drawing.Size(82, 32);
             this.buttonCancel.TabIndex = 3;
             this.buttonCancel.Text = "Отмена";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -84,7 +84,7 @@ namespace ATM_DataBase
             // SetConnection
             // 
             this.AcceptButton = this.buttonOK;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(418, 184);
             this.Controls.Add(this.buttonCancel);

@@ -44,10 +44,11 @@ namespace ATM_DataBase
             // 
             this.tb_name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_name.Location = new System.Drawing.Point(15, 29);
+            this.tb_name.Location = new System.Drawing.Point(17, 42);
+            this.tb_name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_name.MaxLength = 20;
             this.tb_name.Name = "tb_name";
-            this.tb_name.Size = new System.Drawing.Size(320, 22);
+            this.tb_name.Size = new System.Drawing.Size(360, 30);
             this.tb_name.TabIndex = 0;
             // 
             // label1
@@ -55,18 +56,19 @@ namespace ATM_DataBase
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(14, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 17);
+            this.label1.Size = new System.Drawing.Size(98, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Провайдер";
             // 
             // buttonEdit
             // 
             this.buttonEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonEdit.Location = new System.Drawing.Point(153, 195);
+            this.buttonEdit.Location = new System.Drawing.Point(172, 242);
+            this.buttonEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(88, 25);
+            this.buttonEdit.Size = new System.Drawing.Size(99, 36);
             this.buttonEdit.TabIndex = 3;
             this.buttonEdit.Text = "Изменить";
             this.buttonEdit.UseVisualStyleBackColor = true;
@@ -76,9 +78,10 @@ namespace ATM_DataBase
             // 
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(247, 195);
+            this.buttonCancel.Location = new System.Drawing.Point(278, 242);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(88, 25);
+            this.buttonCancel.Size = new System.Drawing.Size(99, 36);
             this.buttonCancel.TabIndex = 4;
             this.buttonCancel.Text = "Отмена";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -88,9 +91,9 @@ namespace ATM_DataBase
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 63);
+            this.label2.Location = new System.Drawing.Point(14, 87);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 17);
+            this.label2.Size = new System.Drawing.Size(53, 23);
             this.label2.TabIndex = 5;
             this.label2.Text = "DNS1";
             // 
@@ -99,18 +102,19 @@ namespace ATM_DataBase
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 119);
+            this.label3.Location = new System.Drawing.Point(14, 161);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 17);
+            this.label3.Size = new System.Drawing.Size(53, 23);
             this.label3.TabIndex = 7;
             this.label3.Text = "DNS2";
             // 
             // buttonAdd
             // 
             this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAdd.Location = new System.Drawing.Point(153, 195);
+            this.buttonAdd.Location = new System.Drawing.Point(173, 242);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(88, 25);
+            this.buttonAdd.Size = new System.Drawing.Size(99, 36);
             this.buttonAdd.TabIndex = 8;
             this.buttonAdd.Text = "Добавить";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -118,27 +122,29 @@ namespace ATM_DataBase
             // 
             // tb_dns1
             // 
-            this.tb_dns1.Location = new System.Drawing.Point(15, 83);
+            this.tb_dns1.Location = new System.Drawing.Point(17, 115);
+            this.tb_dns1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_dns1.Mask = "000.000.000.000";
             this.tb_dns1.Name = "tb_dns1";
-            this.tb_dns1.Size = new System.Drawing.Size(320, 22);
+            this.tb_dns1.Size = new System.Drawing.Size(360, 30);
             this.tb_dns1.TabIndex = 9;
             // 
             // tb_dns2
             // 
-            this.tb_dns2.Location = new System.Drawing.Point(15, 139);
+            this.tb_dns2.Location = new System.Drawing.Point(17, 190);
+            this.tb_dns2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_dns2.Mask = "000.000.000.000";
             this.tb_dns2.Name = "tb_dns2";
-            this.tb_dns2.Size = new System.Drawing.Size(320, 22);
+            this.tb_dns2.Size = new System.Drawing.Size(360, 30);
             this.tb_dns2.TabIndex = 10;
             // 
             // EditProvider
             // 
             this.AcceptButton = this.buttonEdit;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(347, 232);
+            this.ClientSize = new System.Drawing.Size(390, 296);
             this.Controls.Add(this.tb_dns2);
             this.Controls.Add(this.tb_dns1);
             this.Controls.Add(this.buttonAdd);
@@ -148,10 +154,13 @@ namespace ATM_DataBase
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tb_name);
-            this.MaximumSize = new System.Drawing.Size(456, 316);
-            this.MinimumSize = new System.Drawing.Size(315, 272);
+            this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximumSize = new System.Drawing.Size(408, 343);
             this.Name = "EditProvider";
-            this.Text = "EditProvider";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Провайдер";
             this.ResumeLayout(false);
             this.PerformLayout();
 

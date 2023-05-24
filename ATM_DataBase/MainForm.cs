@@ -40,6 +40,8 @@ namespace ATM_DataBase
 
             DataGridViewImageColumn imgColumn = new DataGridViewImageColumn(); 
             dgvATM.Columns.Add(imgColumn);
+            ((DataGridViewImageColumn)this.dgvATM.Columns[0]).DefaultCellStyle.NullValue = null;
+            dgvATM.RowTemplate.MinimumHeight = 32;
 
             OnOffPing(Properties.Settings.Default.ping_on);
 
@@ -660,12 +662,14 @@ namespace ATM_DataBase
             if (ping_on)
             {
                 btn_ping.Text = "off ping";
-                this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+                timer1.Start();
+                //this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             }
             else
             {
                 btn_ping.Text = "on ping";
-                this.timer1.Tick -= new System.EventHandler(this.timer1_Tick);
+                timer1.Stop();
+                //this.timer1.Tick -= new System.EventHandler(this.timer1_Tick);
             }
         }
 
